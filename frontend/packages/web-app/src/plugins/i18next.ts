@@ -20,7 +20,7 @@ const resources = locales.reduce((acc, locale) => {
 
 i18next.use(LanguageDetector).init({
   debug: false,
-  fallbackLng: 'zh-CN',
+  fallbackLng: 'en-US',
   supportedLngs: locales.map(locale => locale.lng),
   resources,
   interpolation: {

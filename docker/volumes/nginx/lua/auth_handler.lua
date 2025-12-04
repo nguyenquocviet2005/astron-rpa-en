@@ -90,6 +90,9 @@ local function authenticate_user()
     -- 调用 robot-service 进行认证
     local getUserUrl = "http://robot-service:8040/api/robot/user/now/userinfo"
     local httpc = http.new()
+    
+    -- Set DNS resolver for resty.http to use Docker's internal DNS
+    httpc:set_timeout(5000)
 
     -- 准备发送给 robot-service 的 Headers
     -- 使用Cookie方式传递JSESSIONID给robot-service
@@ -104,34 +107,50 @@ local function authenticate_user()
 
     ngx_log(ngx_DEBUG, "Calling robot-service (" .. getUserUrl .. ") with headers: " .. json.encode(headers_to_robot_service))
 
-    local res, err = httpc:request_uri(getUserUrl, {
-        method = "GET",
-        headers = headers_to_robot_service,
-        ssl_verify_host = false, -- 内部通信通常不需要 SSL 验证
-        ssl_verify_peer = false,
-        read_timeout = 5000,
-        connect_timeout = 5000
-    })
-
-    if err then
-        ngx_log(ngx_ERR, "Failed to connect to robot-service for " .. ctx_type .. " auth: " .. err .. ", URL: " .. getUserUrl)
+    local ok, err_conn = httpc:connect("robot-service", 8040)
+    if not ok then
+        ngx_log(ngx_ERR, "Failed to connect to robot-service for " .. ctx_type .. " auth: " .. err_conn)
         ngx.status = ngx_HTTP_INTERNAL_SERVER_ERROR
-        ngx.say(json.encode({code = "5000", message = "Internal Server Error: Auth service unavailable"}))
+        ngx.say(json.encode({code = "5000", message = "Internal Server Error: Auth service unavailable - " .. err_conn}))
         return ngx.exit(ngx_HTTP_INTERNAL_SERVER_ERROR)
     end
+    
+    local res, err = httpc:request({
+        method = "GET",
+        path = "/api/robot/user/now/userinfo",
+        headers = headers_to_robot_service
+    })
 
-    ngx_log(ngx_DEBUG, "robot-service response status: " .. res.status .. ", body (first 200 chars): " .. (res.body and string.sub(res.body, 1, 200) or "No body"))
+    if not res then
+        ngx_log(ngx_ERR, "Failed to request robot-service for " .. ctx_type .. " auth: " .. (err or "unknown error"))
+        ngx.status = ngx_HTTP_INTERNAL_SERVER_ERROR
+        ngx.say(json.encode({code = "5000", message = "Internal Server Error: Auth service request failed"}))
+        return ngx.exit(ngx_HTTP_INTERNAL_SERVER_ERROR)
+    end
+    
+    -- Read response body
+    local body, body_err = res:read_body()
+    if not body then
+        ngx_log(ngx_ERR, "Failed to read robot-service response body: " .. (body_err or "unknown error"))
+        ngx.status = ngx_HTTP_INTERNAL_SERVER_ERROR
+        ngx.say(json.encode({code = "5000", message = "Internal Server Error: Failed to read auth response"}))
+        return ngx.exit(ngx_HTTP_INTERNAL_SERVER_ERROR)
+    end
+    
+    httpc:set_keepalive(10000, 100) -- reuse connection
+
+    ngx_log(ngx_DEBUG, "robot-service response status: " .. res.status .. ", body (first 200 chars): " .. (body and string.sub(body, 1, 200) or "No body"))
 
     if res.status ~= ngx_HTTP_OK then
-        ngx_log(ngx_ERR, "robot-service returned unexpected status " .. res.status .. " for " .. ctx_type .. " auth, full body: " .. (res.body or "No body"))
+        ngx_log(ngx_ERR, "robot-service returned unexpected status " .. res.status .. " for " .. ctx_type .. " auth, full body: " .. (body or "No body"))
         ngx.status = res.status
-        ngx.say(res.body) -- 将 robot-service 的错误响应直接返回
+        ngx.say(body) -- 将 robot-service 的错误响应直接返回
         return ngx.exit(res.status)
     end
 
-    local userResponse, json_err = json.decode(res.body)
+    local userResponse, json_err = json.decode(body)
     if json_err then
-        ngx_log(ngx_ERR, "Failed to decode robot-service response for " .. ctx_type .. " auth: " .. json_err .. ", full body: " .. (res.body or "No body"))
+        ngx_log(ngx_ERR, "Failed to decode robot-service response for " .. ctx_type .. " auth: " .. json_err .. ", full body: " .. (body or "No body"))
         ngx.status = ngx_HTTP_INTERNAL_SERVER_ERROR
         ngx.say(json.encode({code = "5000", message = "Internal Server Error: Invalid auth service response"}))
         return ngx.exit(ngx_HTTP_INTERNAL_SERVER_ERROR)

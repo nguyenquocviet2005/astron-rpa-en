@@ -1,0 +1,679 @@
+atomic:
+  Docx.open_docx:
+    title: Open Word Document
+    comment: Open Word document at @{file_path}, return Word object @{doc_obj}
+    icon: word-open-document
+    helpManual: ''
+    inputList:
+    - key: file_path
+      title: Document Path
+      tip: Fill in the path to the Word document
+    - key: default_application
+      title: Driver Mode
+      tip: Select the opening method for Word document, such as Word or WPS
+    - key: visible_flag
+      title: Visible
+      tip: Whether to display the Word document window
+    - key: encoding
+      title: Encoding Mode
+      tip: Select document encoding mode, such as UTF-8 or GBK
+    - key: open_pwd_flag
+      title: Fill Word Open Password
+      tip: Choose whether to enter password to open document
+    - key: open_pwd
+      title: Word Open Password
+      tip: Enter Word open password
+    - key: write_pwd_flag
+      title: Fill Word Write Password
+      tip: Choose whether to enter password to write to document
+    - key: write_pwd
+      title: Word Write Password
+      tip: Enter Word write password
+    outputList:
+    - key: doc_obj
+      title: Word Object
+      tip: Returns Word object for subsequent operations
+  Docx.read_docx:
+    title: Read Word Document Content
+    comment: Read Word document object @{doc} content, return document content @{doc_data}
+    icon: word-read-content
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: select_range
+      title: Read Range
+      tip: Select the range to read from the document, such as entire document or selected area
+    outputList:
+    - key: doc_data
+      title: Document Content
+      tip: ''
+  Docx.create_docx:
+    title: Create Word Document
+    comment: Create Word document, save to path @{file_path} with file name @{file_name}, return Word object @{doc_obj} and save path @{doc_create_path}
+    icon: word-new-document
+    helpManual: ''
+    inputList:
+    - key: file_path
+      title: Document Save Folder
+      tip: Fill in the save folder path for the Word document
+    - key: file_name
+      title: Document Name
+      tip: Fill in the name of the Word document
+    - key: default_application
+      title: Driver Mode
+      tip: Select the opening method for Word document, such as Word or WPS
+    - key: visible_flag
+      title: Visible
+      tip: Whether to display the Word document window
+    - key: exist_handle_type
+      title: Existing File Handling
+      tip: Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation
+    outputList:
+    - key: doc_obj
+      title: Word Object
+      tip: ''
+    - key: doc_create_path
+      title: Document Save Path
+      tip: The complete path to the saved Word document
+  Docx.save_docx:
+    title: Save Word Document
+    comment: Save Word document object @{doc}, save type @{save_type}, and output save path @{save_file_path}
+    icon: word-save-document
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: save_type
+      title: Save Type
+      tip: Select save type, such as save, save as, or don't save
+    - key: file_path
+      title: Document Path
+      tip: Fill in the save path for the Word document
+    - key: file_name
+      title: Document Name
+      tip: Fill in the name of the Word document
+    - key: exist_handle_type
+      title: Existing File Handling
+      tip: Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation
+    - key: close_flag
+      title: Close Document
+      tip: Choose whether to close the document window
+    outputList:
+    - key: save_file_path
+      title: Save Path
+      tip: The complete path to the saved Word document
+  Docx.close_docx:
+    title: Close Word Document
+    comment: Close Word document object @{doc}
+    icon: word-close-document
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: close_range_flag
+      title: Close Scope
+      tip: Select the scope to close documents, such as close current document or close all documents
+    - key: save_type
+      title: Save Type
+      tip: Select save type, such as save, save as, or don't save
+    - key: file_path
+      title: Save As Document Path
+      tip: Fill in the save path for the Word document
+    - key: file_name
+      title: Save As Document Name
+      tip: Fill in the name of the Word document
+    - key: exist_handle_type
+      title: Existing File Handling
+      tip: Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation
+    - key: pkill_flag
+      title: End Word or WPS Process
+      tip: Choose whether to end Word or WPS process
+    outputList: []
+  Docx.insert_docx:
+    title: Insert Text to Word Document
+    comment: Insert text @{text} to Word document object @{doc}
+    icon: word-insert-text
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: text
+      title: Insert Text
+      tip: Fill in the text to insert
+    - key: enter_flag
+      title: Line Break Before Insert
+      tip: Choose whether to add a line break before inserting
+    - key: font_size
+      title: Font Size
+      tip: Fill in font size
+    - key: bold_flag
+      title: Bold
+      tip: Choose whether to bold
+    - key: italic_flag
+      title: Italic
+      tip: Choose whether to italicize
+    - key: underline_flag
+      title: Underline
+      tip: Choose whether to add underline
+    - key: font_name
+      title: Font Name
+      tip: Fill in font name
+    - key: font_color
+      title: Font Color
+      tip: Select font color
+    outputList: []
+  Docx.select_text:
+    title: Select Word Text
+    comment: Select text from Word document object @{doc}
+    icon: word-select-text
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: select_type
+      title: Select Text Method
+      tip: Supports selecting full text, paragraph, or line
+    - key: p_start
+      title: Start Paragraph Number
+      tip: Enter start paragraph number
+    - key: p_end
+      title: End Paragraph Number
+      tip: Enter end paragraph number
+    - key: r_start
+      title: Start Line Number
+      tip: Enter start line number
+    - key: r_end
+      title: End Line Number
+      tip: Enter end line number
+    outputList: []
+  Docx.get_cursor_position:
+    title: Position Word Cursor
+    comment: Position cursor in Word document object @{doc}
+    icon: word-position-cursor
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: by
+      title: Cursor Position Method
+      tip: Choose to position to full text, paragraph, line, or text
+    - key: pos
+      title: Cursor Relative Position
+      tip: Before selected content / After selected content
+    - key: content
+      title: Text Content
+      tip: If choosing to position text, enter text content
+    - key: c_idx
+      title: Text Index
+      tip: Enter the index number of the text to position
+    - key: p_idx
+      title: Paragraph Number
+      tip: Enter paragraph number to position
+    - key: r_idx
+      title: Line Number
+      tip: Choose the line number to position
+    outputList: []
+  Docx.move_cursor:
+    title: Move Word Cursor
+    comment: Move cursor in Word document object @{doc}
+    icon: word-move-cursor
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: direction
+      title: Cursor Move Direction
+      tip: Can choose up, down, left, or right
+    - key: unitupdown
+      title: Up/Down Move Unit
+      tip: Can choose line or paragraph
+    - key: unitleftright
+      title: Left/Right Move Unit
+      tip: Can choose character or word
+    - key: distance
+      title: Move Distance
+      tip: Enter the distance to move
+    - key: with_shift
+      title: Press Shift
+      tip: Choose whether to press Shift
+    outputList: []
+  Docx.insert_sep:
+    title: Word Insert Page/Paragraph
+    comment: Insert page/paragraph in Word document object @{doc}
+    icon: word-insert-page
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: sep_type
+      title: Insert Type
+      tip: Choose page or paragraph
+    outputList: []
+  Docx.insert_hyperlink:
+    title: Word Insert Hyperlink
+    comment: Insert hyperlink in Word document object @{doc}
+    icon: word-insert-hyperlink
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: url
+      title: Link
+      tip: Enter the link to insert
+    - key: display
+      title: Display Text
+      tip: Enter the text to display
+    outputList: []
+  Docx.insert_img:
+    title: Word Insert Image
+    comment: In Word document object @{doc}, insert image from path @{img_path} or clipboard
+    icon: word-insert-image
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: img_from
+      title: Image Source
+      tip: Choose via file path or clipboard
+    - key: img_path
+      title: File Path
+      tip: Enter file path
+    - key: scale
+      title: Scale (%)
+      tip: Default is 100%, can enter other values, no need to enter percent sign
+    - key: newline
+      title: Line Break
+      tip: Choose whether to add line break before insertion
+    outputList: []
+  Docx.read_table:
+    title: Word Read Table
+    comment: In Word document object @{doc}, read table content and return table data object @{table_content}
+    icon: word-read-table
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: search_type
+      title: Find Table Method
+      tip: Select method to find table
+    - key: idx
+      title: Index
+      tip: Enter the index number to find table
+    - key: text
+      title: Text
+      tip: Enter the text to find table
+    outputList:
+    - key: table_content
+      title: Table Content
+      tip: ''
+  Docx.insert_table:
+    title: Word Insert Table
+    comment: In Word document object @{doc}, insert table content
+    icon: word-insert-table
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: table_content
+      title: Table Content
+      tip: Table content to create, format is two-dimensional array or read Excel table content
+    - key: table_behavior
+      title: Table Size
+      tip: Choose default or fit to content
+    - key: alignment
+      title: Text Horizontal Position
+      tip: Choose left align, center align, or right align
+    - key: v_alignment
+      title: Text Vertical Position
+      tip: Choose top align, center align, or bottom align
+    - key: border
+      title: Table Border
+      tip: Choose whether to have border
+    - key: if_change_font
+      title: Change Font
+      tip: Choose whether to change font
+    - key: font_size
+      title: Size
+      tip: Choose font size
+    - key: font_color
+      title: Color
+      tip: Choose font color
+    - key: font_set
+      title: Font
+      tip: Choose font
+    - key: font_bold
+      title: Bold
+      tip: Choose whether to bold
+    - key: font_italic
+      title: Italic
+      tip: Choose whether to italicize
+    - key: underline
+      title: Underline
+      tip: Choose whether to underline
+    - key: newline
+      title: Insert on New Line
+      tip: Choose whether to insert on a new line
+    outputList: []
+  Docx.delete:
+    title: Word Delete Content
+    comment: In Word document object @{doc}, delete content
+    icon: word-delete-content
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: delete_mode
+      title: Delete Method
+      tip: Select delete method
+    - key: delete_str
+      title: Text
+      tip: Select the text to delete
+    - key: delete_idx
+      title: Index
+      tip: Select which text to delete
+    - key: str_delete_all
+      title: Delete All Found Text
+      tip: Choose whether to delete all found text
+    - key: p_start
+      title: Start Paragraph
+      tip: Enter start paragraph
+    - key: c_start
+      title: Start Character
+      tip: Enter start character
+    - key: p_end
+      title: End Paragraph
+      tip: Enter end paragraph
+    - key: c_end
+      title: End Character
+      tip: Enter end character
+    outputList: []
+  Docx.replace:
+    title: Word Replace Content
+    comment: In Word document object @{doc}, find and replace content
+    icon: word-replace-content
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: origin_word
+      title: Find Content
+      tip: Enter the content to find
+    - key: replace_type
+      title: Replace With
+      tip: Choose to replace with image or text
+    - key: new_word
+      title: New Content
+      tip: Enter the content to replace with
+    - key: img_path
+      title: Image Path
+      tip: Choose image path
+    - key: replace_method
+      title: Replace Mode
+      tip: Choose replace all or replace first
+    - key: ignore_case
+      title: Ignore Case
+      tip: Choose whether to ignore case
+    outputList: []
+  Docx.create_comment:
+    title: Word Create Comment
+    comment: In Word document object @{doc}, create comment
+    icon: word-create-comment
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: comment
+      title: Comment Content
+      tip: Enter comment content
+    - key: comment_type
+      title: Comment Object
+      tip: Choose specified range or specified content
+    - key: paragraph_idx
+      title: Paragraph Number
+      tip: Enter the paragraph number to create comment
+    - key: start
+      title: Start Character Index
+      tip: Enter the start character index for the comment
+    - key: end
+      title: End Character Index
+      tip: Enter the end character index for the comment
+    - key: target_str
+      title: Target Content
+      tip: Enter the target content for the comment
+    - key: comment_all
+      title: Comment All
+      tip: Choose whether to comment all
+    - key: comment_index
+      title: Index
+      tip: Select the index of the content to comment
+    outputList: []
+  Docx.delete_comment:
+    title: Word Delete Comment
+    comment: In Word document object @{doc}, delete specified comment
+    icon: word-delete-comment
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: delete_all
+      title: Delete All
+      tip: Choose whether to delete all comments
+    - key: comment_index
+      title: Comment Index
+      tip: Enter the index of the comment to delete
+    outputList: []
+  Docx.convert_format:
+    title: Word Export to PDF/TXT
+    comment: In Word document object @{doc}, export specified content to PDF or TXT file
+    icon: word-export-pdf-txt
+    helpManual: ''
+    inputList:
+    - key: doc
+      title: Word Object
+      tip: Word object returned by previous atomic operations (such as open, create) in this software
+    - key: output_path
+      title: Export Path
+      tip: Select the folder to export to
+    - key: default_name
+      title: Use Default Name
+      tip: Choose whether to use default name
+    - key: output_name
+      title: Export File Name
+      tip: Enter file name without format extension
+    - key: page_type
+      title: Page Range
+      tip: Choose to export all pages, specified page range, current page, or current selection
+    - key: output_file_type
+      title: Export File Format
+      tip: Choose to export as PDF or TXT
+    - key: page_start
+      title: Start Page
+      tip: Enter the start page to export
+    - key: page_end
+      title: End Page
+      tip: Enter the end page to export
+    - key: save_type
+      title: Duplicate Name Save Method
+      tip: Choose to error on duplicate name, overwrite, or auto rename
+    outputList: []
+options:
+  ApplicationType:
+  - value: Word
+    label: Word
+  - value: WPS
+    label: WPS
+  - value: Default
+    label: Default Software
+  Bool:
+  - value: true
+    label: Yes
+  - value: false
+    label: No
+  EncodingType:
+  - value: utf-8
+    label: utf-8
+  - value: gbk
+    label: gbk
+  SelectRangeType:
+  - value: all
+    label: Entire Document
+  - value: selected
+    label: Selected Area
+  FileExistenceType:
+  - value: overwrite
+    label: Overwrite Existing File
+  - value: rename
+    label: Create File Copy
+  - value: cancel
+    label: Cancel Save Operation
+  SaveType:
+  - value: save
+    label: Save
+  - value: save_as
+    label: Save As
+  - value: abort
+    label: Don't Save
+  CloseRangeType:
+  - value: one
+    label: Close Current Document
+  - value: all
+    label: Close All Documents
+  UnderLineStyle:
+  - value: 0
+    label: No Underline
+  - value: 1
+    label: Underline
+  CursorPointerType:
+  - value: paragraph
+    label: Paragraph
+  - value: row
+    label: Line
+  - value: all
+    label: Document
+  - value: content
+    label: Text Content
+  SelectTextType:
+  - value: paragraph
+    label: Paragraph
+  - value: row
+    label: Line
+  - value: all
+    label: Full Text
+  CursorPositionType:
+  - value: head
+    label: Before Selected Content
+  - value: tail
+    label: After Selected Content
+  MoveDirectionType:
+  - value: up
+    label: Up
+  - value: down
+    label: Down
+  - value: left
+    label: Left
+  - value: right
+    label: Right
+  MoveUpDownType:
+  - value: paragraph
+    label: Paragraph
+  - value: row
+    label: Line
+  MoveLeftRightType:
+  - value: character
+    label: Character
+  - value: word
+    label: Word
+  InsertionType:
+  - value: page
+    label: Page
+  - value: paragraph
+    label: Paragraph
+  InsertImgType:
+  - value: file
+    label: File
+  - value: clipboard
+    label: Clipboard
+  SearchTableType:
+  - value: text
+    label: Text
+  - value: idx
+    label: Index
+  TableBehavior:
+  - value: 0
+    label: Default
+  - value: 1
+    label: Fit to Content
+  RowAlignment:
+  - value: 0
+    label: Left Align
+  - value: 1
+    label: Center Align
+  - value: 2
+    label: Right Align
+  VerticalAlignment:
+  - value: 0
+    label: Top Align
+  - value: 1
+    label: Center Align
+  - value: 3
+    label: Bottom Align
+  DeleteMode:
+  - value: all
+    label: All
+  - value: content
+    label: Specified Text
+  - value: range
+    label: Specified Range
+  ReplaceType:
+  - value: img
+    label: Image
+  - value: str
+    label: Text
+  ReplaceMethodType:
+  - value: first
+    label: First
+  - value: all
+    label: All
+  CommentType:
+  - value: position
+    label: Specified Position
+  - value: content
+    label: Specified Content
+  ConvertPageType:
+  - value: 0
+    label: All Pages
+  - value: 2
+    label: Current Page
+  - value: 3
+    label: Specified Page Range
+  - value: 1
+    label: Selected Content
+  FileType:
+  - value: pdf
+    label: PDF
+  - value: txt
+    label: TXT
+  SaveFileType:
+  - value: warn
+    label: Duplicate Name Warning
+  - value: generate
+    label: Auto Generate Name
+  - value: overwrite
+    label: Overwrite Duplicate Name File

@@ -1,0 +1,223 @@
+atomic:
+  Gui.keyboard:
+    title: Keyboard Input
+    comment: Simulate keyboard input (@{message}) via (@{keyboard_type}) method
+    icon: keyboard-input
+    helpManual: ''
+    inputList:
+    - key: keyboard_type
+      title: Input Method
+      tip: Normal input: simulate key input using Windows keyboard message method; Clipboard input: get clipboard content and paste input; Key combination: use insert keyboard symbol combination for quick input; Driver input: use driver to simulate key input, generally used for online banking password box input scenarios or other scenarios where normal input method cannot input
+    - key: message
+      title: Input Content
+      tip: ''
+    - key: simulate_flag
+      title: Simulate Manual Input
+      tip: Simulate manual keyboard operation by inputting characters one by one, default is no
+    - key: interval
+      title: Input Interval
+      tip: Set input interval, unit is seconds
+    outputList: []
+  Gui.key_input:
+    title: Keyboard Simulate Key
+    comment: Simulate key press (@{keys_str}) (@{key_model})
+    icon: keyboard-simulate-key
+    helpManual: Set keyboard keys for input
+    inputList:
+    - key: keys_str
+      title: Key Combination
+      tip: Set key combination
+    - key: key_model
+      title: Key Method
+      tip: Set key method
+    outputList: []
+  Gui.mouse:
+    title: Mouse Click
+    comment: Simulate mouse (@{btn_type:left button/right button/middle button}) (@{btn_model:down/up/click/double-click}))
+    icon: mouse-click
+    helpManual: ''
+    inputList:
+    - key: btn_type
+      title: Mouse Button
+      tip: Select which button on the mouse to click
+    - key: btn_model
+      title: Click Method
+      tip: Select the mouse click method
+    - key: ctrl_type
+      title: Keyboard Assist Key
+      tip: Select keyboard assist key, default is none
+    outputList: []
+  Gui.mouse_wheel:
+    title: Mouse Scroll
+    comment: Simulate mouse (@{scroll_type}) scroll (@{scroll_px||times}), scroll direction is: (@{direction})
+    icon: mouse-scroll-webpage
+    helpManual: ''
+    inputList:
+    - key: scroll_type
+      title: Scroll Method
+      tip: ''
+    - key: times
+      title: Custom Times
+      tip: Enter the number of times the mouse scrolls, default scroll distance once is 120 webpage pixels
+    - key: scroll_px
+      title: Custom Pixels
+      tip: Enter custom pixels, unit is px, generally a value between 0-9999
+    - key: direction
+      title: Scroll Direction
+      tip: ''
+    - key: ctrl_type
+      title: Keyboard Assist Key
+      tip: Select keyboard assist key, default is none
+    outputList: []
+  Gui.mouse_move:
+    title: Mouse Move
+    comment: Simulate mouse move to (@{position_x}, @{position_y}) on (@{window_type})
+    icon: mouse-move
+    helpManual: ''
+    inputList:
+    - key: window_type
+      title: Window Type
+      tip: 'Entire screen: use top-left corner of screen as relative coordinate position; Active window: use top-left corner of active window as relative coordinate position'
+    - key: window_position
+      title: Window Top-Left Corner Position
+      tip: ''
+    - key: get_mouse_position
+      title: Get Mouse Position
+      tip: ''
+    - key: position_x
+      title: Mouse X Position
+      tip: ''
+    - key: position_y
+      title: Mouse Y Position
+      tip: ''
+    - key: move_type
+      title: Mouse Move Method
+      tip: Select mouse move method
+    - key: move_speed
+      title: Mouse Move Speed
+      tip: ''
+    outputList: []
+  Gui.mouse_drag:
+    title: Mouse Drag
+    comment: Simulate mouse drag from start position (@{start_pos_x}, @{start_pos_y}) to end position (@{end_pos_x}, @{end_pos_y})
+    icon: mouse-drag
+    helpManual: ''
+    inputList:
+    - key: start_pos_x
+      title: Mouse Start X Position
+      tip: ''
+    - key: start_pos_y
+      title: Mouse Start Y Position
+      tip: ''
+    - key: end_pos_x
+      title: Mouse End X Position
+      tip: ''
+    - key: end_pos_y
+      title: Mouse End Y Position
+      tip: ''
+    - key: btn_type
+      title: Mouse Button
+      tip: Mouse button pressed during drag
+    - key: move_type
+      title: Move Method
+      tip: Select mouse move method
+    - key: move_speed
+      title: Move Speed
+      tip: Select mouse move speed
+    - key: ctrl_type
+      title: Keyboard Assist Key
+      tip: Select keyboard assist key during mouse drag, default is none
+    outputList: []
+  Gui.mouse_position:
+    title: Get Mouse Position
+    comment: Get current mouse position and output to (@{point_x}, @{point_y})
+    icon: get-mouse-position
+    helpManual: ''
+    inputList: []
+    outputList:
+    - key: point_x
+      title: Mouse X Position
+      tip: ''
+    - key: point_y
+      title: Mouse Y Position
+      tip: ''
+options:
+  KeyboardType:
+  - value: normal
+    label: Normal Input
+  - value: driver
+    label: Driver Input
+  - value: clip
+    label: Clipboard Input
+  - value: gblid
+    label: Ghost Input
+  Simulate_flag:
+  - value: 'yes'
+    label: Yes
+  - value: 'no'
+    label: No
+  KeyModel:
+  - value: click
+    label: Click
+  - value: down
+    label: Down
+  - value: up
+    label: Up
+  BtnType:
+  - value: left
+    label: Left Button
+  - value: middle
+    label: Middle Button
+  - value: right
+    label: Right Button
+  BtnModel:
+  - value: click
+    label: Click
+  - value: double_click
+    label: Double-Click
+  - value: down
+    label: Down
+  - value: up
+    label: Up
+  ControlType:
+  - value: none
+    label: None
+  - value: ctrl
+    label: ctrl
+  - value: alt
+    label: alt
+  - value: shift
+    label: shift
+  - value: win
+    label: win
+  - value: space
+    label: space
+  ScrollType:
+  - value: time
+    label: By Times
+  - value: px
+    label: By Pixels
+  Direction:
+  - value: up
+    label: Up
+  - value: down
+    label: Down
+  WindowType:
+  - value: fullscreen
+    label: Entire Screen
+  - value: active_window
+    label: Active Window
+  MoveType:
+  - value: linear
+    label: Linear Uniform Movement
+  - value: simulation
+    label: Simulate Manual Method
+  - value: teleportation
+    label: Instant Movement
+  Speed:
+  - value: slow
+    label: Slow
+  - value: normal
+    label: Normal
+  - value: fast
+    label: Fast

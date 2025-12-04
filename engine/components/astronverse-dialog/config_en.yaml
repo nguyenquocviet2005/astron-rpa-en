@@ -1,0 +1,280 @@
+atomic:
+  Dialog.message_box:
+    title: Message Prompt Box
+    comment: ''
+    icon: message-dialog
+    helpManual: Open message prompt dialog box, you can set the content and title of the message prompt.
+    inputList:
+    - key: box_title
+      title: Dialog Title
+      tip: User-defined title displayed at the top of the dialog box, the title content is limited to 50 characters. If not entered, the default title is "Message Prompt Box"
+    - key: message_type
+      title: Message Type
+      tip: Selectable message type
+    - key: message_content
+      title: Message Content
+      tip: User-defined content displayed in the dialog box, the content is limited to 120 characters
+    - key: button_type
+      title: Display Buttons
+      tip: Buttons that can be displayed in the message box for user selection, only switching is allowed, not empty state
+    - key: auto_check
+      title: Auto Close Dialog on No Operation
+      tip: ''
+    - key: wait_time
+      title: No Operation Timeout Wait (seconds)
+      tip: Set timeout wait time, if no mouse movement behavior is detected beyond this time, the default button will be selected, default is 60 seconds
+    - key: default_button_c
+      title: Default Selected Button on Timeout
+      tip: ''
+    - key: default_button_cn
+      title: Default Selected Button on Timeout
+      tip: ''
+    - key: default_button_y
+      title: Default Selected Button on Timeout
+      tip: ''
+    - key: default_button_yn
+      title: Default Selected Button on Timeout
+      tip: ''
+    - key: preview_button
+      title: Preview
+      tip: ''
+    outputList:
+    - key: result_button
+      title: Save User Selected Button to
+      tip: ''
+  Dialog.input_box:
+    title: Input Dialog Box
+    comment: ''
+    icon: input-dialog
+    helpManual: Open input dialog box, user needs to input information and confirm submission, returns the content entered by the user in the dialog box.
+    inputList:
+    - key: box_title
+      title: Dialog Title
+      tip: The title content is limited to 50 characters, if not entered, the default title is "Input Dialog Box"
+    - key: input_type
+      title: Input Box Type
+      tip: ''
+    - key: input_title
+      title: Input Box Title
+      tip: ''
+    - key: default_input_text
+      title: Input Box Default Value
+      tip: If filled in, the default text will be displayed in the dialog box as a text prompt, the content is limited to 120 characters
+    - key: default_input_pwd
+      title: Input Box Default Value
+      tip: If filled in, the default password will be displayed in the dialog box, password length is between 4-16 characters
+    - key: preview_button
+      title: Preview
+      tip: ''
+    outputList:
+    - key: input_content
+      title: Save User Input Content to
+      tip: ''
+  Dialog.select_box:
+    title: Select Dialog Box
+    comment: ''
+    icon: select-dialog
+    helpManual: Open select dialog box, save one or more options selected by the user from the selection list
+    inputList:
+    - key: box_title
+      title: Dialog Title
+      tip: ''
+    - key: select_type
+      title: Selection Mode
+      tip: ''
+    - key: options
+      title: Options
+      tip: ''
+    - key: options_title
+      title: Selection Box Title
+      tip: ''
+    - key: preview_button
+      title: Preview
+      tip: ''
+    outputList:
+    - key: select_result
+      title: Save Selection Result to
+      tip: ''
+  Dialog.select_time_box:
+    title: Date Time Picker
+    comment: ''
+    icon: datetime-picker
+    helpManual: Open date time picker, save the date or time selected by the user
+    inputList:
+    - key: box_title
+      title: Dialog Title
+      tip: ''
+    - key: time_type
+      title: Time Type
+      tip: ''
+    - key: time_format
+      title: Time Format
+      tip: ''
+    - key: default_time
+      title: Default Time
+      tip: ''
+    - key: default_time_range
+      title: Default Time
+      tip: ''
+    - key: input_title
+      title: Input Box Title
+      tip: ''
+    - key: preview_button
+      title: Preview
+      tip: ''
+    outputList:
+    - key: select_time
+      title: Save Time Selection Result to
+      tip: ''
+  Dialog.select_file_box:
+    title: File Selection Dialog Box
+    comment: ''
+    icon: file-select-dialog
+    helpManual: Open system file selection dialog box, save the corresponding file/folder path selected by the user
+    inputList:
+    - key: box_title_file
+      title: Dialog Title
+      tip: ''
+    - key: box_title_folder
+      title: Dialog Title
+      tip: ''
+    - key: open_type
+      title: Open Type
+      tip: ''
+    - key: file_type
+      title: File Type
+      tip: ''
+    - key: multiple_choice
+      title: Allow Multiple Selection
+      tip: ''
+    - key: select_title
+      title: Selection Box Title
+      tip: ''
+    - key: default_path
+      title: Default Folder
+      tip: When this parameter is configured, the file selection box will default to this folder path for the next step of selection
+    - key: preview_button
+      title: Preview
+      tip: ''
+    outputList:
+    - key: select_file
+      title: Save File Selection Result to
+      tip: Save the user's file selection result, if the user clicks the cancel button, it will return empty value
+  Dialog.custom_box:
+    title: Custom Dialog Box
+    comment: ''
+    icon: custom-dialog
+    helpManual: ''
+    inputList:
+    - key: box_title
+      title: Dialog Title
+      tip: ''
+    - key: design_interface
+      title: Design Dialog Interface
+      tip: Click the button to enter the dialog design popup interface
+      value: ''
+    - key: auto_check
+      title: Auto Close Dialog on No Operation
+      tip: ''
+    - key: wait_time
+      title: No Operation Timeout Wait (seconds)
+      tip: ''
+    - key: default_button
+      title: Default Selected Button on Timeout
+      tip: ''
+    outputList:
+    - key: dialog_result
+      title: Custom Dialog Result
+      tip: Store the output results of all form controls and the clicked button result
+options:
+  MessageType:
+  - value: message
+    label: Information
+  - value: warning
+    label: Warning
+  - value: question
+    label: Question
+  - value: error
+    label: Error
+  ButtonType:
+  - value: confirm
+    label: Confirm
+  - value: confirm_cancel
+    label: Confirm-Cancel
+  - value: yes_no
+    label: Yes-No
+  - value: yes_no_cancel
+    label: Yes-No-Cancel
+  Bool:
+  - value: true
+    label: Yes
+  - value: false
+    label: No
+  DefaultButtonC:
+  - value: confirm
+    label: Confirm
+  DefaultButtonCN:
+  - value: confirm
+    label: Confirm
+  - value: cancel
+    label: Cancel
+  DefaultButtonY:
+  - value: 'yes'
+    label: Yes
+  - value: 'no'
+    label: No
+  DefaultButtonYN:
+  - value: 'yes'
+    label: Yes
+  - value: 'no'
+    label: No
+  - value: cancel
+    label: Cancel
+  InputType:
+  - value: text
+    label: Text Box
+  - value: password
+    label: Password Box
+  SelectType:
+  - value: single
+    label: Single Selection
+  - value: multi
+    label: Multiple Selection
+  TimeType:
+  - value: time
+    label: Time
+  - value: time_range
+    label: Time Range
+  TimeFormat:
+  - value: YYYY-MM-DD
+    label: Year-Month-Day
+  - value: YYYY-MM-DD HH:mm
+    label: Year-Month-Day Hour:Minute
+  - value: YYYY-MM-DD HH:mm:ss
+    label: Year-Month-Day Hour:Minute:Second
+  - value: YYYY/MM/DD
+    label: Year/Month/Day
+  - value: YYYY/MM/DD HH:mm
+    label: Year/Month/Day Hour:Minute
+  - value: YYYY/MM/DD HH:mm:ss
+    label: Year/Month/Day Hour:Minute:Second
+  OpenType:
+  - value: file
+    label: File
+  - value: folder
+    label: Folder
+  FileType:
+  - value: '*'
+    label: All Files
+  - value: .xls,.xlsx
+    label: Excel Files
+  - value: .doc,.docx
+    label: Word Files
+  - value: .txt
+    label: Text Files
+  - value: .png,.jpg,.jpeg,.bmp,.gif
+    label: Image Files
+  - value: .ppt,.pptx
+    label: PPT Files
+  - value: .zip,.rar
+    label: Compressed Files

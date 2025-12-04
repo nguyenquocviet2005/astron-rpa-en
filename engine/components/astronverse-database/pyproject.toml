@@ -8,9 +8,11 @@ dependencies = [
     "astronverse-actionlib",
     "pymysql",
     "pyodbc",
-    "cx_Oracle",
     "psycopg2"
 ]
+
+[project.optional-dependencies]
+oracle = ["cx_Oracle"]
 
 [tool.uv.sources]
 astronverse-actionlib = {path = "../../shared/astronverse-actionlib", editable = true}

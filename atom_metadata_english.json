@@ -1,0 +1,6573 @@
+{
+  "DataProcess.set_variable_value": {
+    "key": "DataProcess.set_variable_value",
+    "title": "Set Variable Value",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "assign @{value} to variable @{variable_var}",
+    "icon": "set-variable-value",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "value",
+        "title": "Variable Value",
+        "tip": "Enter the value to set"
+      },
+      {
+        "key": "variable_type",
+        "title": "Variable Type",
+        "tip": "Select the variable type to set"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "variable_var",
+        "title": "Variable Value After Setting",
+        "tip": ""
+      }
+    ]
+  },
+  "DataConvertProcess.json_convertor": {
+    "key": "DataConvertProcess.json_convertor",
+    "title": "JSON String Conversion",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Convert input text @{input_data} from JSON format to String or from String format to JSON format, return converted text @{json_convert_data}",
+    "icon": "json-string-convert",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "input_data",
+        "title": "Input Content",
+        "tip": ""
+      },
+      {
+        "key": "convert_type",
+        "title": "Conversion Type",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "json_convert_data",
+        "title": "Conversion Result",
+        "tip": ""
+      }
+    ]
+  },
+  "DataConvertProcess.other_to_str": {
+    "key": "DataConvertProcess.other_to_str",
+    "title": "Other Format to Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Convert input content @{input_data} to text (String) format, return conversion result @{other_convert_str}",
+    "icon": "format-to-text",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "input_data",
+        "title": "Input Content",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "other_convert_str",
+        "title": "Conversion Result",
+        "tip": ""
+      }
+    ]
+  },
+  "DataConvertProcess.str_to_other": {
+    "key": "DataConvertProcess.str_to_other",
+    "title": "Text to Other Format",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Convert input text (String) @{input_data} to other format, return conversion result @{str_convert_other}",
+    "icon": "text-convert-format",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "input_data",
+        "title": "Input Content",
+        "tip": ""
+      },
+      {
+        "key": "convert_type",
+        "title": "Conversion Type",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "str_convert_other",
+        "title": "Conversion Result",
+        "tip": ""
+      }
+    ]
+  },
+  "DictProcess.create_new_dict": {
+    "key": "DictProcess.create_new_dict",
+    "title": "Create New Dictionary",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Create a dictionary, return created dictionary @{created_new_dict_data}",
+    "icon": "create-new-dict",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "dict_data",
+        "title": "Dictionary Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "created_new_dict_data",
+        "title": "Newly Created Dictionary",
+        "tip": ""
+      }
+    ]
+  },
+  "DictProcess.set_value_to_dict": {
+    "key": "DictProcess.set_value_to_dict",
+    "title": "Dictionary Set Value",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Set dictionary @{dict_data} key to @{dict_key}, value to @{value}, return dictionary after setting @{inserted_dict_data}",
+    "icon": "dict-set-value",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "dict_data",
+        "title": "Dictionary Data",
+        "tip": ""
+      },
+      {
+        "key": "dict_key",
+        "title": "Key",
+        "tip": ""
+      },
+      {
+        "key": "value",
+        "title": "Value",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "inserted_dict_data",
+        "title": "Dictionary After Setting",
+        "tip": ""
+      }
+    ]
+  },
+  "DictProcess.delete_value_from_dict": {
+    "key": "DictProcess.delete_value_from_dict",
+    "title": "Dictionary Delete Value",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "From dictionary @{dict_data} delete key @{dict_key} and its value, return dictionary after deletion @{deleted_dict_data}",
+    "icon": "dict-delete-value",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "dict_data",
+        "title": "Dictionary Data",
+        "tip": ""
+      },
+      {
+        "key": "dict_key",
+        "title": "Key",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "deleted_dict_data",
+        "title": "Dictionary After Deletion",
+        "tip": ""
+      }
+    ]
+  },
+  "DictProcess.get_value_from_dict": {
+    "key": "DictProcess.get_value_from_dict",
+    "title": "Dictionary Get Value",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get dictionary @{dict_data} value for key @{dict_key} @{get_dict_value}",
+    "icon": "dict-get-value",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "dict_data",
+        "title": "Dictionary Data",
+        "tip": ""
+      },
+      {
+        "key": "dict_key",
+        "title": "Key",
+        "tip": ""
+      },
+      {
+        "key": "fail_option",
+        "title": "Handling When Key Not Exists",
+        "tip": "When key does not exist, either raise error or return default value"
+      },
+      {
+        "key": "default_value",
+        "title": "Default Value",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_dict_value",
+        "title": "Dictionary Value",
+        "tip": ""
+      }
+    ]
+  },
+  "DictProcess.get_keys_from_dict": {
+    "key": "DictProcess.get_keys_from_dict",
+    "title": "Get All Dictionary Keys",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get all keys from dictionary @{dict_data} @{get_dict_keys}",
+    "icon": "get-dict-all-keys",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "dict_data",
+        "title": "Dictionary Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_dict_keys",
+        "title": "Key List",
+        "tip": ""
+      }
+    ]
+  },
+  "DictProcess.get_values_from_dict": {
+    "key": "DictProcess.get_values_from_dict",
+    "title": "Get All Dictionary Values",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get all values from dictionary @{dict_data} @{get_dict_values}",
+    "icon": "get-dict-all-values",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "dict_data",
+        "title": "Dictionary Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_dict_values",
+        "title": "Value List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.create_new_list": {
+    "key": "ListProcess.create_new_list",
+    "title": "Create New List",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Create a @{list_type} type of list, return created list @{created_list_data}",
+    "icon": "create-new-list",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_type",
+        "title": "List Type",
+        "tip": ""
+      },
+      {
+        "key": "size",
+        "title": "List Length",
+        "tip": ""
+      },
+      {
+        "key": "value",
+        "title": "Initial Value",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "created_list_data",
+        "title": "Created List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.clear_list": {
+    "key": "ListProcess.clear_list",
+    "title": "Clear List",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Clear list @{list_data}, return cleared list @{cleared_list_data}",
+    "icon": "list-clear",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "cleared_list_data",
+        "title": "Cleared List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.insert_value_to_list": {
+    "key": "ListProcess.insert_value_to_list",
+    "title": "List Insert Value",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Insert value @{value} into list @{list_data} at @{insert_method} position @{index}, return inserted list @{inserted_list_data}",
+    "icon": "list-insert-value",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      },
+      {
+        "key": "value",
+        "title": "Insert Value",
+        "tip": ""
+      },
+      {
+        "key": "insert_method",
+        "title": "Insert Method",
+        "tip": ""
+      },
+      {
+        "key": "index",
+        "title": "Insert Position",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "inserted_list_data",
+        "title": "Inserted List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.change_value_in_list": {
+    "key": "ListProcess.change_value_in_list",
+    "title": "List Modify Value",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Modify list @{list_data} value at position @{index} to @{new_value}, return modified list @{changed_list_data}",
+    "icon": "list-modify-value",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      },
+      {
+        "key": "index",
+        "title": "Position Index",
+        "tip": "Enter the position index to modify, starting from 0. First value index is 0, second value index is 1, and so on"
+      },
+      {
+        "key": "new_value",
+        "title": "New Value",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "changed_list_data",
+        "title": "Modified List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.get_list_position": {
+    "key": "ListProcess.get_list_position",
+    "title": "Get Value Position in List",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get position of value @{value} in list @{list_data} @{get_list_position}",
+    "icon": "get-value-position",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      },
+      {
+        "key": "value",
+        "title": "value",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_list_position",
+        "title": "Position Index",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.remove_value_from_list": {
+    "key": "ListProcess.remove_value_from_list",
+    "title": "List Remove Value",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Use @{del_mode} to delete @{del_value||del_pos} content from @{list_data}, return deleted list @{removed_list_data}",
+    "icon": "list-remove-value",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      },
+      {
+        "key": "del_mode",
+        "title": "Delete Method",
+        "tip": ""
+      },
+      {
+        "key": "del_value",
+        "title": "Delete Value",
+        "tip": ""
+      },
+      {
+        "key": "del_pos",
+        "title": "Delete Position",
+        "tip": "Can specify single or multiple position data, separate multiple position indices with commas, for example: 1,3,5"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "removed_list_data",
+        "title": "Deleted List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.sort_list": {
+    "key": "ListProcess.sort_list",
+    "title": "List Sort",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Sort list @{list_data} using @{sort_method}, return sorted list @{sorted_list_data}",
+    "icon": "list-sort",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      },
+      {
+        "key": "sort_method",
+        "title": "Sort Method",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "sorted_list_data",
+        "title": "Sorted List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.random_shuffle_list": {
+    "key": "ListProcess.random_shuffle_list",
+    "title": "List Random Shuffle",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Randomly shuffle list @{list_data} order, return shuffled list @{shuffled_list_data}",
+    "icon": "list-shuffle",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "shuffled_list_data",
+        "title": "Shuffled List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.filter_elements_from_list": {
+    "key": "ListProcess.filter_elements_from_list",
+    "title": "Remove Multiple Items from List",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Remove elements from list @{list_data_1} that exist in list @{list_data_2}, return filtered list @{filter_list_data}",
+    "icon": "list-remove-multiple",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data_1",
+        "title": "List to Process",
+        "tip": "Enter the list to process"
+      },
+      {
+        "key": "list_data_2",
+        "title": "Elements to Remove List",
+        "tip": "Enter the list of elements to remove. If list to process contains elements from this list, those elements will be removed"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "filter_list_data",
+        "title": "Filtered List",
+        "tip": "Return filtered list"
+      }
+    ]
+  },
+  "ListProcess.reverse_list": {
+    "key": "ListProcess.reverse_list",
+    "title": "List Reverse",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Reverse list @{list_data}, return reversed list @{reversed_list_data}",
+    "icon": "list-reverse",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "reversed_list_data",
+        "title": "Reversed List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.merge_list": {
+    "key": "ListProcess.merge_list",
+    "title": "List Merge",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Merge list @{list_data_1} and list @{list_data_2} into a list @{merged_list_data}",
+    "icon": "list-merge",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data_1",
+        "title": "First List",
+        "tip": ""
+      },
+      {
+        "key": "list_data_2",
+        "title": "Second List",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "merged_list_data",
+        "title": "Merged List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.get_unique_list": {
+    "key": "ListProcess.get_unique_list",
+    "title": "List Remove Duplicates",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Remove duplicates from list @{list_data}, return deduplicated list @{unique_list_data}",
+    "icon": "list-remove-duplicates",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "unique_list_data",
+        "title": "Deduplicated List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.get_common_elements_from_list": {
+    "key": "ListProcess.get_common_elements_from_list",
+    "title": "Get Duplicate Items from Two Lists",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get common elements from list @{list_data_1} and list @{list_data_2}, return duplicate items list @{common_list_data}",
+    "icon": "get-list-duplicates",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data_1",
+        "title": "First List",
+        "tip": ""
+      },
+      {
+        "key": "list_data_2",
+        "title": "Second List",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "common_list_data",
+        "title": "Duplicate Items List",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.get_value_from_list": {
+    "key": "ListProcess.get_value_from_list",
+    "title": "Get List Value by Index",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get value from list @{list_data} at index @{index} @{get_list_value}",
+    "icon": "get-list-value-by-index",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      },
+      {
+        "key": "index",
+        "title": "Index",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_list_value",
+        "title": "value",
+        "tip": ""
+      }
+    ]
+  },
+  "ListProcess.get_length_of_list": {
+    "key": "ListProcess.get_length_of_list",
+    "title": "Get List Length",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get length of list @{list_data} @{get_list_length}",
+    "icon": "get-list-length",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_list_length",
+        "title": "Length",
+        "tip": ""
+      }
+    ]
+  },
+  "MathProcess.generate_random_number": {
+    "key": "MathProcess.generate_random_number",
+    "title": "Generate Random Number",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Generate @{number_type} type @{size} random numbers, range from @{start} to @{end}, return generated random numbers @{generated_random_numbers}",
+    "icon": "generate-random-number",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "number_type",
+        "title": "Random Number Type",
+        "tip": ""
+      },
+      {
+        "key": "size",
+        "title": "Random Number Count",
+        "tip": ""
+      },
+      {
+        "key": "start",
+        "title": "Start Range",
+        "tip": ""
+      },
+      {
+        "key": "end",
+        "title": "End Range",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "generated_random_numbers",
+        "title": "Generated Random Numbers",
+        "tip": ""
+      }
+    ]
+  },
+  "MathProcess.get_rounding_number": {
+    "key": "MathProcess.get_rounding_number",
+    "title": "Round",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Round number @{number} to @{precision} decimal places, return rounded number @{rounding_number}",
+    "icon": "round-number",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "number",
+        "title": "Original Data",
+        "tip": ""
+      },
+      {
+        "key": "precision",
+        "title": "Precision",
+        "tip": "Can specify decimal places, for example 2 rounds to 2 decimal places. Also supports negative numbers and 0, for example -2 rounds to 2 places before decimal point"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "rounding_number",
+        "title": "Rounded Number",
+        "tip": ""
+      }
+    ]
+  },
+  "MathProcess.self_calculation_number": {
+    "key": "MathProcess.self_calculation_number",
+    "title": "Increment/Decrement",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Increment or decrement number @{number} by @{add_sub_number}, return result after calculation @{self_calculation_number}",
+    "icon": "increment-decrement",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "number",
+        "title": "Original Data",
+        "tip": ""
+      },
+      {
+        "key": "add_sub",
+        "title": "Increment/Decrement",
+        "tip": "Select whether to increment or decrement"
+      },
+      {
+        "key": "add_sub_number",
+        "title": "Increment/Decrement Number",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "self_calculation_number",
+        "title": "Result After Increment/Decrement",
+        "tip": ""
+      }
+    ]
+  },
+  "MathProcess.get_absolute_number": {
+    "key": "MathProcess.get_absolute_number",
+    "title": "Get Absolute Value",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get absolute value of number @{raw_number} @{absolute_number}",
+    "icon": "get-absolute-value",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "raw_number",
+        "title": "Original Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "absolute_number",
+        "title": "Absolute Value of Original Data",
+        "tip": ""
+      }
+    ]
+  },
+  "MathProcess.calculate_expression": {
+    "key": "MathProcess.calculate_expression",
+    "title": "Math Calculation",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Perform basic math calculation @{left}  @{operator}  @{right}, return calculation result @{calculation_number}",
+    "icon": "math-calculation",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "left",
+        "title": "Left Operand",
+        "tip": ""
+      },
+      {
+        "key": "operator",
+        "title": "Operator",
+        "tip": ""
+      },
+      {
+        "key": "right",
+        "title": "Right Operand",
+        "tip": ""
+      },
+      {
+        "key": "handle_method",
+        "title": "Result Handling Method",
+        "tip": ""
+      },
+      {
+        "key": "precision",
+        "title": "Round to Decimal Places",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "calculation_number",
+        "title": "Calculation Result",
+        "tip": ""
+      }
+    ]
+  },
+  "StringProcess.extract_content_from_string": {
+    "key": "StringProcess.extract_content_from_string",
+    "title": "Extract Content from Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Extract @{extract_type} type content from text @{text}",
+    "icon": "text-extract-content",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "text",
+        "title": "Original Text",
+        "tip": "Enter text to extract content from"
+      },
+      {
+        "key": "extract_type",
+        "title": "Extract Type",
+        "tip": "Select the type to extract"
+      },
+      {
+        "key": "regex_formula",
+        "title": "Regular Expression",
+        "tip": "Enter regular expression, for example [\\u4e00-\\u9fff] to extract Chinese characters, \\d to extract numbers, [a-zA-Z] to extract English letters, etc"
+      },
+      {
+        "key": "first_flag",
+        "title": "Extract Only First Match",
+        "tip": "Whether to extract only first match"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "extract_from_string",
+        "title": "Extracted Content",
+        "tip": "Return extracted content"
+      }
+    ]
+  },
+  "StringProcess.replace_content_in_string": {
+    "key": "StringProcess.replace_content_in_string",
+    "title": "Replace Content in Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Replace @{replace_type} type content in text @{text} with @{new_value}",
+    "icon": "text-replace-content",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "text",
+        "title": "Original Text",
+        "tip": "Enter text with content to replace"
+      },
+      {
+        "key": "replace_type",
+        "title": "Replace Type",
+        "tip": "Select the type to replace"
+      },
+      {
+        "key": "replaced_string",
+        "title": "String to Replace",
+        "tip": "Enter string to replace"
+      },
+      {
+        "key": "regex_formula",
+        "title": "Replace with Regular Expression",
+        "tip": "Enter regular expression to replace content"
+      },
+      {
+        "key": "new_value",
+        "title": "Replace With",
+        "tip": "Enter new value"
+      },
+      {
+        "key": "first_flag",
+        "title": "Replace Only First Match",
+        "tip": "Whether to replace only first match"
+      },
+      {
+        "key": "ignore_case_flag",
+        "title": "Ignore Case",
+        "tip": "Whether to ignore case"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "replaced_content_string",
+        "title": "Replaced Text",
+        "tip": "Return replaced text"
+      }
+    ]
+  },
+  "StringProcess.merge_list_to_string": {
+    "key": "StringProcess.merge_list_to_string",
+    "title": "Aggregate List to Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Aggregate content from list @{list_data} to text @{merged_string_from_list}",
+    "icon": "list-to-text",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "list_data",
+        "title": "List Data",
+        "tip": "Enter list data to aggregate"
+      },
+      {
+        "key": "separator",
+        "title": "Separator",
+        "tip": "Enter separator"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "merged_string_from_list",
+        "title": "Aggregated Text",
+        "tip": "Return aggregated text"
+      }
+    ]
+  },
+  "StringProcess.split_string_to_list": {
+    "key": "StringProcess.split_string_to_list",
+    "title": "Split Text to List",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Split text @{string_data} by @{separator} to list @{split_list_from_string}",
+    "icon": "text-split-to-list",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "string_data",
+        "title": "Text Data",
+        "tip": "Enter text data to split"
+      },
+      {
+        "key": "separator",
+        "title": "Separator",
+        "tip": "Enter separator"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "split_list_from_string",
+        "title": "Split List",
+        "tip": "Return split list"
+      }
+    ]
+  },
+  "StringProcess.concatenate_string": {
+    "key": "StringProcess.concatenate_string",
+    "title": "Merge Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Merge @{string_data_1} and @{string_data_2} to @{concat_string}",
+    "icon": "text-merge",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "string_data_1",
+        "title": "First Text",
+        "tip": "Enter first text to merge"
+      },
+      {
+        "key": "string_data_2",
+        "title": "Second Text",
+        "tip": "Enter second text to merge"
+      },
+      {
+        "key": "concat_type",
+        "title": "Merge Type",
+        "tip": "Select merge type, can use custom separator"
+      },
+      {
+        "key": "separator",
+        "title": "Separator",
+        "tip": "enterSeparator"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "concat_string",
+        "title": "Merged Text",
+        "tip": "returnMerged Text"
+      }
+    ]
+  },
+  "StringProcess.fill_string_to_length": {
+    "key": "StringProcess.fill_string_to_length",
+    "title": "Pad Text to Fixed Length",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Pad text @{string_data} to @{total_length} length, padding method @{fill_type}",
+    "icon": "text-pad-to-length",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "string_data",
+        "title": "Text Data",
+        "tip": "Enter text data to pad"
+      },
+      {
+        "key": "add_str",
+        "title": "Padding Character",
+        "tip": ""
+      },
+      {
+        "key": "total_length",
+        "title": "Total Length",
+        "tip": "Enter total length to pad to"
+      },
+      {
+        "key": "fill_type",
+        "title": "Padding Method",
+        "tip": "Select padding method, can choose left pad or right pad"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "complete_string",
+        "title": "Padded Text",
+        "tip": ""
+      }
+    ]
+  },
+  "StringProcess.strip_string": {
+    "key": "StringProcess.strip_string",
+    "title": "Trim Text Spaces",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Remove spaces from both sides of text @{string_data} @{stripped_string}",
+    "icon": "text-trim-spaces",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "string_data",
+        "title": "Text Data",
+        "tip": ""
+      },
+      {
+        "key": "strip_method",
+        "title": "Trim Method",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "stripped_string",
+        "title": "Text After Trimming Spaces",
+        "tip": ""
+      }
+    ]
+  },
+  "StringProcess.cut_string_to_length": {
+    "key": "StringProcess.cut_string_to_length",
+    "title": "Extract Fixed Length Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Extract @{length} length from text @{string_data}, extraction method @{cut_type}, return extracted text @{cut_string}",
+    "icon": "screenshot-fixed-text",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "string_data",
+        "title": "Extract Text",
+        "tip": ""
+      },
+      {
+        "key": "length",
+        "title": "Extract Length",
+        "tip": ""
+      },
+      {
+        "key": "cut_type",
+        "title": "Extract Type",
+        "tip": ""
+      },
+      {
+        "key": "index",
+        "title": "Start Extraction from Character",
+        "tip": ""
+      },
+      {
+        "key": "find_str",
+        "title": "String to Search",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "cut_string",
+        "title": "Extracted Text",
+        "tip": ""
+      }
+    ]
+  },
+  "StringProcess.change_case_of_string": {
+    "key": "StringProcess.change_case_of_string",
+    "title": "Change Text Case",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Change text @{string_data} case to @{case_type}, return changed text @{change_case_string}",
+    "icon": "change-text-case",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "string_data",
+        "title": "Text Data",
+        "tip": ""
+      },
+      {
+        "key": "case_type",
+        "title": "Case Type",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "change_case_string",
+        "title": "Changed Text",
+        "tip": ""
+      }
+    ]
+  },
+  "StringProcess.get_string_length": {
+    "key": "StringProcess.get_string_length",
+    "title": "Get Text Length",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get length of text @{string_data} @{string_length}",
+    "icon": "get-text-length",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "string_data",
+        "title": "Text Data",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "string_length",
+        "title": "Text Length",
+        "tip": ""
+      }
+    ]
+  },
+  "TimeProcess.get_current_time": {
+    "key": "TimeProcess.get_current_time",
+    "title": "Get Current Time",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get current time, format as @{time_format}, return current time object @{current_time}",
+    "icon": "get-current-time",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "time_format",
+        "title": "Time Format",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "current_time",
+        "title": "Current Time Object",
+        "tip": "Return value is time object, can output as string format via shortcut function or conversion atomic capability"
+      }
+    ]
+  },
+  "TimeProcess.set_time": {
+    "key": "TimeProcess.set_time",
+    "title": "Set Time",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Set time @{time}, setting method @{change_type}, return time object after setting @{set_time}",
+    "icon": "set-time",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "time",
+        "title": "Time Object",
+        "tip": ""
+      },
+      {
+        "key": "change_type",
+        "title": "Date Adjustment Method",
+        "tip": ""
+      },
+      {
+        "key": "seconds",
+        "title": "Second",
+        "tip": ""
+      },
+      {
+        "key": "minutes",
+        "title": "Minute",
+        "tip": ""
+      },
+      {
+        "key": "hours",
+        "title": "Hour",
+        "tip": ""
+      },
+      {
+        "key": "days",
+        "title": "Day",
+        "tip": ""
+      },
+      {
+        "key": "months",
+        "title": "Month",
+        "tip": ""
+      },
+      {
+        "key": "years",
+        "title": "Year",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "set_time",
+        "title": "Set Time Object",
+        "tip": ""
+      }
+    ]
+  },
+  "TimeProcess.time_to_timestamp": {
+    "key": "TimeProcess.time_to_timestamp",
+    "title": "DateTime to Timestamp",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Convert time object @{time} to timestamp with @{timestamp_unit} precision, return converted timestamp @{converted_timestamp}",
+    "icon": "datetime-to-timestamp",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "time",
+        "title": "Time Object",
+        "tip": ""
+      },
+      {
+        "key": "timestamp_unit",
+        "title": "Timestamp Precision",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "converted_timestamp",
+        "title": "Timestamp",
+        "tip": ""
+      }
+    ]
+  },
+  "TimeProcess.timestamp_to_time": {
+    "key": "TimeProcess.timestamp_to_time",
+    "title": "Timestamp to DateTime",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Convert timestamp @{timestamp} to time object @{converted_time}",
+    "icon": "timestamp-to-datetime",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "timestamp",
+        "title": "Timestamp",
+        "tip": ""
+      },
+      {
+        "key": "time_zone",
+        "title": "Select Time Zone",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "converted_time",
+        "title": "Time Object",
+        "tip": ""
+      }
+    ]
+  },
+  "TimeProcess.get_time_difference": {
+    "key": "TimeProcess.get_time_difference",
+    "title": "Get Time Difference",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get time difference between @{time_1} and @{time_2}, unit @{time_unit}, return time difference @{time_difference}",
+    "icon": "get-time-difference",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "time_1",
+        "title": "Time Object 1",
+        "tip": ""
+      },
+      {
+        "key": "time_2",
+        "title": "Time Object 2",
+        "tip": ""
+      },
+      {
+        "key": "time_unit",
+        "title": "Time Unit",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "time_difference",
+        "title": "Time Difference",
+        "tip": ""
+      }
+    ]
+  },
+  "TimeProcess.format_datetime": {
+    "key": "TimeProcess.format_datetime",
+    "title": "Output Formatted Time Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Output time object @{time} as text in specified format @{format_type} @{format_datetime}",
+    "icon": "output-formatted-time",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "time",
+        "title": "Time Object",
+        "tip": ""
+      },
+      {
+        "key": "format_type",
+        "title": "Time Format",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "format_datetime",
+        "title": "Time Text",
+        "tip": ""
+      }
+    ]
+  },
+  "Dialog.message_box": {
+    "key": "Dialog.message_box",
+    "title": "Message Prompt Box",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "",
+    "icon": "message-dialog",
+    "helpManual": "Open message prompt dialog box, you can set the content and title of the message prompt.",
+    "inputList": [
+      {
+        "key": "box_title",
+        "title": "Dialog Title",
+        "tip": "User-defined title displayed at the top of the dialog box, the title content is limited to 50 characters. If not entered, the default title is \"Message Prompt Box\""
+      },
+      {
+        "key": "message_type",
+        "title": "Message Type",
+        "tip": "Selectable message type"
+      },
+      {
+        "key": "message_content",
+        "title": "Message Content",
+        "tip": "User-defined content displayed in the dialog box, the content is limited to 120 characters"
+      },
+      {
+        "key": "button_type",
+        "title": "Display Buttons",
+        "tip": "Buttons that can be displayed in the message box for user selection, only switching is allowed, not empty state"
+      },
+      {
+        "key": "auto_check",
+        "title": "Auto Close Dialog on No Operation",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "No Operation Timeout Wait (seconds)",
+        "tip": "Set timeout wait time, if no mouse movement behavior is detected beyond this time, the default button will be selected, default is 60 seconds"
+      },
+      {
+        "key": "default_button_c",
+        "title": "Default Selected Button on Timeout",
+        "tip": ""
+      },
+      {
+        "key": "default_button_cn",
+        "title": "Default Selected Button on Timeout",
+        "tip": ""
+      },
+      {
+        "key": "default_button_y",
+        "title": "Default Selected Button on Timeout",
+        "tip": ""
+      },
+      {
+        "key": "default_button_yn",
+        "title": "Default Selected Button on Timeout",
+        "tip": ""
+      },
+      {
+        "key": "preview_button",
+        "title": "Preview",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "result_button",
+        "title": "Save User Selected Button to",
+        "tip": ""
+      }
+    ]
+  },
+  "Dialog.input_box": {
+    "key": "Dialog.input_box",
+    "title": "Input Dialog Box",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "",
+    "icon": "input-dialog",
+    "helpManual": "Open input dialog box, user needs to input information and confirm submission, returns the content entered by the user in the dialog box.",
+    "inputList": [
+      {
+        "key": "box_title",
+        "title": "Dialog Title",
+        "tip": "The title content is limited to 50 characters, if not entered, the default title is \"Input Dialog Box\""
+      },
+      {
+        "key": "input_type",
+        "title": "Input Box Type",
+        "tip": ""
+      },
+      {
+        "key": "input_title",
+        "title": "Input Box Title",
+        "tip": ""
+      },
+      {
+        "key": "default_input_text",
+        "title": "Input Box Default Value",
+        "tip": "If filled in, the default text will be displayed in the dialog box as a text prompt, the content is limited to 120 characters"
+      },
+      {
+        "key": "default_input_pwd",
+        "title": "Input Box Default Value",
+        "tip": "If filled in, the default password will be displayed in the dialog box, password length is between 4-16 characters"
+      },
+      {
+        "key": "preview_button",
+        "title": "Preview",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "input_content",
+        "title": "Save User Input Content to",
+        "tip": ""
+      }
+    ]
+  },
+  "Dialog.select_box": {
+    "key": "Dialog.select_box",
+    "title": "Select Dialog Box",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "",
+    "icon": "select-dialog",
+    "helpManual": "Open select dialog box, save one or more options selected by the user from the selection list",
+    "inputList": [
+      {
+        "key": "box_title",
+        "title": "Dialog Title",
+        "tip": ""
+      },
+      {
+        "key": "select_type",
+        "title": "Selection Mode",
+        "tip": ""
+      },
+      {
+        "key": "options",
+        "title": "Options",
+        "tip": ""
+      },
+      {
+        "key": "options_title",
+        "title": "Selection Box Title",
+        "tip": ""
+      },
+      {
+        "key": "preview_button",
+        "title": "Preview",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "select_result",
+        "title": "Save Selection Result to",
+        "tip": ""
+      }
+    ]
+  },
+  "Dialog.select_time_box": {
+    "key": "Dialog.select_time_box",
+    "title": "Date Time Picker",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "",
+    "icon": "datetime-picker",
+    "helpManual": "Open date time picker, save the date or time selected by the user",
+    "inputList": [
+      {
+        "key": "box_title",
+        "title": "Dialog Title",
+        "tip": ""
+      },
+      {
+        "key": "time_type",
+        "title": "Time Type",
+        "tip": ""
+      },
+      {
+        "key": "time_format",
+        "title": "Time Format",
+        "tip": ""
+      },
+      {
+        "key": "default_time",
+        "title": "Default Time",
+        "tip": ""
+      },
+      {
+        "key": "default_time_range",
+        "title": "Default Time",
+        "tip": ""
+      },
+      {
+        "key": "input_title",
+        "title": "Input Box Title",
+        "tip": ""
+      },
+      {
+        "key": "preview_button",
+        "title": "Preview",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "select_time",
+        "title": "Save Time Selection Result to",
+        "tip": ""
+      }
+    ]
+  },
+  "Dialog.select_file_box": {
+    "key": "Dialog.select_file_box",
+    "title": "File Selection Dialog Box",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "",
+    "icon": "file-select-dialog",
+    "helpManual": "Open system file selection dialog box, save the corresponding file/folder path selected by the user",
+    "inputList": [
+      {
+        "key": "box_title_file",
+        "title": "Dialog Title",
+        "tip": ""
+      },
+      {
+        "key": "box_title_folder",
+        "title": "Dialog Title",
+        "tip": ""
+      },
+      {
+        "key": "open_type",
+        "title": "Open Type",
+        "tip": ""
+      },
+      {
+        "key": "file_type",
+        "title": "File Type",
+        "tip": ""
+      },
+      {
+        "key": "multiple_choice",
+        "title": "Allow Multiple Selection",
+        "tip": ""
+      },
+      {
+        "key": "select_title",
+        "title": "Selection Box Title",
+        "tip": ""
+      },
+      {
+        "key": "default_path",
+        "title": "Default Folder",
+        "tip": "When this parameter is configured, the file selection box will default to this folder path for the next step of selection"
+      },
+      {
+        "key": "preview_button",
+        "title": "Preview",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "select_file",
+        "title": "Save File Selection Result to",
+        "tip": "Save the user's file selection result, if the user clicks the cancel button, it will return empty value"
+      }
+    ]
+  },
+  "Dialog.custom_box": {
+    "key": "Dialog.custom_box",
+    "title": "Custom Dialog Box",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "",
+    "icon": "custom-dialog",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "box_title",
+        "title": "Dialog Title",
+        "tip": ""
+      },
+      {
+        "key": "design_interface",
+        "title": "Design Dialog Interface",
+        "tip": "Click the button to enter the dialog design popup interface",
+        "value": ""
+      },
+      {
+        "key": "auto_check",
+        "title": "Auto Close Dialog on No Operation",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "No Operation Timeout Wait (seconds)",
+        "tip": ""
+      },
+      {
+        "key": "default_button",
+        "title": "Default Selected Button on Timeout",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "dialog_result",
+        "title": "Custom Dialog Result",
+        "tip": "Store the output results of all form controls and the clicked button result"
+      }
+    ]
+  },
+  "Email.send_email": {
+    "key": "Email.send_email",
+    "title": "Send Email",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Send email to specified mailbox @{receiver}",
+    "icon": "send-email",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "receiver",
+        "title": "Recipient Email",
+        "tip": ""
+      },
+      {
+        "key": "cc",
+        "title": "CC Email",
+        "tip": ""
+      },
+      {
+        "key": "subject",
+        "title": "Subject",
+        "tip": ""
+      },
+      {
+        "key": "is_html",
+        "title": "Is HTML Format",
+        "tip": ""
+      },
+      {
+        "key": "content",
+        "title": "Content",
+        "tip": ""
+      },
+      {
+        "key": "attachment_path",
+        "title": "Attachment Path",
+        "tip": ""
+      },
+      {
+        "key": "mail_server",
+        "title": "Mail Server",
+        "tip": ""
+      },
+      {
+        "key": "other_mail_server",
+        "title": "Other Mail Server",
+        "tip": ""
+      },
+      {
+        "key": "mail_port",
+        "title": "Mail Server Port",
+        "tip": ""
+      },
+      {
+        "key": "use_ssl",
+        "title": "Use SSL Encryption",
+        "tip": ""
+      },
+      {
+        "key": "sender_mail",
+        "title": "Sender Email",
+        "tip": ""
+      },
+      {
+        "key": "send_name",
+        "title": "Sender Name",
+        "tip": ""
+      },
+      {
+        "key": "password",
+        "title": "Password/Authorization Code",
+        "tip": ""
+      },
+      {
+        "key": "bcc",
+        "title": "BCC Email",
+        "tip": ""
+      },
+      {
+        "key": "replace_table",
+        "title": "Smart Fill Table",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Email.receive_email": {
+    "key": "Email.receive_email",
+    "title": "Receive Email",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Receive email info from mailbox (@{user_mail})",
+    "icon": "receive-email",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "mail_server",
+        "title": "Mail Server Address",
+        "tip": "Select a mailbox type"
+      },
+      {
+        "key": "custom_mail_server",
+        "title": "IMAP Server Address",
+        "tip": "Enter specified IMAP server address"
+      },
+      {
+        "key": "custom_mail_port",
+        "title": "IMAP Server Port",
+        "tip": "Enter specified IMAP server port"
+      },
+      {
+        "key": "user_mail",
+        "title": "User Email Account",
+        "tip": "IMAP server authentication username, usually the mailbox account, refer to specific email service provider specifications"
+      },
+      {
+        "key": "user_password",
+        "title": "Authorization Code",
+        "tip": "IMAP server authentication authorization code, usually requires SMS verification to activate. Some mailboxes use account password. Refer to specific email service provider specifications"
+      },
+      {
+        "key": "max_return_num",
+        "title": "Maximum Email Count",
+        "tip": "Maximum number of emails to return"
+      },
+      {
+        "key": "unseen_flag",
+        "title": "Unread Only",
+        "tip": "Get only unread emails or all emails"
+      },
+      {
+        "key": "save_attachment_flag",
+        "title": "Save Attachments",
+        "tip": "Whether to download email attachments"
+      },
+      {
+        "key": "save_attachment_path",
+        "title": "Save Directory",
+        "tip": "Attachment save directory"
+      },
+      {
+        "key": "folder_name",
+        "title": "Folder Name",
+        "tip": "Enter the mailbox folder name to receive emails from, default is INBOX"
+      },
+      {
+        "key": "mask_as_read_flag",
+        "title": "Mark as Read",
+        "tip": "After receiving email, mark email as read"
+      },
+      {
+        "key": "sender_text",
+        "title": "Sender Contains",
+        "tip": "Filter by sender containing keywords"
+      },
+      {
+        "key": "receiver_text",
+        "title": "Recipient Contains",
+        "tip": "Filter by recipient containing keywords"
+      },
+      {
+        "key": "theme_text",
+        "title": "Subject Contains",
+        "tip": "Filter by subject containing keywords"
+      },
+      {
+        "key": "content_text",
+        "title": "Body Contains",
+        "tip": "Filter by body containing keywords"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "mail_list",
+        "title": "Save Email List",
+        "tip": "Specify a variable name to store the returned email list to this variable"
+      }
+    ]
+  },
+  "Encrypt.md5_encrypt": {
+    "key": "Encrypt.md5_encrypt",
+    "title": "MD5 Encryption",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Perform MD5 encryption on string (@{source_str})",
+    "icon": "md5-encrypt",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "source_str",
+        "title": "String to Encrypt",
+        "tip": ""
+      },
+      {
+        "key": "md5_method",
+        "title": "Encryption Bits",
+        "tip": ""
+      },
+      {
+        "key": "case_method",
+        "title": "Case Selection",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "md5_encrypted_result",
+        "title": "MD5 Encryption Result",
+        "tip": ""
+      }
+    ]
+  },
+  "Encrypt.sha_encrypt": {
+    "key": "Encrypt.sha_encrypt",
+    "title": "SHA Encryption",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Perform SHA encryption on string (@{source_str})",
+    "icon": "sha-encrypt",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "source_str",
+        "title": "String to Encrypt",
+        "tip": ""
+      },
+      {
+        "key": "sha_method",
+        "title": "SHA Encryption Method",
+        "tip": ""
+      },
+      {
+        "key": "case_method",
+        "title": "Case Selection",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "sha_encrypted_result",
+        "title": "SHA Encryption Result",
+        "tip": ""
+      }
+    ]
+  },
+  "Encrypt.symmetric_encrypt": {
+    "key": "Encrypt.symmetric_encrypt",
+    "title": "Symmetric Encryption",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Perform symmetric encryption on string (@{source_str})",
+    "icon": "symmetric-encrypt",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "source_str",
+        "title": "String to Encrypt",
+        "tip": ""
+      },
+      {
+        "key": "password",
+        "title": "Encryption Key",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "symmetric_encrypted_result",
+        "title": "Symmetric Encryption Result",
+        "tip": ""
+      }
+    ]
+  },
+  "Encrypt.symmetric_decrypt": {
+    "key": "Encrypt.symmetric_decrypt",
+    "title": "Symmetric Decryption",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Perform symmetric decryption on string (@{source_str})",
+    "icon": "symmetric-decrypt",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "source_str",
+        "title": "String to Decrypt",
+        "tip": ""
+      },
+      {
+        "key": "password",
+        "title": "Decryption Key",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "symmetric_decrypted_result",
+        "title": "Symmetric Decryption Result",
+        "tip": ""
+      }
+    ]
+  },
+  "Encrypt.base64_encoding": {
+    "key": "Encrypt.base64_encoding",
+    "title": "Base64 Encoding",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Read string or image file and encode to Base64 string, return encoded string (@{encoded_string})",
+    "icon": "base64-encode",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "encode_type",
+        "title": "Encoding Type",
+        "tip": ""
+      },
+      {
+        "key": "string_data",
+        "title": "String Data",
+        "tip": ""
+      },
+      {
+        "key": "file_path",
+        "title": "File Path",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "encoded_string",
+        "title": "Encoded String",
+        "tip": ""
+      }
+    ]
+  },
+  "Encrypt.base64_decoding": {
+    "key": "Encrypt.base64_decoding",
+    "title": "Base64 Decoding",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Read Base64 string (@{string_data}), decode to string or image file",
+    "icon": "base64-decode",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "decode_type",
+        "title": "Decoding Type",
+        "tip": ""
+      },
+      {
+        "key": "string_data",
+        "title": "Base64 String",
+        "tip": ""
+      },
+      {
+        "key": "file_path",
+        "title": "Image Save Folder",
+        "tip": ""
+      },
+      {
+        "key": "file_name",
+        "title": "Image File Name",
+        "tip": ""
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Handling for Existing Files",
+        "tip": "Select handling method for existing files, supports overwrite original file, create file copy, or cancel save operation"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "decoded_string",
+        "title": "Decoded String/Image Absolute Path",
+        "tip": ""
+      }
+    ]
+  },
+  "Enterprise.upload_to_sharefolder": {
+    "key": "Enterprise.upload_to_sharefolder",
+    "title": "Upload File to Shared Folder",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Upload file @{file_path}, return upload result @{upload_result}",
+    "icon": "",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "Upload File Path",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "upload_result",
+        "title": "Upload File Result",
+        "tip": ""
+      }
+    ]
+  },
+  "Enterprise.download_from_sharefolder": {
+    "key": "Enterprise.download_from_sharefolder",
+    "title": "Download File from Shared Folder",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Download file @{file_path} to @{save_folder}, return download result @{download_result}",
+    "icon": "",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "Shared Folder File",
+        "tip": ""
+      },
+      {
+        "key": "save_folder",
+        "title": "File Save Path",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "download_result",
+        "title": "Download Result",
+        "tip": ""
+      }
+    ]
+  },
+  "Enterprise.get_shared_variable": {
+    "key": "Enterprise.get_shared_variable",
+    "title": "Get Shared Variable",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get Shared Variable @{shared_variable} to variable @{variable_data}",
+    "icon": "get-shared-variable",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "shared_variable",
+        "title": "Shared Variable Name",
+        "tip": "Select the shared variable to get"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "variable_data",
+        "title": "Save Shared Variable To",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.open_excel": {
+    "key": "Excel.open_excel",
+    "title": "Open Excel File",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Open Excel file at @{file_path}, return Excel object @{open_excel_obj}",
+    "icon": "excel-open-file",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "File Path",
+        "tip": "Enter file path"
+      },
+      {
+        "key": "default_application",
+        "title": "Default Application",
+        "tip": "Select default application, Excel or WPS"
+      },
+      {
+        "key": "visible_flag",
+        "title": "Visible",
+        "tip": ""
+      },
+      {
+        "key": "password",
+        "title": "Password",
+        "tip": ""
+      },
+      {
+        "key": "update_links",
+        "title": "Update External Links Automatically",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "open_excel_obj",
+        "title": "Opened Excel Object",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.get_excel": {
+    "key": "Excel.get_excel",
+    "title": "Get Opened Excel Object",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get Excel object with file name @{file_name}, return Excel object @{get_excel_obj}",
+    "icon": "get-open-excel-objects",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_name",
+        "title": "File Name",
+        "tip": "Enter file name, no need to enter the variable from previous open Excel operation"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_excel_obj",
+        "title": "Retrieved Excel Object",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.create_excel": {
+    "key": "Excel.create_excel",
+    "title": "Create Excel File",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Create Excel file named @{file_name} at path @{file_path}, return Excel object @{create_excel_obj}",
+    "icon": "excel-create-file",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "Save Folder Path",
+        "tip": ""
+      },
+      {
+        "key": "file_name",
+        "title": "Save File Name",
+        "tip": "Enter file name"
+      },
+      {
+        "key": "default_application",
+        "title": "Default Application",
+        "tip": "Select default application, Excel or WPS"
+      },
+      {
+        "key": "visible_flag",
+        "title": "Visible",
+        "tip": ""
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing file, can choose overwrite, rename, or cancel save"
+      },
+      {
+        "key": "password",
+        "title": "File Open Password",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "create_excel_obj",
+        "title": "Created Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "excel_path",
+        "title": "Created Excel File Path",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.save_excel": {
+    "key": "Excel.save_excel",
+    "title": "Save Excel File",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Save Excel object @{excel}, save type @{save_type}",
+    "icon": "excel-save-file",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": "Enter Excel object"
+      },
+      {
+        "key": "save_type",
+        "title": "Save Type",
+        "tip": "Select save type, can choose save or save as"
+      },
+      {
+        "key": "file_path",
+        "title": "File Path",
+        "tip": "Enter file path"
+      },
+      {
+        "key": "file_name",
+        "title": "File Name",
+        "tip": "Enter file name"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing file, can choose overwrite, rename, or cancel save"
+      },
+      {
+        "key": "close_flag",
+        "title": "Close File",
+        "tip": "Choose whether to close the file after saving, can choose close or don't close"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.close_excel": {
+    "key": "Excel.close_excel",
+    "title": "Close Excel File",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Close @{close_range_flag}, current Excel object @{excel}, save type @{save_type_one||save_type_all}",
+    "icon": "excel-close-file",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "close_range_flag",
+        "title": "Close Scope",
+        "tip": "Select close scope, such as close current document or close all documents"
+      },
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": "Enter Excel object"
+      },
+      {
+        "key": "save_type_one",
+        "title": "Save Type",
+        "tip": "Select save type, can choose save, save as, or don't save"
+      },
+      {
+        "key": "save_type_all",
+        "title": "Save Type",
+        "tip": "Select save type, can choose save or don't save"
+      },
+      {
+        "key": "file_path",
+        "title": "File Path",
+        "tip": "Enter file path"
+      },
+      {
+        "key": "file_name",
+        "title": "File Name",
+        "tip": "Enter file name"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing file, can choose overwrite, rename, or cancel save"
+      },
+      {
+        "key": "pkill_flag",
+        "title": "Close Process",
+        "tip": "Choose whether to close process, can choose close or don't close"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.edit_excel": {
+    "key": "Excel.edit_excel",
+    "title": "Write to Excel File",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Edit Excel object @{excel}, write content @{value}",
+    "icon": "excel-write-file",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": "Enter Excel object"
+      },
+      {
+        "key": "edit_range",
+        "title": "Edit Range",
+        "tip": "Select edit range, can choose row, column, or area"
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "start_col",
+        "title": "Start Column",
+        "tip": "Enter the starting column position to edit, supports letter (such as 'A') or number (such as 1) format."
+      },
+      {
+        "key": "start_row",
+        "title": "Start Row",
+        "tip": "Enter the starting row number to edit, counting from 1. Can be left empty when selecting column (COLUMN), required when selecting row (ROW) or area (AREA)"
+      },
+      {
+        "key": "value",
+        "title": "Insert Content",
+        "tip": "The content to modify is entered as a list. When selecting row or column, enter a list like [1,2,3], which means writing 1,2,3 in sequence in the specified row; when selecting area, enter a list like [[1,1],[2,2]], which means writing data by row in the specified area"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.read_excel": {
+    "key": "Excel.read_excel",
+    "title": "Read Excel File Content",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Read Excel file content from worksheet @{sheet_name} in Excel object @{excel}",
+    "icon": "excel-read-content",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": "Enter Excel object"
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "read_range",
+        "title": "Read Range",
+        "tip": "Select read range, can choose cell, row, column, area, or edited area"
+      },
+      {
+        "key": "start_col",
+        "title": "Start Column",
+        "tip": "Enter start column"
+      },
+      {
+        "key": "end_col",
+        "title": "End Column",
+        "tip": "Enter end column"
+      },
+      {
+        "key": "cell",
+        "title": "Cell",
+        "tip": "Enter cell to read, such as A1"
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "column",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "start_row",
+        "title": "Start Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "end_row",
+        "title": "End Row",
+        "tip": "Enter integer representing row number, -n means the nth row from the end"
+      },
+      {
+        "key": "read_display",
+        "title": "Read Cell Display Content",
+        "tip": "Choose whether to read the content displayed in the cell, can choose yes or no"
+      },
+      {
+        "key": "trim_spaces",
+        "title": "Trim Spaces",
+        "tip": "Choose whether to trim spaces, can choose yes or no"
+      },
+      {
+        "key": "replace_none",
+        "title": "Replace None Values",
+        "tip": "Choose whether to replace None values with empty strings, can choose yes or no"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "read_excel_contents",
+        "title": "Read Excel Content",
+        "tip": "The read Excel content is returned as a list"
+      }
+    ]
+  },
+  "Excel.design_cell_type": {
+    "key": "Excel.design_cell_type",
+    "title": "Set Cell Format",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Set cell format in worksheet @{sheet_name} of @{excel}, font size @{font_size}, font name @{font_name}, font color @{font_color}, background color @{bg_color}",
+    "icon": "excel-set-cell-format",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "design_type",
+        "title": "Set Range",
+        "tip": "Select set range, can choose cell, row, column, or area"
+      },
+      {
+        "key": "cell_position",
+        "title": "Cell Position",
+        "tip": "Enter cell position, such as A1"
+      },
+      {
+        "key": "range_position",
+        "title": "Range Position",
+        "tip": "Enter cell range, such as A1:B2"
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "col_width",
+        "title": "Column Width",
+        "tip": ""
+      },
+      {
+        "key": "bg_color",
+        "title": "Background Color",
+        "tip": ""
+      },
+      {
+        "key": "font_color",
+        "title": "Font Color",
+        "tip": ""
+      },
+      {
+        "key": "font_type",
+        "title": "Font Style",
+        "tip": ""
+      },
+      {
+        "key": "font_name",
+        "title": "Font Name",
+        "tip": ""
+      },
+      {
+        "key": "font_size",
+        "title": "Font Size",
+        "tip": ""
+      },
+      {
+        "key": "numberformat",
+        "title": "Number Format",
+        "tip": ""
+      },
+      {
+        "key": "numberformat_other",
+        "title": "Custom Number Format",
+        "tip": ""
+      },
+      {
+        "key": "horizontal_align",
+        "title": "Horizontal Alignment",
+        "tip": ""
+      },
+      {
+        "key": "vertical_align",
+        "title": "Vertical Alignment",
+        "tip": ""
+      },
+      {
+        "key": "wrap_text",
+        "title": "Wrap Text",
+        "tip": ""
+      },
+      {
+        "key": "auto_row_height",
+        "title": "Auto Row Height",
+        "tip": ""
+      },
+      {
+        "key": "auto_column_width",
+        "title": "Auto Column Width",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.copy_excel": {
+    "key": "Excel.copy_excel",
+    "title": "Copy Excel Cell",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Copy cell from worksheet @{sheet_name} in Excel object @{excel}, return copied content as string @{copy_excel_contents}",
+    "icon": "excel-copy-cell",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "copy_range_type",
+        "title": "Copy Range",
+        "tip": ""
+      },
+      {
+        "key": "cell_position",
+        "title": "Cell Position",
+        "tip": "Fill in cell position, such as A1"
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "range_position",
+        "title": "Cell Range",
+        "tip": "Fill in cell range, such as A1:B2"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "copy_excel_contents",
+        "title": "Excel Copied Content",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.paste_excel": {
+    "key": "Excel.paste_excel",
+    "title": "Paste Excel Cell",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Paste cell to worksheet @{sheet_name} in Excel object @{excel}",
+    "icon": "excel-paste-cell",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "paste_type",
+        "title": "Paste Type",
+        "tip": ""
+      },
+      {
+        "key": "start_location",
+        "title": "Start Location",
+        "tip": "Enter start cell position, such as A1"
+      },
+      {
+        "key": "skip_blanks",
+        "title": "Skip Blank Rows",
+        "tip": ""
+      },
+      {
+        "key": "transpose",
+        "title": "Transpose",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.delete_excel_cell": {
+    "key": "Excel.delete_excel_cell",
+    "title": "Delete Excel Cell",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Delete cell from worksheet @{sheet_name} in Excel object @{excel}",
+    "icon": "excel-delete-cell",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "delete_range_excel",
+        "title": "Delete Range",
+        "tip": ""
+      },
+      {
+        "key": "coordinate",
+        "title": "Cell Position",
+        "tip": "Enter cell position, such as A1"
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "data_region",
+        "title": "Cell Range",
+        "tip": "Enter cell range, such as A1:B2"
+      },
+      {
+        "key": "direction",
+        "title": "Remaining Data Fill Direction",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.clear_excel_content": {
+    "key": "Excel.clear_excel_content",
+    "title": "Clear Excel Range Content",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Clear cell content from worksheet @{sheet_name} in Excel object @{excel}",
+    "icon": "excel-clear-range",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "select_type",
+        "title": "Range Selection",
+        "tip": "Select the range content to delete"
+      },
+      {
+        "key": "cell_location",
+        "title": "Cell Position",
+        "tip": "Enter cell position, such as A1"
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "data_range",
+        "title": "Cell Range",
+        "tip": "Enter continuous cell range, such as A1:B2"
+      },
+      {
+        "key": "clear_type",
+        "title": "Clear Type",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.insert_excel_row_or_column": {
+    "key": "Excel.insert_excel_row_or_column",
+    "title": "Insert Excel Row or Column",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Insert row or column to worksheet @{sheet_name} in Excel object @{excel}",
+    "icon": "excel-insert-row-column",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "insert_type",
+        "title": "Insert Type",
+        "tip": ""
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "row_direction",
+        "title": "Insert Row Direction",
+        "tip": ""
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "col_direction",
+        "title": "Insert Column Direction",
+        "tip": ""
+      },
+      {
+        "key": "blank_rows",
+        "title": "Insert Blank Rows/Columns Only",
+        "tip": ""
+      },
+      {
+        "key": "insert_num",
+        "title": "Number of Rows to Insert",
+        "tip": ""
+      },
+      {
+        "key": "insert_content",
+        "title": "Insert Content",
+        "tip": "When inserting a single or multiple rows, the insert content needs to be a multi-dimensional list, and characters need to use single quotes '', for example: insert 1 row, write content: [[123,24,32]], insert 2 rows, write content: [[123,123],['aaa']], then the actual content written to excel is: first row: 123 123; second row: aaa; write content: [[123,123],'aaa'], then the actual content written to excel is: first row: 123 123; second row: a a a; if the inserted rows or columns exceed the data length, the extra cells will remain empty"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.get_excel_row_num": {
+    "key": "Excel.get_excel_row_num",
+    "title": "Get Excel Row Count",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get row count of worksheet @{sheet_name} in Excel object @{excel}, return row count @{excel_row_num}",
+    "icon": "excel-get-row-count",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "get_col_type",
+        "title": "Get Type",
+        "tip": ""
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "excel_row_num",
+        "title": "Excel Row Count",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.get_excel_col_num": {
+    "key": "Excel.get_excel_col_num",
+    "title": "Get Excel Column Count",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get column count of worksheet @{sheet_name} in Excel object @{excel}, return column count @{excel_col_num}",
+    "icon": "excel-get-column-count",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "get_row_type",
+        "title": "Get Type",
+        "tip": ""
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "output_type",
+        "title": "Output Format",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "excel_col_num",
+        "title": "Excel Column Count",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.get_excel_first_available_row": {
+    "key": "Excel.get_excel_first_available_row",
+    "title": "Get Excel First Available Row",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get first available row of worksheet @{sheet_name} in Excel object @{excel}, return available row @{get_first_available_row}",
+    "icon": "excel-get-first-available-row",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_first_available_row",
+        "title": "First Available Row",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.get_excel_first_available_col": {
+    "key": "Excel.get_excel_first_available_col",
+    "title": "Get Excel First Available Column",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get first available column of worksheet @{sheet_name} in Excel object @{excel}, return available column @{get_first_available_col}",
+    "icon": "excel-get-first-available-column",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "output_type",
+        "title": "Output Format",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_first_available_col",
+        "title": "First Available Column",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.loop_excel_content": {
+    "key": "Excel.loop_excel_content",
+    "title": "Loop Excel Content",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Loop through @{select_type} content in Excel object @{excel}, output loop item position to @{key}, output loop item to @{value}",
+    "icon": "excel-loop-content",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "select_type",
+        "title": "Loop Range",
+        "tip": ""
+      },
+      {
+        "key": "start_row",
+        "title": "Start Row",
+        "tip": "Enter start row number, starting from 1"
+      },
+      {
+        "key": "end_row",
+        "title": "End Row",
+        "tip": "Enter end row number, -n means the nth row from the end"
+      },
+      {
+        "key": "start_col",
+        "title": "Start Column",
+        "tip": "Enter start column number, such as A or 1"
+      },
+      {
+        "key": "end_col",
+        "title": "End Column",
+        "tip": "Enter end column number, -n means the nth column from the end"
+      },
+      {
+        "key": "real_text",
+        "title": "Get Visible Value",
+        "tip": "The visible value of Excel is the value seen when opened, the real value may be a hidden formula, etc. Select no to get the real value"
+      },
+      {
+        "key": "cell_strip",
+        "title": "Trim Spaces",
+        "tip": "Whether to remove leading and trailing spaces and line breaks"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "key",
+        "title": "Loop Item Position",
+        "tip": "For example A, B"
+      },
+      {
+        "key": "value",
+        "title": "Loop Item",
+        "tip": "For example [1.0, None]"
+      }
+    ]
+  },
+  "Excel.excel_get_cell_color": {
+    "key": "Excel.excel_get_cell_color",
+    "title": "Get Excel Cell Color",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get color of cell @{coordinate} from worksheet @{sheet_name} in Excel object @{excel}, return color @{get_cell_color}",
+    "icon": "excel-get-cell-color",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "coordinate",
+        "title": "Cell Position",
+        "tip": "Enter cell position, such as A1"
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_cell_color",
+        "title": "Cell Color",
+        "tip": ""
+      }
+    ]
+  },
+  "Excel.merge_split_excel_cell": {
+    "key": "Excel.merge_split_excel_cell",
+    "title": "Merge or Split Excel Cell",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Merge or split cells in worksheet @{sheet_name} of Excel object @{excel}",
+    "icon": "excel-split-cell",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "job_type",
+        "title": "Merge or Split Type",
+        "tip": ""
+      },
+      {
+        "key": "merge_cell_range",
+        "title": "Merge Cell Range",
+        "tip": "Enter continuous cell range to merge, such as A1:B2"
+      },
+      {
+        "key": "split_cell_range",
+        "title": "Split Cell Range",
+        "tip": "Enter continuous cell range to split, such as A1:B2"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.add_excel_worksheet": {
+    "key": "Excel.add_excel_worksheet",
+    "title": "Add Excel Worksheet",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Add worksheet @{sheet_name} to Excel object @{excel}",
+    "icon": "add-excel-worksheet",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "insert_type",
+        "title": "Insert Position",
+        "tip": ""
+      },
+      {
+        "key": "relative_sheet_name",
+        "title": "Insert Before/After...",
+        "tip": "Enter the worksheet name related to the relative position, such as 'Sheet1'"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.move_excel_worksheet": {
+    "key": "Excel.move_excel_worksheet",
+    "title": "Move Excel Worksheet",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Move worksheet @{move_sheet} in Excel object @{excel}, move type @{move_type}",
+    "icon": "excel-move-sheet",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "move_type",
+        "title": "Move Type",
+        "tip": ""
+      },
+      {
+        "key": "move_sheet",
+        "title": "Worksheet to Move",
+        "tip": "Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1"
+      },
+      {
+        "key": "move_to_sheet",
+        "title": "Target Worksheet",
+        "tip": "Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.delete_excel_worksheet": {
+    "key": "Excel.delete_excel_worksheet",
+    "title": "Delete Excel Worksheet",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Delete worksheet @{del_sheet_name} from Excel object @{excel}",
+    "icon": "excel-delete-sheet",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "del_sheet_name",
+        "title": "Delete Worksheet",
+        "tip": "Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.rename_excel_worksheet": {
+    "key": "Excel.rename_excel_worksheet",
+    "title": "Rename Excel Worksheet",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Rename worksheet @{source_sheet_name} to @{new_sheet_name} in Excel object @{excel}",
+    "icon": "excel-rename-sheet",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "source_sheet_name",
+        "title": "Original Worksheet",
+        "tip": "Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1"
+      },
+      {
+        "key": "new_sheet_name",
+        "title": "New Worksheet Name",
+        "tip": "Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.copy_excel_worksheet": {
+    "key": "Excel.copy_excel_worksheet",
+    "title": "Copy Excel Worksheet",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Copy worksheet @{source_sheet_name} in Excel object @{excel}, copy type @{copy_type}",
+    "icon": "excel-copy-sheet",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "source_sheet_name",
+        "title": "Original Worksheet",
+        "tip": "Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1"
+      },
+      {
+        "key": "new_sheet_name",
+        "title": "New Worksheet Name",
+        "tip": "Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1"
+      },
+      {
+        "key": "location",
+        "title": "Copy Position",
+        "tip": ""
+      },
+      {
+        "key": "copy_type",
+        "title": "Copy Type",
+        "tip": ""
+      },
+      {
+        "key": "other_excel_obj",
+        "title": "Other Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "is_cover",
+        "title": "Overwrite",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.get_excel_worksheet_names": {
+    "key": "Excel.get_excel_worksheet_names",
+    "title": "Get Excel Worksheet Names",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get worksheet names from Excel object @{excel}, return worksheet name list @{sheet_names}",
+    "icon": "excel-get-sheet-names",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_range",
+        "title": "Worksheet Range",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "sheet_names",
+        "title": "Worksheet Names",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      }
+    ]
+  },
+  "Excel.search_and_replace_excel_content": {
+    "key": "Excel.search_and_replace_excel_content",
+    "title": "Find or Replace Excel Content",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Find or replace @{find_str} in @{search_range} range of Excel object @{excel}, return search result @{search_excel_result}",
+    "icon": "excel-find-replace",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "find_str",
+        "title": "Find Content",
+        "tip": ""
+      },
+      {
+        "key": "replace_flag",
+        "title": "Replace",
+        "tip": ""
+      },
+      {
+        "key": "replace_str",
+        "title": "Replace Content",
+        "tip": ""
+      },
+      {
+        "key": "lookup_range_excel",
+        "title": "Search Range",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "search_range",
+        "title": "Search Range in Worksheet",
+        "tip": ""
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "start_row",
+        "title": "Start Row",
+        "tip": ""
+      },
+      {
+        "key": "end_row",
+        "title": "End Row",
+        "tip": ""
+      },
+      {
+        "key": "start_col",
+        "title": "Start Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "end_col",
+        "title": "End Column",
+        "tip": "Enter column name, supports entering letter A or integer 1, -n means the nth column from the end"
+      },
+      {
+        "key": "exact_match",
+        "title": "Exact Match",
+        "tip": ""
+      },
+      {
+        "key": "case_flag",
+        "title": "Case Sensitive",
+        "tip": ""
+      },
+      {
+        "key": "match_range",
+        "title": "Match Count",
+        "tip": ""
+      },
+      {
+        "key": "output_type",
+        "title": "Output Type",
+        "tip": "Returns cell position by default, such as ['A1', 'B2'], or you can choose to return row and column numbers separately, such as [['A', 1], ['B', 2]]"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "search_excel_result",
+        "title": "Search Result",
+        "tip": "Single worksheet search returns a list of cell positions, such as ['A1', 'B2'], multiple worksheet search returns a dictionary of worksheet names and cell position lists, such as {'Sheet1': ['A1', 'B2'], 'Sheet2': ['C3', 'D4']}"
+      }
+    ]
+  },
+  "Excel.insert_pic": {
+    "key": "Excel.insert_pic",
+    "title": "Insert Excel Image",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Insert image @{pic_path} to worksheet @{sheet_name} in Excel object @{excel}, insert type @{pic_size_type}",
+    "icon": "excel-insert-image",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "insert_pos",
+        "title": "Insert Position",
+        "tip": "Can fill in cell position, such as 'A1'; can also fill in range position, such as 'A1:B2'"
+      },
+      {
+        "key": "pic_path",
+        "title": "Image Path",
+        "tip": ""
+      },
+      {
+        "key": "pic_size_type",
+        "title": "Image Size Control",
+        "tip": ""
+      },
+      {
+        "key": "pic_height",
+        "title": "Image Height",
+        "tip": ""
+      },
+      {
+        "key": "pic_width",
+        "title": "Image Width",
+        "tip": ""
+      },
+      {
+        "key": "pic_scale",
+        "title": "Image Scale",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.insert_formula": {
+    "key": "Excel.insert_formula",
+    "title": "Insert Excel Formula",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Insert formula @{formula} to worksheet @{sheet_name} in Excel object @{excel}",
+    "icon": "excel-insert-formula",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "insert_direction",
+        "title": "Formula Insert Direction",
+        "tip": ""
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "start_row",
+        "title": "Start Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "end_row",
+        "title": "End Row",
+        "tip": "Enter integer representing row number, -n means the nth row from the end"
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "start_col",
+        "title": "Start Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "end_col",
+        "title": "End Column",
+        "tip": "Enter column name, supports entering letter A or integer 1, -n means the nth column from the end"
+      },
+      {
+        "key": "formula",
+        "title": "Insert Formula",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.create_excel_comment": {
+    "key": "Excel.create_excel_comment",
+    "title": "Create Excel Comment",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Insert comment @{comment} to Excel object @{excel}",
+    "icon": "excel-create-comment",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "comment_type",
+        "title": "Comment Insert Method",
+        "tip": "Can insert by specifying cell or by searching content"
+      },
+      {
+        "key": "comment",
+        "title": "Comment Content",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "cell_position",
+        "title": "Cell Position",
+        "tip": "Enter cell position, such as A1"
+      },
+      {
+        "key": "comment_range",
+        "title": "Search Range",
+        "tip": ""
+      },
+      {
+        "key": "find_str",
+        "title": "Search Content",
+        "tip": ""
+      },
+      {
+        "key": "comment_all",
+        "title": "Comment All Matches",
+        "tip": "Selecting yes will comment all matching content, selecting no will only comment the first matching content"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.delete_excel_comment": {
+    "key": "Excel.delete_excel_comment",
+    "title": "Delete Excel Comment",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Delete comment from Excel object @{excel}",
+    "icon": "excel-delete-comment",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "delete_all",
+        "title": "Delete All Comments",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "cell_position",
+        "title": "Cell Position",
+        "tip": "Enter cell position, such as A1"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.excel_text_to_number": {
+    "key": "Excel.excel_text_to_number",
+    "title": "Excel Range Text to Number",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Convert range text to number format in worksheet @{sheet_name} of Excel object @{excel_obj}",
+    "icon": "excel-text-to-number",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel_obj",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "select_type",
+        "title": "Range Selection",
+        "tip": ""
+      },
+      {
+        "key": "cell_position",
+        "title": "Cell Position",
+        "tip": "Enter cell position, such as A1"
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "range_location",
+        "title": "Cell Range",
+        "tip": "Enter cell range, such as A1:B2"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.excel_number_to_text": {
+    "key": "Excel.excel_number_to_text",
+    "title": "Excel Range Number to Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Convert range numbers to text format in worksheet @{sheet_name} of Excel object @{excel_obj}",
+    "icon": "excel-number-to-text",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel_obj",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "select_type",
+        "title": "Range Selection",
+        "tip": ""
+      },
+      {
+        "key": "cell_position",
+        "title": "Cell Position",
+        "tip": "Enter cell position, such as A1"
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "range_location",
+        "title": "Cell Range",
+        "tip": "Enter cell range, such as A1:B2"
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.excel_set_col_width": {
+    "key": "Excel.excel_set_col_width",
+    "title": "Set Excel Column Width",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Set column width of @{col} in worksheet @{sheet_name} of Excel object @{excel_obj}",
+    "icon": "excel-set-column-width",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel_obj",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "set_type",
+        "title": "Set Type",
+        "tip": ""
+      },
+      {
+        "key": "col",
+        "title": "Column",
+        "tip": "Enter column name, supports entering letter A or integer 1"
+      },
+      {
+        "key": "width",
+        "title": "Column Width",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Excel.excel_set_row_height": {
+    "key": "Excel.excel_set_row_height",
+    "title": "Set Excel Row Height",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Set row height of @{row} in worksheet @{sheet_name} of Excel object @{excel_obj}",
+    "icon": "excel-set-row-height",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "excel_obj",
+        "title": "Excel Object",
+        "tip": ""
+      },
+      {
+        "key": "sheet_name",
+        "title": "Worksheet Name",
+        "tip": "Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default"
+      },
+      {
+        "key": "set_type",
+        "title": "Set Type",
+        "tip": ""
+      },
+      {
+        "key": "row",
+        "title": "Row",
+        "tip": "Enter integer representing row number, starting from 1"
+      },
+      {
+        "key": "height",
+        "title": "Row Height",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "Network.http_request": {
+    "key": "Network.http_request",
+    "title": "HTTP Request",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Send HTTP request (@{request_type}) to URL(@{url}), request headers(@{headers}), request body(@{body}), and save response result to {@{http_response}}",
+    "icon": "http-request",
+    "helpManual": "Send HTTP request to specified URL",
+    "inputList": [
+      {
+        "key": "url",
+        "title": "URL",
+        "tip": ""
+      },
+      {
+        "key": "request_type",
+        "title": "Request Type",
+        "tip": ""
+      },
+      {
+        "key": "headers",
+        "title": "Request Headers",
+        "tip": ""
+      },
+      {
+        "key": "body",
+        "title": "Request Body",
+        "tip": ""
+      },
+      {
+        "key": "file_path",
+        "title": "File Path to Upload",
+        "tip": ""
+      },
+      {
+        "key": "time_out",
+        "title": "Timeout",
+        "tip": ""
+      },
+      {
+        "key": "save_type",
+        "title": "Save Response Result to File",
+        "tip": "Save response result to specified text file"
+      },
+      {
+        "key": "save_path",
+        "title": "Document Save Directory",
+        "tip": "Enter file save directory"
+      },
+      {
+        "key": "save_name",
+        "title": "File Name",
+        "tip": "Enter save file name, default is text file"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "http_response",
+        "title": "Save Response Result to",
+        "tip": ""
+      }
+    ]
+  },
+  "Network.http_download": {
+    "key": "Network.http_download",
+    "title": "HTTP Download",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "HTTP Download",
+    "icon": "http-download",
+    "helpManual": "Download file from specified URL(@{url}) and save to specified directory(@{dst_dir}), and save download path to variable(@{http_download_path})",
+    "inputList": [
+      {
+        "key": "url",
+        "title": "Download URL",
+        "tip": ""
+      },
+      {
+        "key": "dst_dir",
+        "title": "File Save Directory",
+        "tip": ""
+      },
+      {
+        "key": "rename",
+        "title": "Specify File Name",
+        "tip": "If not specified, automatically uses default file name from download path, reports error if no default file name"
+      },
+      {
+        "key": "state_type",
+        "title": "When Directory Does Not Exist",
+        "tip": "Set handling method when file save directory does not exist"
+      },
+      {
+        "key": "exist_type",
+        "title": "When File Exists",
+        "tip": "Set handling method when target file already exists"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "http_download_path",
+        "title": "Save Downloaded File to",
+        "tip": "Save downloaded file path to variable"
+      }
+    ]
+  },
+  "Network.ftp_create": {
+    "key": "Network.ftp_create",
+    "title": "Create FTP Connection",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Establish FTP connection to address(@{host}), port(@{port}), output as(@{ftp_instance})",
+    "icon": "ftp-create-connection",
+    "helpManual": "Establish an FTP connection to file server and return connection object",
+    "inputList": [
+      {
+        "key": "host",
+        "title": "Server Address",
+        "tip": "FTP server address"
+      },
+      {
+        "key": "port",
+        "title": "Server Port Number",
+        "tip": "FTP server port number"
+      },
+      {
+        "key": "name",
+        "title": "Username",
+        "tip": "Login account provided by file server"
+      },
+      {
+        "key": "password",
+        "title": "User Password",
+        "tip": "Password for login account provided by file server"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "ftp_instance",
+        "title": "Save FTP Connection Object to",
+        "tip": "Save created FTP connection object to specified variable"
+      }
+    ]
+  },
+  "Network.ftp_close": {
+    "key": "Network.ftp_close",
+    "title": "Close FTP Connection",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Disconnect FTP connection(@{ftp_instance}), and output result to variable(@{close_ftp})",
+    "icon": "ftp-close-connection",
+    "helpManual": "Disconnect an FTP connection and return disconnect result",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Object",
+        "tip": "FTP connection object to disconnect"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "close_ftp",
+        "title": "Save Disconnect Result to",
+        "tip": "Boolean value of whether FTP connection was successfully disconnected"
+      }
+    ]
+  },
+  "Network.get_work_dir": {
+    "key": "Network.get_work_dir",
+    "title": "Get Working Directory (FTP)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get current working directory of(@{ftp_instance}), output as(@{get_work_dir})",
+    "icon": "get-work-directory",
+    "helpManual": "Get current working directory of FTP object",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Connection Object",
+        "tip": "Current FTP connection object"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_work_dir",
+        "title": "Save Working Directory to",
+        "tip": "Output obtained working directory"
+      }
+    ]
+  },
+  "Network.change_working_dir": {
+    "key": "Network.change_working_dir",
+    "title": "Change Working Directory (FTP)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Change working directory of FTP connection(@{ftp_instance}) to(@{new_work_dir}), and save changed working directory to(@{change_work_dir})",
+    "icon": "change-work-directory",
+    "helpManual": "Change FTP connection current working directory to specified path",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Connection Object",
+        "tip": "FTP connection object that needs working directory change"
+      },
+      {
+        "key": "new_work_dir",
+        "title": "Working Directory",
+        "tip": "New working directory to change to"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "change_work_dir",
+        "title": "Changed Working Directory",
+        "tip": "Output current working directory after change"
+      }
+    ]
+  },
+  "Network.create_folder": {
+    "key": "Network.create_folder",
+    "title": "Create Folder (FTP)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Create folder(@{folder_name}) under specified FTP connection(@{ftp_instance}), and save new folder path to(@{new_folder})",
+    "icon": "create-folder",
+    "helpManual": "Create folder under specified FTP connection",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Connection Object",
+        "tip": "FTP connection object where folder needs to be created"
+      },
+      {
+        "key": "folder_name",
+        "title": "New Folder Name",
+        "tip": "Folder name to create"
+      },
+      {
+        "key": "exist_type",
+        "title": "When Folder Exists",
+        "tip": "Operation to perform when folder with same name exists under FTP connection"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "new_folder",
+        "title": "Created Folder Path",
+        "tip": "Save created folder path to variable"
+      }
+    ]
+  },
+  "Network.get_ftp_list": {
+    "key": "Network.get_ftp_list",
+    "title": "Get File/Folder (FTP)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get (@{file_type}) list under specified FTP connection(@{ftp_instance}), and save to(@{get_ftp_list})",
+    "icon": "get-folder",
+    "helpManual": "Get all file/folder list under specified FTP connection",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Connection Object",
+        "tip": "FTP connection object to get file and folder information"
+      },
+      {
+        "key": "file_type",
+        "title": "Get Object",
+        "tip": "Select object to get"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_ftp_list",
+        "title": "Obtained File/Folder List",
+        "tip": "Output file/folder list under FTP connection to variable"
+      }
+    ]
+  },
+  "Network.ftp_rename": {
+    "key": "Network.ftp_rename",
+    "title": "Rename File/Folder (FTP)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Rename (@{file_type})(@{cur_file_name||cur_folder_name}) in(@{ftp_instance}) to new name(@{new_file_name||new_folder_name}), and save renamed path to variable(@{rename_ftp_path})",
+    "icon": "rename-folder",
+    "helpManual": "Rename file/folder on FTP server",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Connection Object",
+        "tip": "FTP connection object to perform file/folder rename operation"
+      },
+      {
+        "key": "file_type",
+        "title": "Rename Object",
+        "tip": ""
+      },
+      {
+        "key": "cur_file_name",
+        "title": "Original File Name",
+        "tip": "Enter file to rename"
+      },
+      {
+        "key": "new_file_name",
+        "title": "New File Name (excluding file extension)",
+        "tip": "Enter new file name, excluding file extension"
+      },
+      {
+        "key": "cur_folder_name",
+        "title": "Original Folder Name",
+        "tip": "Enter folder to rename"
+      },
+      {
+        "key": "new_folder_name",
+        "title": "New Folder Name",
+        "tip": "Enter new folder name"
+      },
+      {
+        "key": "exist_type",
+        "title": "When Renamed Object Exists",
+        "tip": "Operation to perform when renamed object already exists"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "rename_ftp_path",
+        "title": "Renamed Path",
+        "tip": "Save renamed (@{file_type}) path to variable"
+      }
+    ]
+  },
+  "Network.ftp_upload": {
+    "key": "Network.ftp_upload",
+    "title": "Upload File/Folder (FTP)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Upload (@{file_path||folder_path}) to FTP specified directory(@{ftp_pwd}), and save uploaded path result to(@{upload_ftp_list})",
+    "icon": "upload-folder",
+    "helpManual": "Upload one or more local files/folders to FTP specified directory",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Connection Object",
+        "tip": "FTP connection object to upload file/folder"
+      },
+      {
+        "key": "file_type",
+        "title": "Upload Object",
+        "tip": ""
+      },
+      {
+        "key": "ftp_pwd",
+        "title": "Remote Working Directory",
+        "tip": "Remote working directory for file/folder upload, default is empty, uploads to current working path"
+      },
+      {
+        "key": "file_path",
+        "title": "File to Upload",
+        "tip": "Supports single or multiple file upload, multiple file names separated by comma, e.g.:test1.txt,test2.txt,test3.txt"
+      },
+      {
+        "key": "folder_path",
+        "title": "Folder to Upload",
+        "tip": "Supports single or multiple folder upload, multiple folders separated by comma, e.g.:folder1,folder2,folder3"
+      },
+      {
+        "key": "exist_type",
+        "title": "When Upload Object Already Exists",
+        "tip": "Handling method when file/folder to upload already exists on FTP server"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "upload_ftp_list",
+        "title": "Upload List",
+        "tip": "Output uploaded file/folder path information on FTP server to variable, data type is list"
+      }
+    ]
+  },
+  "Network.ftp_download": {
+    "key": "Network.ftp_download",
+    "title": "Download File/Folder (FTP)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Download (@{download_file_name||download_folder_name}) to local directory(@{dst_path}), and save downloaded path to variable(@{download_ftp_path})",
+    "icon": "download-folder",
+    "helpManual": "Download multiple files/folders from FTP server to local",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Connection Object",
+        "tip": "FTP server connection object to perform download file/folder"
+      },
+      {
+        "key": "file_type",
+        "title": "Download Object",
+        "tip": ""
+      },
+      {
+        "key": "download_file_name",
+        "title": "File to Download",
+        "tip": "Supports single or multiple file download, multiple file names separated by comma, e.g.:test1.txt,test2.txt,test3.txt"
+      },
+      {
+        "key": "download_folder_name",
+        "title": "Folder to Download",
+        "tip": "Supports single or multiple folder download, multiple folders separated by comma, e.g.:folder1,folder2,folder3"
+      },
+      {
+        "key": "dst_path",
+        "title": "Download to",
+        "tip": "Local storage path"
+      },
+      {
+        "key": "state_type",
+        "title": "When Local Path Does Not Exist",
+        "tip": "Operation to perform when local storage path does not exist"
+      },
+      {
+        "key": "exist_type",
+        "title": "When Download Object Exists",
+        "tip": "Operation to perform when downloaded file/folder exists"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "download_ftp_path",
+        "title": "Download List",
+        "tip": "Output downloaded file/folder path list to variable, data type is list"
+      }
+    ]
+  },
+  "Network.ftp_delete": {
+    "key": "Network.ftp_delete",
+    "title": "Delete File/Folder (FTP)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Delete (@{delete_file_name||delete_folder_name}) on(@{ftp_instance}), and output delete result to variable(@{delete_ftp_result})",
+    "icon": "delete-folder-ftp",
+    "helpManual": "Delete specified file/folder in FTP server",
+    "inputList": [
+      {
+        "key": "ftp_instance",
+        "title": "FTP Connection Object",
+        "tip": "FTP connection object to perform file/folder delete operation"
+      },
+      {
+        "key": "file_type",
+        "title": "Delete Object",
+        "tip": ""
+      },
+      {
+        "key": "delete_file_name",
+        "title": "File to Delete",
+        "tip": "Supports single or multiple file deletion, multiple file names separated by comma, e.g.:test1.txt,test2.txt,test3.txt"
+      },
+      {
+        "key": "delete_folder_name",
+        "title": "Folder to Delete",
+        "tip": "Supports single or multiple folder deletion, multiple folders separated by comma, e.g.:folder1,folder2,folder3"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "delete_ftp_result",
+        "title": "Delete Result",
+        "tip": "Output delete result to variable, data type is boolean"
+      }
+    ]
+  },
+  "OpenApi.id_card": {
+    "key": "OpenApi.id_card",
+    "title": "ID Card Recognition",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "ID Card Recognition",
+    "icon": "id-card-recognition",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "is_multi",
+        "title": "Batch Processing",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially"
+      },
+      {
+        "key": "src_file",
+        "title": "Image File",
+        "tip": ""
+      },
+      {
+        "key": "src_dir",
+        "title": "Image Folder",
+        "tip": ""
+      },
+      {
+        "key": "is_save",
+        "title": "Output Document",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially, saves as Excel document by default, modification not supported"
+      },
+      {
+        "key": "dst_file",
+        "title": "Document Output Path",
+        "tip": ""
+      },
+      {
+        "key": "dst_file_name",
+        "title": "Document Output File Name",
+        "tip": "selectDocument Output File Name"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "id_card",
+        "title": "ID Card Recognition Result Object",
+        "tip": "Output ID card recognition result"
+      }
+    ]
+  },
+  "OpenApi.business_license": {
+    "key": "OpenApi.business_license",
+    "title": "Business License Recognition",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Business License Recognition",
+    "icon": "business-license-recognition",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "is_multi",
+        "title": "Batch Processing",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially"
+      },
+      {
+        "key": "src_file",
+        "title": "Image File",
+        "tip": ""
+      },
+      {
+        "key": "src_dir",
+        "title": "Image Folder",
+        "tip": ""
+      },
+      {
+        "key": "is_save",
+        "title": "Output Document",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially, saves as Excel document by default, modification not supported"
+      },
+      {
+        "key": "dst_file",
+        "title": "Document Output Path",
+        "tip": ""
+      },
+      {
+        "key": "dst_file_name",
+        "title": "Document Output File Name",
+        "tip": "Select document output file name"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "business_license",
+        "title": "Business License Result Object",
+        "tip": "Output business license result object"
+      }
+    ]
+  },
+  "OpenApi.vat_invoice": {
+    "key": "OpenApi.vat_invoice",
+    "title": "VAT Invoice Recognition",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "VAT Invoice Recognition",
+    "icon": "vat-invoice-recognition",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "is_multi",
+        "title": "Batch Processing",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially"
+      },
+      {
+        "key": "src_file",
+        "title": "Image File",
+        "tip": ""
+      },
+      {
+        "key": "src_dir",
+        "title": "Image Folder",
+        "tip": ""
+      },
+      {
+        "key": "is_save",
+        "title": "Output Document",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially, saves as Excel document by default, modification not supported"
+      },
+      {
+        "key": "dst_file",
+        "title": "Document Output Path",
+        "tip": ""
+      },
+      {
+        "key": "dst_file_name",
+        "title": "Document Output File Name",
+        "tip": "Select document output file name"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "vat_invoice",
+        "title": "VAT Invoice Recognition Result Object",
+        "tip": "Output VAT invoice recognition result object"
+      }
+    ]
+  },
+  "OpenApi.train_ticket": {
+    "key": "OpenApi.train_ticket",
+    "title": "Train Ticket Recognition",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Train Ticket Recognition",
+    "icon": "train-ticket-recognition",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "is_multi",
+        "title": "Batch Processing",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially"
+      },
+      {
+        "key": "src_file",
+        "title": "Image File",
+        "tip": ""
+      },
+      {
+        "key": "src_dir",
+        "title": "Image Folder",
+        "tip": ""
+      },
+      {
+        "key": "is_save",
+        "title": "Output Document",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially, saves as Excel document by default, modification not supported"
+      },
+      {
+        "key": "dst_file",
+        "title": "Document Output Path",
+        "tip": ""
+      },
+      {
+        "key": "dst_file_name",
+        "title": "Document Output File Name",
+        "tip": "Select document output file name"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "train_ticket",
+        "title": "Train Ticket Recognition Result Object",
+        "tip": "Train ticket recognition result object"
+      }
+    ]
+  },
+  "OpenApi.taxi_ticket": {
+    "key": "OpenApi.taxi_ticket",
+    "title": "Taxi Invoice Recognition",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Taxi Invoice Recognition",
+    "icon": "taxi-invoice-recognition",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "is_multi",
+        "title": "Batch Processing",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially"
+      },
+      {
+        "key": "src_file",
+        "title": "Image File",
+        "tip": ""
+      },
+      {
+        "key": "src_dir",
+        "title": "Image Folder",
+        "tip": ""
+      },
+      {
+        "key": "is_save",
+        "title": "Output Document",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially, saves as Excel document by default, modification not supported"
+      },
+      {
+        "key": "dst_file",
+        "title": "Document Output Path",
+        "tip": ""
+      },
+      {
+        "key": "dst_file_name",
+        "title": "Document Output File Name",
+        "tip": "Select document output file name"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "taxi_ticket",
+        "title": "Taxi Invoice Recognition Result Object",
+        "tip": "Taxi invoice recognition result object"
+      }
+    ]
+  },
+  "OpenApi.common_ocr": {
+    "key": "OpenApi.common_ocr",
+    "title": "General Text Recognition",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "General Text Recognition",
+    "icon": "general-text-recognition",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "is_multi",
+        "title": "Batch Processing",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially"
+      },
+      {
+        "key": "src_file",
+        "title": "Image File",
+        "tip": ""
+      },
+      {
+        "key": "src_dir",
+        "title": "Image Folder",
+        "tip": ""
+      },
+      {
+        "key": "is_save",
+        "title": "Output Document",
+        "tip": "Select 'No' to process one image file each time, select 'Yes' to process all files in folder sequentially, saves as Excel document by default, modification not supported"
+      },
+      {
+        "key": "dst_file",
+        "title": "Document Output Path",
+        "tip": "Select document output folder"
+      },
+      {
+        "key": "dst_file_name",
+        "title": "Document Output File Name",
+        "tip": "Select document output file name"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "common_ocr",
+        "title": "General Text Recognition Result Object",
+        "tip": "Output general text recognition result object"
+      }
+    ]
+  },
+  "PDF.get_pages_num": {
+    "key": "PDF.get_pages_num",
+    "title": "Get PDF Document Page Count",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get page count of PDF document at @{file_path}, return @{pdf_pages_num}",
+    "icon": "pdf-get-page-count",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "PDF File Path",
+        "tip": "Enter PDF file path"
+      },
+      {
+        "key": "password",
+        "title": "PDF File Password",
+        "tip": "Enter PDF file password, leave empty if no password"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "pdf_pages_num",
+        "title": "PDF Document Page Count",
+        "tip": "Returns PDF document page count"
+      }
+    ]
+  },
+  "PDF.get_pdf_text": {
+    "key": "PDF.get_pdf_text",
+    "title": "Extract PDF Document Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Extract text from PDF document at @{file_path}, return as string or list @{pdf_text}",
+    "icon": "pdf-extract-text",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "PDF File Path",
+        "tip": "Enter PDF file path"
+      },
+      {
+        "key": "password",
+        "title": "PDF File Password",
+        "tip": "Enter PDF file password, leave empty if no password"
+      },
+      {
+        "key": "select_range",
+        "title": "Select Range",
+        "tip": "Select range, supports all pages or specified page range"
+      },
+      {
+        "key": "page_range",
+        "title": "Specified Page Range",
+        "tip": "Enter page range, format is 1-3,5,7-9,11, meaning pages 1 to 3, page 5, pages 7 to 9, page 11"
+      },
+      {
+        "key": "text_save_type",
+        "title": "Save as File",
+        "tip": "Choose whether to save extracted text as file, can save as Word or text file format"
+      },
+      {
+        "key": "save_dir",
+        "title": "Save File Path",
+        "tip": "Select the folder path to save the file"
+      },
+      {
+        "key": "save_file_name",
+        "title": "Save File Name",
+        "tip": "Enter save file name, if not entered, default file name will be used"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "pdf_text",
+        "title": "Extracted PDF Document Text",
+        "tip": "Extracted PDF document text, stored and returned as a list"
+      }
+    ]
+  },
+  "PDF.get_pdf_images": {
+    "key": "PDF.get_pdf_images",
+    "title": "Extract PDF Document Images",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Extract images from PDF document at @{file_path}, and save to @{save_dir} folder",
+    "icon": "pdf-extract-images",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "PDF File Path",
+        "tip": ""
+      },
+      {
+        "key": "pwd",
+        "title": "PDF File Password",
+        "tip": "If PDF file requires password, please enter password, otherwise leave empty"
+      },
+      {
+        "key": "select_range",
+        "title": "Select Range",
+        "tip": "Select range, supports all pages or specified page range"
+      },
+      {
+        "key": "page_range",
+        "title": "Specified Page Range",
+        "tip": "Enter page range, format is 1-3,5,7-9,11, meaning pages 1 to 3, page 5, pages 7 to 9, page 11"
+      },
+      {
+        "key": "image_type",
+        "title": "Image Format",
+        "tip": "Select image format, supports JPEG, PNG and other formats"
+      },
+      {
+        "key": "save_dir",
+        "title": "Save File Path",
+        "tip": "Select the folder path to save the file"
+      },
+      {
+        "key": "prefix",
+        "title": "Image File Name Prefix",
+        "tip": "Enter image file name prefix, if not entered, original file name prefix will be used"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      }
+    ],
+    "outputList": []
+  },
+  "PDF.merge_pdf_files": {
+    "key": "PDF.merge_pdf_files",
+    "title": "Merge PDF Files",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Merge PDF files into one PDF file, and save to @{pdf_merge_file_path} path",
+    "icon": "merge-pdf-files",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "merge_type",
+        "title": "Merge Method",
+        "tip": "Select merge method, supports merge by folder or merge by file"
+      },
+      {
+        "key": "file_folder_path",
+        "title": "Merge Folder",
+        "tip": "Will merge all PDF files in the folder"
+      },
+      {
+        "key": "files_path",
+        "title": "Merge Files",
+        "tip": "Will merge all selected PDF files"
+      },
+      {
+        "key": "save_dir",
+        "title": "Save File Path",
+        "tip": "Select the folder path to save the file"
+      },
+      {
+        "key": "new_file_name",
+        "title": "Merged File Name",
+        "tip": "Enter merged file name, if not entered, default file name will be used"
+      },
+      {
+        "key": "new_pwd_flag",
+        "title": "Set Password for New PDF File",
+        "tip": "Choose whether to set password"
+      },
+      {
+        "key": "new_pwd",
+        "title": "New PDF File Password",
+        "tip": "Enter new PDF file password"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "pdf_merge_file_path",
+        "title": "Merged PDF File Path",
+        "tip": "Merged PDF file path"
+      }
+    ]
+  },
+  "PDF.extract_pdf_file": {
+    "key": "PDF.extract_pdf_file",
+    "title": "Extract PDF Specified Pages",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Extract specified pages from PDF document at @{file_path}, and save to @{extract_file_path} folder",
+    "icon": "pdf-extract-page",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "PDF File Path",
+        "tip": "Select the PDF file path to extract"
+      },
+      {
+        "key": "pwd",
+        "title": "PDF File Password",
+        "tip": "If PDF file requires password, please enter password, otherwise leave empty"
+      },
+      {
+        "key": "page_range",
+        "title": "Specified Page Range",
+        "tip": "Enter page range, format is 1-3,5,7-9,11, meaning pages 1 to 3, page 5, pages 7 to 9, page 11"
+      },
+      {
+        "key": "save_dir",
+        "title": "Save File Path",
+        "tip": "Select the folder path to save the file"
+      },
+      {
+        "key": "new_file_name",
+        "title": "Extracted New PDF File Name",
+        "tip": "Enter new file name, if not entered, default file name will be used"
+      },
+      {
+        "key": "new_pwd_flag",
+        "title": "Set Password for New PDF File",
+        "tip": "Choose whether to set password"
+      },
+      {
+        "key": "new_pwd",
+        "title": "New PDF File Password",
+        "tip": "Enter new PDF file password"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "extract_file_path",
+        "title": "Extracted PDF File Path",
+        "tip": "Extracted PDF file path"
+      }
+    ]
+  },
+  "PDF.extract_forms_from_pdf": {
+    "key": "PDF.extract_forms_from_pdf",
+    "title": "Extract PDF Table to Excel",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Extract tables from PDF document at @{file_path}, and save to @{forms_file_path} folder",
+    "icon": "pdf-extract-table-to-excel",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "PDF File Path",
+        "tip": "Select the PDF file path to extract tables"
+      },
+      {
+        "key": "pwd",
+        "title": "PDF File Password",
+        "tip": "If PDF file requires password, please enter password, otherwise leave empty"
+      },
+      {
+        "key": "select_range",
+        "title": "Select Range",
+        "tip": "Select range, supports all pages or specified page range"
+      },
+      {
+        "key": "page_range",
+        "title": "Specified Page Range",
+        "tip": "Enter page range, format is 1-3,5,7-9,11, meaning pages 1 to 3, page 5, pages 7 to 9, page 11"
+      },
+      {
+        "key": "combine_flag",
+        "title": "Merge Multiple Tables",
+        "tip": "When cross-page tables appear, you can choose whether to merge into one table, it is recommended to choose merge when headers are the same"
+      },
+      {
+        "key": "save_dir",
+        "title": "Save File Path",
+        "tip": "Select the folder path to save the file"
+      },
+      {
+        "key": "new_file_name",
+        "title": "Table File Name",
+        "tip": "Enter table file name, if not entered, default file name will be used"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "forms_file_path",
+        "title": "Extracted Excel File Path",
+        "tip": "Extracted Excel file path"
+      }
+    ]
+  },
+  "PDF.convert_pdf_to_img": {
+    "key": "PDF.convert_pdf_to_img",
+    "title": "PDF Page to Image",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Convert PDF document at @{file_path} to images, and save to @{save_dir} folder",
+    "icon": "pdf-page-to-image",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "PDF File Path",
+        "tip": "Select the PDF file path to convert"
+      },
+      {
+        "key": "pwd",
+        "title": "PDF File Password",
+        "tip": "If PDF file requires password, please enter password, otherwise leave empty"
+      },
+      {
+        "key": "image_type",
+        "title": "Image Format",
+        "tip": "Select image format, supports JPEG, PNG and other formats"
+      },
+      {
+        "key": "select_range",
+        "title": "Select Range",
+        "tip": "Select range, supports all pages or specified page range"
+      },
+      {
+        "key": "page_range",
+        "title": "Specified Page Range",
+        "tip": "Enter page range, format is 1-3,5,7-9,11, meaning pages 1 to 3, page 5, pages 7 to 9, page 11"
+      },
+      {
+        "key": "save_dir",
+        "title": "Save File Path",
+        "tip": "Select the folder path to save the file"
+      },
+      {
+        "key": "prefix",
+        "title": "Image File Name Prefix",
+        "tip": "Enter image file name prefix, if not entered, original file name prefix will be used"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      }
+    ],
+    "outputList": []
+  },
+  "Report.print": {
+    "key": "Report.print",
+    "title": "Log Print",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Print variable (@{msg})",
+    "icon": "log-print",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "report_type",
+        "title": "Log Type"
+      },
+      {
+        "key": "msg",
+        "title": "Log Content",
+        "tip": "Print stream variables output during execution"
+      }
+    ],
+    "outputList": null
+  },
+  "Script.module": {
+    "key": "Script.module",
+    "title": "Run Python Module",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Run Python Module(@{content:Python module})",
+    "icon": "run-python-module",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "content",
+        "title": "Select Python Module",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "program_script",
+        "title": "Execution Result",
+        "tip": ""
+      }
+    ]
+  },
+  "Software.open": {
+    "key": "Software.open",
+    "title": "Open Program",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Open application path (@{app_abs_path}), set run parameters to (@{app_args}), output result to (@{software_open})",
+    "icon": "open-program",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "app_abs_path",
+        "title": "Application Path",
+        "tip": "Enter application file path to open"
+      },
+      {
+        "key": "app_args",
+        "title": "Run Parameters",
+        "tip": "Used for run parameters required by some programs, example: program environment variables"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "software_open",
+        "title": "Application Path",
+        "tip": "Output the opened application path"
+      }
+    ]
+  },
+  "Software.close": {
+    "key": "Software.close",
+    "title": "Close Program",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Close program at application path (@{app_abs_path})",
+    "icon": "close-program",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "app_abs_path",
+        "title": "Application Path",
+        "tip": "Application path to close"
+      }
+    ],
+    "outputList": []
+  },
+  "Software.cmd": {
+    "key": "Software.cmd",
+    "title": "Cmd Command",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Execute cmd command by configuring cmd string (@{cmd}), save execution result to (@{exec_cmd})",
+    "icon": "cmd-command",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "cmd",
+        "title": "cmd String",
+        "tip": "Enter cmd string"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "exec_cmd",
+        "title": "Execution Result",
+        "tip": "Output custom cmd command execution result object"
+      }
+    ]
+  },
+  "VerifyCode.picture_code": {
+    "key": "VerifyCode.picture_code",
+    "title": "General Text Captcha",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Recognize captcha @{picture_pick} in browser, return recognition result @{code_result}",
+    "icon": "captcha-text",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "browser_obj",
+        "title": "Browser Object",
+        "tip": ""
+      },
+      {
+        "key": "picture_pick",
+        "title": "Pick Captcha Object",
+        "tip": ""
+      },
+      {
+        "key": "code_type",
+        "title": "Captcha Type",
+        "tip": ""
+      },
+      {
+        "key": "input_flag",
+        "title": "Fill Input Box",
+        "tip": ""
+      },
+      {
+        "key": "input_box",
+        "title": "Input Box Object",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "code_result",
+        "title": "Recognition Result",
+        "tip": ""
+      }
+    ]
+  },
+  "VerifyCode.slider_code": {
+    "key": "VerifyCode.slider_code",
+    "title": "General Slider Captcha",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "On background image @{picture_pick} slider captcha, drag slider @{slider_pick} to specified position, drag distance @{drag_distance}",
+    "icon": "captcha-slider",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "browser_obj",
+        "title": "Browser Object",
+        "tip": ""
+      },
+      {
+        "key": "picture_pick",
+        "title": "Background Image Object",
+        "tip": ""
+      },
+      {
+        "key": "slider_pick",
+        "title": "Pick Slider Object",
+        "tip": ""
+      },
+      {
+        "key": "unmatched_flag",
+        "title": "Is Variable Speed Captcha",
+        "tip": ""
+      },
+      {
+        "key": "move_pic_pick",
+        "title": "Pick Sliding Image Object",
+        "tip": ""
+      },
+      {
+        "key": "mini_step",
+        "title": "Fine Adjustment Step (px)",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "drag_distance",
+        "title": "Move Distance",
+        "tip": ""
+      }
+    ]
+  },
+  "VerifyCode.click_code": {
+    "key": "VerifyCode.click_code",
+    "title": "General Click Captcha",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "On background image @{picture_pick} click captcha, click corresponding position",
+    "icon": "captcha-click",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "browser_obj",
+        "title": "Browser Object",
+        "tip": ""
+      },
+      {
+        "key": "picture_pick",
+        "title": "Click Image Object",
+        "tip": "Need to include large click image and small image indicating order"
+      },
+      {
+        "key": "hint_position",
+        "title": "Position of Order Indicator Image Relative to Main Image",
+        "tip": "If the image indicating order is at the bottom relative to the main image, select bottom, otherwise select top"
+      }
+    ],
+    "outputList": []
+  },
+  "CV.cv_click": {
+    "key": "CV.cv_click",
+    "title": "Click Image",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Mouse (@{btn_type}) (@{btn_model}) image (@{input_data}) (@{click_position})",
+    "icon": "click-image",
+    "helpManual": "Search for target image in current (active) window and click this image in the window interface.",
+    "inputList": [
+      {
+        "key": "input_data",
+        "title": "Target Image",
+        "tip": "Support selecting image from image library to get image element"
+      },
+      {
+        "key": "btn_type",
+        "title": "Mouse Button",
+        "tip": ""
+      },
+      {
+        "key": "btn_model",
+        "title": "Click Method",
+        "tip": ""
+      },
+      {
+        "key": "click_position",
+        "title": "Click Position",
+        "tip": "Select mouse click position"
+      },
+      {
+        "key": "specified_position",
+        "title": "Specified Position",
+        "tip": ""
+      },
+      {
+        "key": "horizontal_move",
+        "title": "Horizontal Translation",
+        "tip": ""
+      },
+      {
+        "key": "vertical_move",
+        "title": "Vertical Translation",
+        "tip": ""
+      },
+      {
+        "key": "match_similarity",
+        "title": "Mouse Movement Method",
+        "tip": ""
+      },
+      {
+        "key": "move_speed",
+        "title": "Mouse Movement Speed",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait Time for Image (seconds)",
+        "tip": "exceedsthis timestop waiting，defaultto10Second"
+      }
+    ],
+    "outputList": []
+  },
+  "CV.hover_image": {
+    "key": "CV.hover_image",
+    "title": "Mouse Hover on Image",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Mouse hover on (@{click_position}) of image (@{input_data})",
+    "icon": "mouse-hover-image",
+    "helpManual": "Search for image in current (active) window and move mouse to specified position of this image.",
+    "inputList": [
+      {
+        "key": "input_data",
+        "title": "Target Image",
+        "tip": "Support selecting image from image library to get image element"
+      },
+      {
+        "key": "click_position",
+        "title": "Hover Position",
+        "tip": ""
+      },
+      {
+        "key": "specified_position",
+        "title": "Specified Position",
+        "tip": "Divide image by 9-grid layout, supports selecting any area of the 9 grids. Selected area will hover at center position of corresponding area of target image"
+      },
+      {
+        "key": "horizontal_move",
+        "title": "Horizontal Translation",
+        "tip": ""
+      },
+      {
+        "key": "vertical_move",
+        "title": "Vertical Translation",
+        "tip": ""
+      },
+      {
+        "key": "match_similarity",
+        "title": "Match Similarity",
+        "tip": "Similarity threshold between target image and current page (maximum match accuracy is 99%). Precise match indicates that only when current interface contains target image that is completely identical can match succeed"
+      },
+      {
+        "key": "move_type",
+        "title": "Mouse Movement Method",
+        "tip": ""
+      },
+      {
+        "key": "move_speed",
+        "title": "Mouse Movement Speed",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait Time for Image (seconds)",
+        "tip": "exceedsthis timestop waiting，defaultto10Second"
+      }
+    ],
+    "outputList": []
+  },
+  "CV.is_image_exist": {
+    "key": "CV.is_image_exist",
+    "title": "IF Image Exists",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Judge if image (@{input_data}) (@{exist_type}) in current interface",
+    "icon": "if-image-exists",
+    "helpManual": "Search for image in current (active) window and judge whether it exists.",
+    "inputList": [
+      {
+        "key": "input_data",
+        "title": "Target Image",
+        "tip": "Support selecting image from image library to get image element"
+      },
+      {
+        "key": "exist_type",
+        "title": "Judgment Type",
+        "tip": "Judge whether image exists or not exists, execute corresponding code block content respectively"
+      },
+      {
+        "key": "match_similarity",
+        "title": "Match Similarity",
+        "tip": "Similarity threshold between target image and current page (maximum match accuracy is 99%). Precise match indicates that only when current interface contains target image that is completely identical can match succeed"
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait Time for Image (seconds)",
+        "tip": "Stop waiting if exceeds this time, default is 10 seconds"
+      }
+    ],
+    "outputList": []
+  },
+  "CV.wait_image": {
+    "key": "CV.wait_image",
+    "title": "Wait for Image",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Wait for image (@{input_data}) (@{wait_type})",
+    "icon": "wait-image",
+    "helpManual": "Wait for target image to appear or disappear, then continue executing process.",
+    "inputList": [
+      {
+        "key": "input_data",
+        "title": "Target Image",
+        "tip": "Support selecting image from image library to get image element"
+      },
+      {
+        "key": "wait_type",
+        "title": "Wait Type",
+        "tip": "Wait for image to appear or disappear"
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait Time (seconds)",
+        "tip": "Stop waiting if exceeds this time, default is 10 seconds"
+      },
+      {
+        "key": "match_similarity",
+        "title": "Match Similarity",
+        "tip": "Similarity threshold between target image and current page (maximum match accuracy is 99%). Precise match indicates that only when current interface contains target image that is completely identical can match succeed"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "image_wait_result",
+        "title": "Wait Result",
+        "tip": "Whether target image appears/disappears. If appears/disappears within wait time, returns true, otherwise returns false"
+      }
+    ]
+  },
+  "CV.image_input": {
+    "key": "CV.image_input",
+    "title": "Image Input Box Input",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Click image input box (@{input_data}) and use (@{input_type}) to input (@{input_content})",
+    "icon": "image-input-box",
+    "helpManual": "Click target input box image and input content",
+    "inputList": [
+      {
+        "key": "input_data",
+        "title": "Target Image",
+        "tip": "Support selecting image from image library to get image element"
+      },
+      {
+        "key": "input_type",
+        "title": "Input Method",
+        "tip": ""
+      },
+      {
+        "key": "input_content",
+        "title": "Input Content",
+        "tip": ""
+      },
+      {
+        "key": "simulate_flag",
+        "title": "Simulate Manual Input",
+        "tip": ""
+      },
+      {
+        "key": "interval",
+        "title": "Input Interval",
+        "tip": ""
+      },
+      {
+        "key": "match_similarity",
+        "title": "Match Similarity",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait Time for Image (seconds)",
+        "tip": "exceedsthis timestop waiting，defaultto10Second"
+      }
+    ],
+    "outputList": []
+  },
+  "Window.exist": {
+    "key": "Window.exist",
+    "title": "IF Window Exists",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Check if the picked window (@{pick}) @{check_type}, if true execute the following operations",
+    "icon": "check-window-exists",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Window Picker",
+        "tip": "Select the window object to check for existence"
+      },
+      {
+        "key": "check_type",
+        "title": "Check Type",
+        "tip": "Select the check type, default is exists"
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait Time (seconds)",
+        "tip": "Time to wait for the check result"
+      }
+    ],
+    "outputList": []
+  },
+  "Window.top": {
+    "key": "Window.top",
+    "title": "Pin Window",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Pin window object (@{pick})",
+    "icon": "pin-window",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Window Picker",
+        "tip": "Pick the window object to pin on top"
+      }
+    ],
+    "outputList": []
+  },
+  "Window.close": {
+    "key": "Window.close",
+    "title": "Close Window",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Close desktop application window object (@{pick})",
+    "icon": "close-window",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Window Picker",
+        "tip": "Pick the window object to close"
+      }
+    ],
+    "outputList": []
+  },
+  "Window.set_size": {
+    "key": "Window.set_size",
+    "title": "Resize Window",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Resize the picked window (@{pick}), set the window width and height to (@{width}) (@{height}) using (@{size_type:Custom}) method",
+    "icon": "resize-window",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Window Picker",
+        "tip": "Pick the desktop application window to resize"
+      },
+      {
+        "key": "size_type",
+        "title": "Resize Method",
+        "tip": ""
+      },
+      {
+        "key": "width",
+        "title": "Window Width",
+        "tip": "Set the specified window width value in screen resolution pixels (px), typically a value between 0-9999"
+      },
+      {
+        "key": "height",
+        "title": "Window Height",
+        "tip": "Set the specified window height value in screen resolution pixels (px), typically a value between 0-9999"
+      }
+    ],
+    "outputList": []
+  },
+  "WinEle.click_element": {
+    "key": "WinEle.click_element",
+    "title": "Click Element (Desktop)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "@{click_type} the picked element @{pick}, wait up to @{wait_time} seconds until this element appears",
+    "icon": "click-element-win",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Element Picker",
+        "tip": ""
+      },
+      {
+        "key": "click_button",
+        "title": "Click Button",
+        "tip": ""
+      },
+      {
+        "key": "click_type",
+        "title": "Click Type",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait for Element to Appear",
+        "tip": ""
+      },
+      {
+        "key": "horizontals_offset",
+        "title": "Horizontal Offset",
+        "tip": ""
+      },
+      {
+        "key": "verticals_offset",
+        "title": "Vertical Offset",
+        "tip": ""
+      },
+      {
+        "key": "keyboard_input",
+        "title": "Keyboard Assist Input",
+        "tip": "Press certain keys on the keyboard while clicking"
+      }
+    ],
+    "outputList": []
+  },
+  "WinEle.screenshot_element": {
+    "key": "WinEle.screenshot_element",
+    "title": "Element Screenshot (Desktop)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Screenshot the picked element @{pick} and save to folder @{file_path}",
+    "icon": "element-screenshot-win",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Element Picker",
+        "tip": ""
+      },
+      {
+        "key": "file_path",
+        "title": "File Save Path",
+        "tip": ""
+      },
+      {
+        "key": "file_name",
+        "title": "File Name",
+        "tip": ""
+      },
+      {
+        "key": "exist_type",
+        "title": "Action When File Exists",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "WinEle.hover_element": {
+    "key": "WinEle.hover_element",
+    "title": "Hover Element (Desktop)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Hover mouse over the picked element @{pick} and set wait time @{wait_time} seconds",
+    "icon": "mouse-hover-element-win",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Element Picker",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait for Element to Appear",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "WinEle.input_text_element": {
+    "key": "WinEle.input_text_element",
+    "title": "Fill Input Field (Desktop)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Fill input field @{pick}, set input type to @{input_type}, input content is @{text}",
+    "icon": "fill-input-win",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Element Picker",
+        "tip": ""
+      },
+      {
+        "key": "input_type",
+        "title": "Input Type",
+        "tip": ""
+      },
+      {
+        "key": "text",
+        "title": "Input Content",
+        "tip": ""
+      },
+      {
+        "key": "clear_first",
+        "title": "Clear Input Field Content",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait for Element to Appear",
+        "tip": ""
+      }
+    ],
+    "outputList": []
+  },
+  "WinEle.get_element_text": {
+    "key": "WinEle.get_element_text",
+    "title": "Get Element Text (Desktop)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Extract text from element @{pick} and save to @{ele_text}",
+    "icon": "get-element-text-win",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Element Picker",
+        "tip": ""
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait for Element to Appear",
+        "tip": ""
+      }
+    ],
+    "outputList": [
+      {
+        "key": "ele_text",
+        "title": "Element Text",
+        "tip": ""
+      }
+    ]
+  },
+  "WinEle.similar": {
+    "key": "WinEle.similar",
+    "title": "Get Similar Elements List (Desktop)",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Get elements similar to the picked element @{pick}, and output the similar elements array to @{get_similar_ele}",
+    "icon": "get-similar-elements-win",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "pick",
+        "title": "Similar Element Picker",
+        "tip": "Pick two similar elements at different positions on the desktop"
+      },
+      {
+        "key": "wait_time",
+        "title": "Wait for Element to Appear (seconds)",
+        "tip": "Stop waiting after this time"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "get_similar_ele",
+        "title": "Element Information",
+        "tip": ""
+      }
+    ]
+  },
+  "Docx.open_docx": {
+    "key": "Docx.open_docx",
+    "title": "Open Word Document",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Open Word document at @{file_path}, return Word object @{doc_obj}",
+    "icon": "word-open-document",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "Document Path",
+        "tip": "Fill in the path to the Word document"
+      },
+      {
+        "key": "default_application",
+        "title": "Driver Mode",
+        "tip": "Select the opening method for Word document, such as Word or WPS"
+      },
+      {
+        "key": "visible_flag",
+        "title": "Visible",
+        "tip": "Whether to display the Word document window"
+      },
+      {
+        "key": "encoding",
+        "title": "Encoding Mode",
+        "tip": "Select document encoding mode, such as UTF-8 or GBK"
+      },
+      {
+        "key": "open_pwd_flag",
+        "title": "Fill Word Open Password",
+        "tip": "Choose whether to enter password to open document"
+      },
+      {
+        "key": "open_pwd",
+        "title": "Word Open Password",
+        "tip": "Enter Word open password"
+      },
+      {
+        "key": "write_pwd_flag",
+        "title": "Fill Word Write Password",
+        "tip": "Choose whether to enter password to write to document"
+      },
+      {
+        "key": "write_pwd",
+        "title": "Word Write Password",
+        "tip": "Enter Word write password"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "doc_obj",
+        "title": "Word Object",
+        "tip": "Returns Word object for subsequent operations"
+      }
+    ]
+  },
+  "Docx.read_docx": {
+    "key": "Docx.read_docx",
+    "title": "Read Word Document Content",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Read Word document object @{doc} content, return document content @{doc_data}",
+    "icon": "word-read-content",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "select_range",
+        "title": "Read Range",
+        "tip": "Select the range to read from the document, such as entire document or selected area"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "doc_data",
+        "title": "Document Content",
+        "tip": ""
+      }
+    ]
+  },
+  "Docx.create_docx": {
+    "key": "Docx.create_docx",
+    "title": "Create Word Document",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Create Word document, save to path @{file_path} with file name @{file_name}, return Word object @{doc_obj} and save path @{doc_create_path}",
+    "icon": "word-new-document",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "file_path",
+        "title": "Document Save Folder",
+        "tip": "Fill in the save folder path for the Word document"
+      },
+      {
+        "key": "file_name",
+        "title": "Document Name",
+        "tip": "Fill in the name of the Word document"
+      },
+      {
+        "key": "default_application",
+        "title": "Driver Mode",
+        "tip": "Select the opening method for Word document, such as Word or WPS"
+      },
+      {
+        "key": "visible_flag",
+        "title": "Visible",
+        "tip": "Whether to display the Word document window"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "doc_obj",
+        "title": "Word Object",
+        "tip": ""
+      },
+      {
+        "key": "doc_create_path",
+        "title": "Document Save Path",
+        "tip": "The complete path to the saved Word document"
+      }
+    ]
+  },
+  "Docx.save_docx": {
+    "key": "Docx.save_docx",
+    "title": "Save Word Document",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Save Word document object @{doc}, save type @{save_type}, and output save path @{save_file_path}",
+    "icon": "word-save-document",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "save_type",
+        "title": "Save Type",
+        "tip": "Select save type, such as save, save as, or don't save"
+      },
+      {
+        "key": "file_path",
+        "title": "Document Path",
+        "tip": "Fill in the save path for the Word document"
+      },
+      {
+        "key": "file_name",
+        "title": "Document Name",
+        "tip": "Fill in the name of the Word document"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      },
+      {
+        "key": "close_flag",
+        "title": "Close Document",
+        "tip": "Choose whether to close the document window"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "save_file_path",
+        "title": "Save Path",
+        "tip": "The complete path to the saved Word document"
+      }
+    ]
+  },
+  "Docx.close_docx": {
+    "key": "Docx.close_docx",
+    "title": "Close Word Document",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Close Word document object @{doc}",
+    "icon": "word-close-document",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "close_range_flag",
+        "title": "Close Scope",
+        "tip": "Select the scope to close documents, such as close current document or close all documents"
+      },
+      {
+        "key": "save_type",
+        "title": "Save Type",
+        "tip": "Select save type, such as save, save as, or don't save"
+      },
+      {
+        "key": "file_path",
+        "title": "Save As Document Path",
+        "tip": "Fill in the save path for the Word document"
+      },
+      {
+        "key": "file_name",
+        "title": "Save As Document Name",
+        "tip": "Fill in the name of the Word document"
+      },
+      {
+        "key": "exist_handle_type",
+        "title": "Existing File Handling",
+        "tip": "Select how to handle existing files, supports overwrite original file, create file copy, or cancel save operation"
+      },
+      {
+        "key": "pkill_flag",
+        "title": "End Word or WPS Process",
+        "tip": "Choose whether to end Word or WPS process"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.insert_docx": {
+    "key": "Docx.insert_docx",
+    "title": "Insert Text to Word Document",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Insert text @{text} to Word document object @{doc}",
+    "icon": "word-insert-text",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "text",
+        "title": "Insert Text",
+        "tip": "Fill in the text to insert"
+      },
+      {
+        "key": "enter_flag",
+        "title": "Line Break Before Insert",
+        "tip": "Choose whether to add a line break before inserting"
+      },
+      {
+        "key": "font_size",
+        "title": "Font Size",
+        "tip": "Fill in font size"
+      },
+      {
+        "key": "bold_flag",
+        "title": "Bold",
+        "tip": "Choose whether to bold"
+      },
+      {
+        "key": "italic_flag",
+        "title": "Italic",
+        "tip": "Choose whether to italicize"
+      },
+      {
+        "key": "underline_flag",
+        "title": "Underline",
+        "tip": "Choose whether to add underline"
+      },
+      {
+        "key": "font_name",
+        "title": "Font Name",
+        "tip": "Fill in font name"
+      },
+      {
+        "key": "font_color",
+        "title": "Font Color",
+        "tip": "Select font color"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.select_text": {
+    "key": "Docx.select_text",
+    "title": "Select Word Text",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Select text from Word document object @{doc}",
+    "icon": "word-select-text",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "select_type",
+        "title": "Select Text Method",
+        "tip": "Supports selecting full text, paragraph, or line"
+      },
+      {
+        "key": "p_start",
+        "title": "Start Paragraph Number",
+        "tip": "Enter start paragraph number"
+      },
+      {
+        "key": "p_end",
+        "title": "End Paragraph Number",
+        "tip": "Enter end paragraph number"
+      },
+      {
+        "key": "r_start",
+        "title": "Start Line Number",
+        "tip": "Enter start line number"
+      },
+      {
+        "key": "r_end",
+        "title": "End Line Number",
+        "tip": "Enter end line number"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.get_cursor_position": {
+    "key": "Docx.get_cursor_position",
+    "title": "Position Word Cursor",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Position cursor in Word document object @{doc}",
+    "icon": "word-position-cursor",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "by",
+        "title": "Cursor Position Method",
+        "tip": "Choose to position to full text, paragraph, line, or text"
+      },
+      {
+        "key": "pos",
+        "title": "Cursor Relative Position",
+        "tip": "Before selected content / After selected content"
+      },
+      {
+        "key": "content",
+        "title": "Text Content",
+        "tip": "If choosing to position text, enter text content"
+      },
+      {
+        "key": "c_idx",
+        "title": "Text Index",
+        "tip": "Enter the index number of the text to position"
+      },
+      {
+        "key": "p_idx",
+        "title": "Paragraph Number",
+        "tip": "Enter paragraph number to position"
+      },
+      {
+        "key": "r_idx",
+        "title": "Line Number",
+        "tip": "Choose the line number to position"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.move_cursor": {
+    "key": "Docx.move_cursor",
+    "title": "Move Word Cursor",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Move cursor in Word document object @{doc}",
+    "icon": "word-move-cursor",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "direction",
+        "title": "Cursor Move Direction",
+        "tip": "Can choose up, down, left, or right"
+      },
+      {
+        "key": "unitupdown",
+        "title": "Up/Down Move Unit",
+        "tip": "Can choose line or paragraph"
+      },
+      {
+        "key": "unitleftright",
+        "title": "Left/Right Move Unit",
+        "tip": "Can choose character or word"
+      },
+      {
+        "key": "distance",
+        "title": "Move Distance",
+        "tip": "Enter the distance to move"
+      },
+      {
+        "key": "with_shift",
+        "title": "Press Shift",
+        "tip": "Choose whether to press Shift"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.insert_sep": {
+    "key": "Docx.insert_sep",
+    "title": "Word Insert Page/Paragraph",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Insert page/paragraph in Word document object @{doc}",
+    "icon": "word-insert-page",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "sep_type",
+        "title": "Insert Type",
+        "tip": "Choose page or paragraph"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.insert_hyperlink": {
+    "key": "Docx.insert_hyperlink",
+    "title": "Word Insert Hyperlink",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "Insert hyperlink in Word document object @{doc}",
+    "icon": "word-insert-hyperlink",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "url",
+        "title": "Link",
+        "tip": "Enter the link to insert"
+      },
+      {
+        "key": "display",
+        "title": "Display Text",
+        "tip": "Enter the text to display"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.insert_img": {
+    "key": "Docx.insert_img",
+    "title": "Word Insert Image",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "In Word document object @{doc}, insert image from path @{img_path} or clipboard",
+    "icon": "word-insert-image",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "img_from",
+        "title": "Image Source",
+        "tip": "Choose via file path or clipboard"
+      },
+      {
+        "key": "img_path",
+        "title": "File Path",
+        "tip": "Enter file path"
+      },
+      {
+        "key": "scale",
+        "title": "Scale (%)",
+        "tip": "Default is 100%, can enter other values, no need to enter percent sign"
+      },
+      {
+        "key": "newline",
+        "title": "Line Break",
+        "tip": "Choose whether to add line break before insertion"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.read_table": {
+    "key": "Docx.read_table",
+    "title": "Word Read Table",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "In Word document object @{doc}, read table content and return table data object @{table_content}",
+    "icon": "word-read-table",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "search_type",
+        "title": "Find Table Method",
+        "tip": "Select method to find table"
+      },
+      {
+        "key": "idx",
+        "title": "Index",
+        "tip": "Enter the index number to find table"
+      },
+      {
+        "key": "text",
+        "title": "Text",
+        "tip": "Enter the text to find table"
+      }
+    ],
+    "outputList": [
+      {
+        "key": "table_content",
+        "title": "Table Content",
+        "tip": ""
+      }
+    ]
+  },
+  "Docx.insert_table": {
+    "key": "Docx.insert_table",
+    "title": "Word Insert Table",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "In Word document object @{doc}, insert table content",
+    "icon": "word-insert-table",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "table_content",
+        "title": "Table Content",
+        "tip": "Table content to create, format is two-dimensional array or read Excel table content"
+      },
+      {
+        "key": "table_behavior",
+        "title": "Table Size",
+        "tip": "Choose default or fit to content"
+      },
+      {
+        "key": "alignment",
+        "title": "Text Horizontal Position",
+        "tip": "Choose left align, center align, or right align"
+      },
+      {
+        "key": "v_alignment",
+        "title": "Text Vertical Position",
+        "tip": "Choose top align, center align, or bottom align"
+      },
+      {
+        "key": "border",
+        "title": "Table Border",
+        "tip": "Choose whether to have border"
+      },
+      {
+        "key": "if_change_font",
+        "title": "Change Font",
+        "tip": "Choose whether to change font"
+      },
+      {
+        "key": "font_size",
+        "title": "Size",
+        "tip": "Choose font size"
+      },
+      {
+        "key": "font_color",
+        "title": "Color",
+        "tip": "Choose font color"
+      },
+      {
+        "key": "font_set",
+        "title": "Font",
+        "tip": "Choose font"
+      },
+      {
+        "key": "font_bold",
+        "title": "Bold",
+        "tip": "Choose whether to bold"
+      },
+      {
+        "key": "font_italic",
+        "title": "Italic",
+        "tip": "Choose whether to italicize"
+      },
+      {
+        "key": "underline",
+        "title": "Underline",
+        "tip": "Choose whether to underline"
+      },
+      {
+        "key": "newline",
+        "title": "Insert on New Line",
+        "tip": "Choose whether to insert on a new line"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.delete": {
+    "key": "Docx.delete",
+    "title": "Word Delete Content",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "In Word document object @{doc}, delete content",
+    "icon": "word-delete-content",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "delete_mode",
+        "title": "Delete Method",
+        "tip": "Select delete method"
+      },
+      {
+        "key": "delete_str",
+        "title": "Text",
+        "tip": "Select the text to delete"
+      },
+      {
+        "key": "delete_idx",
+        "title": "Index",
+        "tip": "Select which text to delete"
+      },
+      {
+        "key": "str_delete_all",
+        "title": "Delete All Found Text",
+        "tip": "Choose whether to delete all found text"
+      },
+      {
+        "key": "p_start",
+        "title": "Start Paragraph",
+        "tip": "Enter start paragraph"
+      },
+      {
+        "key": "c_start",
+        "title": "Start Character",
+        "tip": "Enter start character"
+      },
+      {
+        "key": "p_end",
+        "title": "End Paragraph",
+        "tip": "Enter end paragraph"
+      },
+      {
+        "key": "c_end",
+        "title": "End Character",
+        "tip": "Enter end character"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.replace": {
+    "key": "Docx.replace",
+    "title": "Word Replace Content",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "In Word document object @{doc}, find and replace content",
+    "icon": "word-replace-content",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "origin_word",
+        "title": "Find Content",
+        "tip": "Enter the content to find"
+      },
+      {
+        "key": "replace_type",
+        "title": "Replace With",
+        "tip": "Choose to replace with image or text"
+      },
+      {
+        "key": "new_word",
+        "title": "New Content",
+        "tip": "Enter the content to replace with"
+      },
+      {
+        "key": "img_path",
+        "title": "Image Path",
+        "tip": "Choose image path"
+      },
+      {
+        "key": "replace_method",
+        "title": "Replace Mode",
+        "tip": "Choose replace all or replace first"
+      },
+      {
+        "key": "ignore_case",
+        "title": "Ignore Case",
+        "tip": "Choose whether to ignore case"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.create_comment": {
+    "key": "Docx.create_comment",
+    "title": "Word Create Comment",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "In Word document object @{doc}, create comment",
+    "icon": "word-create-comment",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "comment",
+        "title": "Comment Content",
+        "tip": "Enter comment content"
+      },
+      {
+        "key": "comment_type",
+        "title": "Comment Object",
+        "tip": "Choose specified range or specified content"
+      },
+      {
+        "key": "paragraph_idx",
+        "title": "Paragraph Number",
+        "tip": "Enter the paragraph number to create comment"
+      },
+      {
+        "key": "start",
+        "title": "Start Character Index",
+        "tip": "Enter the start character index for the comment"
+      },
+      {
+        "key": "end",
+        "title": "End Character Index",
+        "tip": "Enter the end character index for the comment"
+      },
+      {
+        "key": "target_str",
+        "title": "Target Content",
+        "tip": "Enter the target content for the comment"
+      },
+      {
+        "key": "comment_all",
+        "title": "Comment All",
+        "tip": "Choose whether to comment all"
+      },
+      {
+        "key": "comment_index",
+        "title": "Index",
+        "tip": "Select the index of the content to comment"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.delete_comment": {
+    "key": "Docx.delete_comment",
+    "title": "Word Delete Comment",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "In Word document object @{doc}, delete specified comment",
+    "icon": "word-delete-comment",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "delete_all",
+        "title": "Delete All",
+        "tip": "Choose whether to delete all comments"
+      },
+      {
+        "key": "comment_index",
+        "title": "Comment Index",
+        "tip": "Enter the index of the comment to delete"
+      }
+    ],
+    "outputList": []
+  },
+  "Docx.convert_format": {
+    "key": "Docx.convert_format",
+    "title": "Word Export to PDF/TXT",
+    "version": "1.0.0",
+    "src": "",
+    "comment": "In Word document object @{doc}, export specified content to PDF or TXT file",
+    "icon": "word-export-pdf-txt",
+    "helpManual": "",
+    "inputList": [
+      {
+        "key": "doc",
+        "title": "Word Object",
+        "tip": "Word object returned by previous atomic operations (such as open, create) in this software"
+      },
+      {
+        "key": "output_path",
+        "title": "Export Path",
+        "tip": "Select the folder to export to"
+      },
+      {
+        "key": "default_name",
+        "title": "Use Default Name",
+        "tip": "Choose whether to use default name"
+      },
+      {
+        "key": "output_name",
+        "title": "Export File Name",
+        "tip": "Enter file name without format extension"
+      },
+      {
+        "key": "page_type",
+        "title": "Page Range",
+        "tip": "Choose to export all pages, specified page range, current page, or current selection"
+      },
+      {
+        "key": "output_file_type",
+        "title": "Export File Format",
+        "tip": "Choose to export as PDF or TXT"
+      },
+      {
+        "key": "page_start",
+        "title": "Start Page",
+        "tip": "Enter the start page to export"
+      },
+      {
+        "key": "page_end",
+        "title": "End Page",
+        "tip": "Enter the end page to export"
+      },
+      {
+        "key": "save_type",
+        "title": "Duplicate Name Save Method",
+        "tip": "Choose to error on duplicate name, overwrite, or auto rename"
+      }
+    ],
+    "outputList": []
+  }
+}
