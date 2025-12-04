@@ -1,268 +1,268 @@
 atomic:
   ChatAI.single_turn_chat:
-    title: 单轮会话
-    comment: 大模型将对你提出的问题： @{query} 进行回答。
-    description: 大模型将会根据你给定的问题，生成互动答案。
+    title: Single-Turn Chat
+    comment: "The model will respond to your question: @{query}"
+    description: The model will generate an interactive answer based on your question.
     icon: single-chat
     helpManual: ''
     inputList:
     - key: query
-      title: 用户输入
-      tip: 用户输入的问题。
+      title: User Input
+      tip: Enter your question.
     - key: model
-      title: 模型选择
-      tip: 可以选择使用的模型。
+      title: Model Selection
+      tip: Select the model to use.
     outputList:
     - key: single_chat_res
-      title: 答案输出
-      tip: 将大模型生成的答案输出为变量。
+      title: Answer Output
+      tip: Output the model's generated answer to a variable.
   ChatAI.chat:
-    title: 多轮会话
-    comment: 大模型将扮演角色，并进行最多 (@{max_turns}) 问答次数。
-    description: 大模型将扮演指定角色，与您进行多轮的互动。
+    title: Multi-Turn Chat
+    comment: The model will play a role and perform up to @{max_turns} Q&A rounds.
+    description: The model will play a specified role and interact with you in multiple rounds.
     icon: multi-chat
     helpManual: ''
     inputList:
     - key: is_save
-      title: 保存会话
-      tip: 是否在对话结束时保存对话。
+      title: Save Conversation
+      tip: Whether to save the conversation when it ends.
     - key: title
-      title: 窗口标题
-      tip: 定义对话窗口标题。
+      title: Window Title
+      tip: Define the conversation window title.
     - key: max_turns
-      title: 最大问答次数
-      tip: 最大问答次数，完整的Q&A（question & answer）为一次。
+      title: Maximum Q&A Rounds
+      tip: Maximum number of Q&A rounds, where a complete Q&A consists of one question and answer.
     - key: model
-      title: 模型选择
-      tip: 可以选择使用的模型。
+      title: Model Selection
+      tip: Select the model to use.
     outputList:
     - key: chat_res
-      title: 对话聊天记录输出
-      tip: 将对话聊天记录输出为变量。
+      title: Chat History Output
+      tip: Output the chat history to a variable.
   ChatAI.knowledge_chat:
-    title: 知识问答
-    comment: 大模型将读取的文件位于 @{file_path} 。
-    description: 大模型将阅读您的文档，并回答您提出的问题。
+    title: Knowledge Q&A
+    comment: The model will read the file located at @{file_path}.
+    description: The model will read your document and answer your questions.
     icon: knowledge-qa
     helpManual: ''
     inputList:
     - key: is_save
-      title: 保存会话
-      tip: 是否在对话结束时保存对话。
+      title: Save Conversation
+      tip: Whether to save the conversation when it ends.
     - key: max_turns
-      title: 最大问答次数
-      tip: 最大问答次数，完整的Q&A（question & answer）为一次。
+      title: Maximum Q&A Rounds
+      tip: Maximum number of Q&A rounds, where a complete Q&A consists of one question and answer.
     - key: file_path
-      title: 文件路径
-      tip: 请选择需要进行知识问答的文件路径。
+      title: File Path
+      tip: Select the file path for knowledge-based Q&A.
     outputList:
     - key: knowledge_chat_res
-      title: 对话聊天记录输出
-      tip: 将对话聊天记录输出为变量。
+      title: Chat History Output
+      tip: Output the chat history to a variable.
   DocumentAI.theme_expand:
-    title: 主题扩写
-    comment: 大模型将根据您给定的主题： @{text} ，对其进行扩写。
-    description: 大模型将根据您给定的主题，对其进行扩写。
+    title: Theme Expansion
+    comment: "The model will expand on the given topic: @{text}"
+    description: The model will expand on the topic you provide.
     icon: topic-expand
     helpManual: ''
     inputList:
     - key: text
-      title: 主题
-      tip: 输入您需要扩展的主题。
+      title: Subject
+      tip: Enter the topic you want to expand.
     outputList:
     - key: theme_expand_res
-      title: 主题扩展结果输出
-      tip: 将主题扩展结果输出为变量。
+      title: Theme Expansion Result Output
+      tip: Output the theme expansion result to a variable.
   DocumentAI.sentence_expand:
-    title: 段落扩写
-    comment: 大模型将根据您给定的段落 @{text} ，对其进行扩写。
-    description: 大模型将根据您给定的段落，对其进行扩写。
+    title: Paragraph Expansion
+    comment: "The model will expand the given paragraph: @{text}"
+    description: The model will expand the paragraph you provide.
     icon: paragraph-expand
     helpManual: ''
     inputList:
     - key: text
-      title: 段落
-      tip: 输入您需要扩展的段落。
+      title: Paragraph
+      tip: Enter the paragraph you want to expand.
     outputList:
     - key: sentence_expand_res
-      title: 段落扩展结果输出
-      tip: 将段落扩展结果输出为变量。
+      title: Paragraph Expansion Result Output
+      tip: Output the paragraph expansion result to a variable.
   DocumentAI.sentence_reduce:
-    title: 段落缩写
-    comment: 大模型将根据您给定的段落 @{text} ，对其进行缩写。
-    description: 大模型将根据您给定的段落，对其进行缩写。
+    title: Paragraph Abbreviation
+    comment: "The model will abbreviate the given paragraph: @{text}"
+    description: The model will abbreviate the paragraph you provide.
     icon: paragraph-abbreviate
     helpManual: ''
     inputList:
     - key: text
-      title: 段落
-      tip: 输入您需要缩写的段落。
+      title: Paragraph
+      tip: Enter the paragraph you want to abbreviate.
     outputList:
     - key: sentence_reduce_res
-      title: 段落缩写结果输出
-      tip: 将段落缩写结果输出为变量。
+      title: Paragraph Abbreviation Result Output
+      tip: Output the paragraph abbreviation result to a variable.
   Agent.call_dify:
-    title: 调用Dify流程
-    comment: 调用Dify流程 @{app_token} ，完成您指定的任务。
+    title: Call Dify Workflow
+    comment: Call Dify Workflow @{app_token} to complete your specified task.
     icon: call-dify-workflow
     helpManual: ''
     inputList:
     - key: user
-      title: 用户名
+      title: Username
       tip: ''
     - key: app_token
-      title: Dify流程密钥
-      tip: Dify流程密钥
+      title: Dify Workflow Secret
+      tip: Dify Workflow Secret
     - key: file_flag
-      title: 是否上传文件
+      title: Upload File
       tip: ''
     - key: variable_name
-      title: 变量名
+      title: Variable Name
       tip: ''
     - key: variable_value
-      title: 变量值
+      title: Variable Value
       tip: ''
     - key: file_path
-      title: 文件路径
+      title: File Path
       tip: ''
     - key: file_type
-      title: 文件类型
+      title: File Type
       tip: ''
     outputList:
     - key: dify_result
-      title: Dify流程结果输出
+      title: Dify Workflow Result Output
       tip: ''
   Agent.call_xcagent:
-    title: 调用星辰Agent流程
-    comment: 调用星辰Agent流程 @{flow_id} ，完成您指定的任务。
+    title: Call XC Agent Workflow
+    comment: Call XC Agent Workflow @{flow_id} to complete your specified task.
     icon: call-dify-workflow
     helpManual: ''
     inputList:
-      - key: api_key
-        title: api_key
-        tip: ''
-      - key: api_secret
-        title: api_secret
-        tip: ''
-      - key: flow_id
-        title: 流程id
-        tip: ''
-      - key: input_value
-        title: 工作流默认输入
-        tip: ''
+    - key: api_key
+      title: api_key
+      tip: ''
+    - key: api_secret
+      title: api_secret
+      tip: ''
+    - key: flow_id
+      title: Workflow ID
+      tip: ''
+    - key: input_value
+      title: Workflow Default Input
+      tip: ''
     outputList:
-      - key: xcagent_result
-        title: 星辰Agent返回值
-        tip: ''
+    - key: xcagent_result
+      title: XC Agent Return Value
+      tip: ''
   ContractAI.get_factors:
-    title: 合同要素提取
-    comment: 提取合同 @{contract_content} 中的要素。
+    title: Contract Element Extraction
+    comment: Extract elements from contract @{contract_content}.
     icon: contract-element-extraction
     helpManual: ''
     inputList:
     - key: contract_type
-      title: 输入合同方式
+      title: Contract Input Method
       tip: ''
     - key: contract_path
-      title: 合同路径
+      title: Contract Path
       tip: ''
     - key: contract_content
-      title: 合同文本内容
-      tip: 合同内容
+      title: Contract Text Content
+      tip: Contract content
     - key: custom_factors
-      title: 要素
+      title: Elements
       tip: ''
     - key: contract_validate
-      title: 效果验证
+      title: Effect Validation
       tip: ''
     outputList:
     - key: factor_result
-      title: 返回要素结果
+      title: Return Element Result
       tip: ''
   RecruitAI.generate_keywords:
-    title: 职位关键词生成
-    comment: 根据职位描述 @{job_description} 生成关键词。
+    title: Job Keyword Generation
+    comment: Generate keywords based on job description @{job_description}.
     icon: job-keyword-generation
     helpManual: ''
     inputList:
     - key: job_name
-      title: 职位名称
+      title: Job Title
       tip: ''
     - key: job_description
-      title: 职位描述
+      title: Job Description
       tip: ''
     - key: job_website
-      title: 招聘网站
+      title: Recruitment Website
       tip: ''
     outputList:
     - key: recruit_keywords
-      title: 职位关键词
+      title: Job Keywords
       tip: ''
   RecruitAI.rating_resume:
-    title: 简历评分
-    comment: 根据简历 @{resume_content} 评分。
+    title: Resume Scoring
+    comment: Score the resume @{resume_content}.
     icon: resume-scoring
     helpManual: ''
     inputList:
     - key: job_name
-      title: 职位名称
+      title: Job Title
       tip: ''
     - key: resume_input_type
-      title: 简历输入方式
+      title: Resume Input Method
       tip: ''
     - key: resume_file_path
-      title: 简历文件路径
+      title: Resume File Path
       tip: ''
     - key: resume_content
-      title: 简历文本内容
+      title: Resume Text Content
       tip: ''
     - key: job_description
-      title: 职位描述
+      title: Job Description
       tip: ''
     - key: rating_system
-      title: 岗位评分体系
+      title: Job Rating System
       tip: ''
     - key: rating_dimensions
-      title: 岗位评分画像
+      title: Job Rating Dimensions
       tip: ''
     outputList:
     - key: recruit_rating
-      title: 简历匹配结果
+      title: Resume Match Result
       tip: ''
 options:
   Bool:
   - value: true
-    label: 是
+    label: 'Yes'
   - value: false
-    label: 否
+    label: 'No'
   DifyFileTypes:
   - value: document
-    label: 文档
+    label: Document
   - value: image
-    label: 图像
+    label: Image
   - value: video
-    label: 视频
+    label: Video
   - value: audio
-    label: 音频
+    label: Audio
   - value: custom
-    label: 其他格式
+    label: Other Format
   InputType:
   - value: file
-    label: 文件形式
+    label: File Format
   - value: text
-    label: 文本形式
+    label: Text Format
   JobWebsitesTypes:
   - value: boss
-    label: BOSS直聘
+    label: BOSS Zhipin
   - value: liepin
-    label: 猎聘
+    label: Liepin
   - value: zhilian
-    label: 智联招聘
+    label: Zhilian Recruitment
   RatingSystemTypes:
   - value: default
-    label: 根据岗位描述生成
+    label: Generate Based on Job Description
   - value: custom
-    label: 自定义判断标准
+    label: Custom Evaluation Criteria
   LLMModelTypes:
   - value: deepseek-v3-0324
     label: DeepSeek-V3

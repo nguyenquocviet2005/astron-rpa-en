@@ -1,156 +1,156 @@
 atomic:
   WinEle.click_element:
-    title: 点击元素（桌面）
-    comment: '@{click_type} 拾取到的元素 @{pick} ，最长等待 @{wait_time} 秒直到此元素出现'
+    title: Click Element (Desktop)
+    comment: '@{click_type} the picked element @{pick}, wait up to @{wait_time} seconds until this element appears'
     icon: click-element-win
     helpManual: ''
     inputList:
     - key: pick
-      title: 元素拾取
+      title: Element Picker
       tip: ''
     - key: click_button
-      title: 点击按钮
+      title: Click Button
       tip: ''
     - key: click_type
-      title: 点击类型
+      title: Click Type
       tip: ''
     - key: wait_time
-      title: 等待元素出现时间
+      title: Wait for Element to Appear
       tip: ''
     - key: horizontals_offset
-      title: 横向偏移量
+      title: Horizontal Offset
       tip: ''
     - key: verticals_offset
-      title: 纵向偏移量
+      title: Vertical Offset
       tip: ''
     - key: keyboard_input
-      title: 键盘辅助输入
-      tip: 点击时同时按下键盘上的某些键
+      title: Keyboard Assist Input
+      tip: Press certain keys on the keyboard while clicking
     outputList: []
   WinEle.screenshot_element:
-    title: 元素截图（桌面）
-    comment: 截图拾取到的元素 @{pick} ，并保存至文件夹 @{file_path}
+    title: Element Screenshot (Desktop)
+    comment: Screenshot the picked element @{pick} and save to folder @{file_path}
     icon: element-screenshot-win
     helpManual: ''
     inputList:
     - key: pick
-      title: 元素拾取
+      title: Element Picker
       tip: ''
     - key: file_path
-      title: 文件保存路径
+      title: File Save Path
       tip: ''
     - key: file_name
-      title: 文件名
+      title: File Name
       tip: ''
     - key: exist_type
-      title: 文件同名时处理方式
+      title: Action When File Exists
       tip: ''
     outputList: []
   WinEle.hover_element:
-    title: 鼠标悬停元素（桌面）
-    comment: 鼠标悬停拾取到的元素 @{pick} ，并设置等待时间 @{wait_time} 秒
+    title: Hover Element (Desktop)
+    comment: Hover mouse over the picked element @{pick} and set wait time @{wait_time} seconds
     icon: mouse-hover-element-win
     helpManual: ''
     inputList:
     - key: pick
-      title: 元素拾取
+      title: Element Picker
       tip: ''
     - key: wait_time
-      title: 等待元素出现时间
+      title: Wait for Element to Appear
       tip: ''
     outputList: []
   WinEle.input_text_element:
-    title: 填写输入框（桌面）
-    comment: 填写输入框 @{pick} ，并设置输入类型为 @{input_type} ，输入内容为 @{text}
+    title: Fill Input Field (Desktop)
+    comment: Fill input field @{pick}, set input type to @{input_type}, input content is @{text}
     icon: fill-input-win
     helpManual: ''
     inputList:
     - key: pick
-      title: 元素拾取
+      title: Element Picker
       tip: ''
     - key: input_type
-      title: 输入类型
+      title: Input Type
       tip: ''
     - key: text
-      title: 输入内容
+      title: Input Content
       tip: ''
     - key: clear_first
-      title: 是否清空输入框内容
+      title: Clear Input Field Content
       tip: ''
     - key: wait_time
-      title: 等待元素出现时间
+      title: Wait for Element to Appear
       tip: ''
     outputList: []
   WinEle.get_element_text:
-    title: 获取元素文本（桌面）
-    comment: 从元素 @{pick} 提取文本并保存到 @{ele_text}
+    title: Get Element Text (Desktop)
+    comment: Extract text from element @{pick} and save to @{ele_text}
     icon: get-element-text-win
     helpManual: ''
     inputList:
     - key: pick
-      title: 元素拾取
+      title: Element Picker
       tip: ''
     - key: wait_time
-      title: 等待元素出现时间
+      title: Wait for Element to Appear
       tip: ''
     outputList:
     - key: ele_text
-      title: 元素文本
+      title: Element Text
       tip: ''
   WinEle.similar:
-    title: 获取相似元素列表（桌面）
-    comment: 获取拾取到的元素 @{pick} 相似的元素，并将相似元素数组输出至 @{get_similar_ele}
+    title: Get Similar Elements List (Desktop)
+    comment: Get elements similar to the picked element @{pick}, and output the similar elements array to @{get_similar_ele}
     icon: get-similar-elements-win
     helpManual: ''
     inputList:
     - key: pick
-      title: 相识元素拾取
-      tip: 在桌面上拾取不同位置的两个相似元素
+      title: Similar Element Picker
+      tip: Pick two similar elements at different positions on the desktop
     - key: wait_time
-      title: 等待元素出现时间（秒）
-      tip: 超过该时间停止等待
+      title: Wait for Element to Appear (seconds)
+      tip: Stop waiting after this time
     outputList:
     - key: get_similar_ele
-      title: 元素信息
+      title: Element Information
       tip: ''
 options:
   MouseClickButton:
   - value: left
-    label: 左键
+    label: Left Button
   - value: right
-    label: 右键
+    label: Right Button
   - value: middle
-    label: 中键
+    label: Middle Button
   MouseClickType:
   - value: click
-    label: 单击
+    label: Single Click
   - value: double_click
-    label: 双击
+    label: Double Click
   MouseClickKeyboard:
   - value: none
-    label: 不使用
+    label: Not Used
   - value: alt
-    label: Alt键
+    label: Alt Key
   - value: ctrl
-    label: Ctrl键
+    label: Ctrl Key
   - value: shift
-    label: Shift键
+    label: Shift Key
   - value: win
-    label: Win键
+    label: Win Key
   FileExistenceType:
   - value: overwrite
-    label: 覆盖原有文件
+    label: Overwrite Existing File
   - value: rename
-    label: 创建文件副本
+    label: Create File Copy
   - value: cancel
-    label: 取消保存操作
+    label: Cancel Save Operation
   ElementInputType:
   - value: keyboard
-    label: 键盘输入
+    label: Keyboard Input
   - value: clipboard
-    label: 剪贴板输入
+    label: Clipboard Input
   Bool:
   - value: true
-    label: 是
+    label: Yes
   - value: false
-    label: 否
+    label: No

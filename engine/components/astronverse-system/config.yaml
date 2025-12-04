@@ -1,832 +1,828 @@
 atomic:
   System.compress:
-    title: 压缩
-    comment: 压缩 @{file_type} 到指定目录 @{compress_dir} 中，并保存压缩包路径至
-      @{compress_path}
+    title: Compress
+    comment: Compress @{file_type} to the specified directory @{compress_dir}, and save the archive path to @{compress_path}
     icon: compress
-    helpManual: 压缩选择文件与文件夹到指定目录，支持单个或多个文件文件夹同时压缩为一个压缩包(压缩后文件格式为zip格式)
+    helpManual: Compress selected files and folders to a specified directory, supports compressing one or more files/folders into a single archive (compressed file format is zip)
     inputList:
     - key: file_type
-      title: 选择压缩方式
-      tip: 选择压缩文件/文件夹/文件和文件夹
+      title: Select Compression Type
+      tip: Select compress file/folder/files and folders
     - key: file_path
-      title: 待压缩文件
-      tip: 选择或输入待压缩文件路径
+      title: File to Compress
+      tip: Select or enter the file path to compress
     - key: folder_path
-      title: 待压缩文件夹
-      tip: 选择或输入待压缩文件夹路径
+      title: Folder to Compress
+      tip: Select or enter the folder path to compress
     - key: compress_dir
-      title: 目标路径
-      tip: 保存目标压缩文件路径
+      title: Target Path
+      tip: Save target compressed file path
     - key: state_type
-      title: 目标路径不存在时
-      tip: 选择目标路径不存在时执行的操作
+      title: When Target Path Does Not Exist
+      tip: Select the operation to perform when target path does not exist
     - key: compress_name
-      title: 压缩包名称
-      tip: 指定压缩包名称，为空则默认以压缩列表中第一个压缩文件名称命名
+      title: Archive Name
+      tip: Specify archive name, if empty defaults to the name of the first file in the compression list
     - key: pwd
-      title: 压缩密码
-      tip: 为压缩包设置解压缩密码
+      title: Compression Password
+      tip: Set decompression password for the archive
     - key: save_type
-      title: 压缩后源文件是否保存
+      title: Keep Source Files After Compression
       tip: ''
     outputList:
     - key: compress_path
-      title: 输出压缩后压缩包路径
+      title: Output Compressed Archive Path
       tip: ''
   System.uncompress:
-    title: 解压
-    comment: 将压缩文件 @{source_path} 解压至指定目录 @{target_path} 下，并输出解压后文件所在路径 @{uncompress_path}
+    title: Decompress
+    comment: Decompress archive file @{source_path} to specified directory @{target_path}, and output the decompressed file path @{uncompress_path}
     icon: decompress
-    helpManual: 将压缩文件解压至指定路径
+    helpManual: Decompress archive file to specified path
     inputList:
     - key: source_path
-      title: 压缩包路径
-      tip: 请选择或输入压缩包路径
+      title: Archive Path
+      tip: Select or enter archive path
     - key: target_path
-      title: 目标解压目录
-      tip: 选择或输入解压后文件保存路径
+      title: Target Decompression Directory
+      tip: Select or enter decompressed file save path
     - key: status_type
-      title: 目标目录不存在时
-      tip: 选择目标目录不存在时执行的操作，默认直接创建
+      title: When Target Directory Does Not Exist
+      tip: Select the operation to perform when target directory does not exist, default is to create directly
     - key: pwd
-      title: 解压密码
+      title: Decompression Password
       tip: ''
     - key: save_type
-      title: 解压缩后源文件是否保留
-      tip: 解压后对源文件的操作，默认保留
+      title: Keep Source File After Decompression
+      tip: Operation on source file after decompression, default is to keep
     outputList:
     - key: uncompress_path
-      title: 输出解压后文件路径
+      title: Output Decompressed File Path
       tip: ''
   System.copy_clip:
-    title: 复制到剪切板
-    comment: 将 @{content_type}  @{message||file_path||folder_path} 复制到剪切板
+    title: Copy to Clipboard
+    comment: Copy @{content_type} @{message||file_path||folder_path} to clipboard
     icon: copy-to-clipboard
-    helpManual: 支持将文本内容/文件/文件夹复制到剪切板
+    helpManual: Supports copying text content/file/folder to clipboard
     inputList:
     - key: content_type
-      title: 复制类型
-      tip: 选择复制到剪贴板的内容类型
+      title: Copy Type
+      tip: Select the content type to copy to clipboard
     - key: message
-      title: 待复制的文本内容
-      tip: 输入文本内容
+      title: Text Content to Copy
+      tip: Enter text content
     - key: file_path
-      title: 待复制的文件路径
-      tip: 输入或选择待复制文件
+      title: File Path to Copy
+      tip: Enter or select file to copy
     - key: folder_path
-      title: 待复制的文件夹路径
-      tip: 输入或选择待复制文件夹
+      title: Folder Path to Copy
+      tip: Enter or select folder to copy
     outputList: []
   System.clear_clip:
-    title: 清空剪切板
-    comment: 清空剪切板中的内容
+    title: Clear Clipboard
+    comment: Clear clipboard content
     icon: clear-clipboard
-    helpManual: 清空剪切板中的内容
+    helpManual: Clear clipboard content
     inputList: []
     outputList: []
   System.paste_clip:
-    title: 获取剪切板
-    comment: 获取剪切板中的 @{content_type} ，并保存至变量 @{output_content}
+    title: Get Clipboard
+    comment: Get @{content_type} from clipboard and save to variable @{output_content}
     icon: get-clipboard
-    helpManual: 支持获取剪切板中的文本内容/文件/文件夹，并将文本内容/文件文件夹保存路径保存到指定路径中
+    helpManual: Supports getting text content/file/folder from clipboard and saving text content/file/folder path to specified path
     inputList:
     - key: content_type
-      title: 获取类型
-      tip: 选择剪切板中要获取的内容类型
+      title: Get Type
+      tip: Select the content type to get from clipboard
     - key: dst_path
-      title: 保存路径
-      tip: 请输入或选择保存路径
+      title: Save Path
+      tip: Enter or select save path
     - key: state_type
-      title: 保存路径不存在时
-      tip: 设置保存路径不存在时执行的操作
+      title: When Save Path Does Not Exist
+      tip: Set the operation to perform when save path does not exist
     - key: dst_file_name
-      title: 文件保存名称
-      tip: 输入保存的文件名，不需加文件后缀，为空自动使用原文件名
+      title: File Save Name
+      tip: Enter the file name to save, no need to add file extension, if empty automatically uses original file name
     - key: dst_folder_name
-      title: 文件夹保存名称
-      tip: 输入保存的文件夹名称，为空自动使用原文件夹名称
+      title: Folder Save Name
+      tip: Enter the folder name to save, if empty automatically uses original folder name
     outputList:
     - key: output_content
-      title: 输出剪切板内容至变量
-      tip: 获取文本内容输出为文本变量，获取文件/文件夹输出为路径信息
+      title: Output Clipboard Content to Variable
+      tip: Get text content outputs as text variable, get file/folder outputs as path information
   System.screen_shot:
-    title: 屏幕截图
-    comment: 按 @{screen_type} 方式截图并保存到 @{png_path} ，输出图片保存路径 @{screenshot_path}
+    title: Screen Screenshot
+    comment: Take screenshot using @{screen_type} method and save to @{png_path}, output image save path @{screenshot_path}
     icon: screen-screenshot
-    helpManual: 选择屏幕或指定区域进行截屏，并保存到指定路径
+    helpManual: Select screen or specified area for screenshot and save to specified path
     inputList:
     - key: png_path
-      title: 图片保存路径
-      tip: 输入或选择截图后的文件保存路径
+      title: Image Save Path
+      tip: Enter or select screenshot file save path
     - key: state_type
-      title: 路径不存在时
-      tip: 选择图片保存文件夹不存在时执行的操作
+      title: When Path Does Not Exist
+      tip: Select the operation to perform when image save folder does not exist
     - key: png_name
-      title: 图片保存名称
-      tip: 输入截图后的文件名，不需加文件后缀
+      title: Image Save Name
+      tip: Enter the screenshot file name, no need to add file extension
     - key: screen_type
-      title: 截图区域
-      tip: 指定截图区域
+      title: Screenshot Area
+      tip: Specify screenshot area
     - key: top_left_x
-      title: 左上角x坐标
-      tip: 输入截图的矩形区域左上角横坐标，单位为像素px
+      title: Top-left X Coordinate
+      tip: Enter the top-left horizontal coordinate of the screenshot rectangular area, in pixels (px)
     - key: top_left_y
-      title: 左上角y坐标
-      tip: 输入截图的矩形区域左上角纵坐标，单位为像素px
+      title: Top-left Y Coordinate
+      tip: Enter the top-left vertical coordinate of the screenshot rectangular area, in pixels (px)
     - key: bottom_right_x
-      title: 右下角x坐标
-      tip: 输入截图的矩形区域右下角横坐标，单位为像素px
+      title: Bottom-right X Coordinate
+      tip: Enter the bottom-right horizontal coordinate of the screenshot rectangular area, in pixels (px)
     - key: bottom_right_y
-      title: 右下角y坐标
-      tip: 输入截图的矩形区域右下角纵坐标，单位为像素px
+      title: Bottom-right Y Coordinate
+      tip: Enter the bottom-right vertical coordinate of the screenshot rectangular area, in pixels (px)
     outputList:
     - key: screenshot_path
-      title: 截图保存路径
+      title: Screenshot Save Path
       tip: ''
   System.screen_lock:
-    title: 屏幕锁定
-    comment: 系统屏幕锁屏，并将操作结果输出至变量 @{screen_lock_result}
+    title: Screen Lock
+    comment: Lock system screen and output operation result to variable @{screen_lock_result}
     icon: screen-lock
-    helpManual: 系统屏幕锁屏
+    helpManual: Lock system screen
     inputList: []
     outputList:
     - key: screen_lock_result
-      title: 锁屏执行结果
-      tip: 输出锁屏操作的执行结果并保存至变量，变量类型为布尔值
+      title: Lock Screen Execution Result
+      tip: Output lock screen operation execution result and save to variable, variable type is boolean
   System.screen_unlock:
-    title: 屏幕解锁
-    comment: 通过用户名 @{user_name} 和 @{pwd_type}  @{password_text||password_rsa} 进行系统屏幕解锁，并将操作结果输出至变量
-      @{screen_unlock_result}
+    title: Screen Unlock
+    comment: Unlock system screen using username @{user_name} and @{pwd_type} @{password_text||password_rsa}, and output operation result to variable @{screen_unlock_result}
     icon: screen-unlock
-    helpManual: 输入用户名和密码进行系统屏幕解锁
+    helpManual: Enter username and password to unlock system screen
     inputList:
     - key: user_name
-      title: 用户名
-      tip: 待解锁屏幕用户名
+      title: Username
+      tip: Username for screen unlock
     - key: pwd_type
-      title: 解锁类型
-      tip: 待解锁屏幕解锁类型
+      title: Unlock Type
+      tip: Screen unlock type
     - key: password_text
-      title: 密码
-      tip: 待解锁屏幕解锁密码
+      title: Password
+      tip: Screen unlock password
     - key: password_rsa
-      title: 密钥
-      tip: 待解锁屏幕解锁密钥
+      title: Key
+      tip: Screen unlock key
     outputList:
     - key: screen_unlock_result
-      title: 执行结果
-      tip: 输出屏幕解锁的执行结果并保存至变量，数据类型为布尔值
+      title: Execution Result
+      tip: Output screen unlock execution result and save to variable, data type is boolean
   System.run_command:
-    title: 运行或打开
-    comment: 运行或打开 @{command} ，并将执行结果保存到输出变量 @{process_out}
+    title: Run or Open
+    comment: Run or open @{command} and save execution result to output variable @{process_out}
     icon: run-or-open
-    helpManual: 运行cmd命令或打开可执行.exe文件，并将执行结果保存到输出变量
+    helpManual: Run cmd command or open executable .exe file, and save execution result to output variable
     inputList:
     - key: command
-      title: 命令或可执行文件
-      tip: 输入cmd命令行或可执行.exe文件
+      title: Command or Executable File
+      tip: Enter cmd command line or executable .exe file
     - key: cmd_type
-      title: 运行方式
-      tip: 选择命令行执行方式
+      title: Run Method
+      tip: Select command line execution method
     - key: run_type
-      title: 在指令执行结束之后
-      tip: 选择是否继续执行指令，或等待程序执行结束
+      title: After Command Execution Ends
+      tip: Select whether to continue executing commands or wait for program execution to end
     - key: params
-      title: 参数
-      tip: 程序执行的所需参数
+      title: Parameters
+      tip: Required parameters for program execution
     - key: work_dir
-      title: 工作目录
-      tip: 所执行命令的工作目录
+      title: Working Directory
+      tip: Working directory of the executed command
     - key: wait_time
-      title: 等待时间不超过
-      tip: 指定命令执行的等待时间，默认60秒
+      title: Wait Time Not Exceeding
+      tip: Specify command execution wait time, default 60 seconds
     outputList:
     - key: process_out
-      title: 保存执行结果至
-      tip: 输出cmd命令的执行结果并保存至变量，数据类型为布尔值
+      title: Save Execution Result to
+      tip: Output cmd command execution result and save to variable, data type is boolean
   System.get_pid:
-    title: 获取进程PID
-    comment: 获取与输入 @{process_name} 匹配的进程PID，并保存至输出变量 @{match_proces_pid}
+    title: Get Process PID
+    comment: Get process PID matching input @{process_name} and save to output variable @{match_proces_pid}
     icon: get-process-pid
-    helpManual: 输入待匹配进程名称，支持精确匹配/模糊匹配/正则表达式匹配，可获取单个匹配进程PID或全部匹配进程PID，并输出至变量列表
+    helpManual: Enter process name to match, supports exact match/fuzzy match/regular expression match, can get single matching process PID or all matching process PIDs and output to variable list
     inputList:
     - key: process_name
-      title: 待匹配内容
-      tip: 输入待匹配进程内容，精确匹配模式下需输入完整进程名，区分大小写
+      title: Content to Match
+      tip: Enter process content to match, exact match mode requires entering complete process name, case-sensitive
     - key: search_type
-      title: 匹配方式
-      tip: 选择匹配方式
+      title: Match Type
+      tip: Select match type
     - key: pid_type
-      title: 获取内容
-      tip: 指定获取到匹配进程PID的内容
+      title: Get Content
+      tip: Specify content to get from matched process PID
     outputList:
     - key: match_proces_pid
-      title: 输出匹配进程PID至
-      tip: 当获取全部匹配PID时输出为列表，获取单个匹配PID时输出为整型
+      title: Output Matching Process PID to
+      tip: When getting all matching PIDs output as list, when getting single matching PID output as integer
   System.terminate_process:
-    title: 终止进程
-    comment: 终止指定 @{termination_type} 的进程，并保存执行结果至输出变量 @{termination_process}
+    title: Terminate Process
+    comment: Terminate process by specified @{termination_type} and save execution result to output variable @{termination_process}
     icon: terminate-process
-    helpManual: 终止指定PID/名称的进程程序
+    helpManual: Terminate specified PID/name process program
     inputList:
     - key: termination_type
-      title: 终止方式
-      tip: 指定终止方式，通过进程PID/进程名称终止进程
+      title: Termination Method
+      tip: Specify termination method, terminate process by process PID/process name
     - key: pid
-      title: 进程PID
-      tip: 要终止的进程PID
+      title: Process PID
+      tip: Process PID to terminate
     - key: process_name
-      title: 进程名称
-      tip: 要终止的进程名称
+      title: Process Name
+      tip: Process name to terminate
     - key: time_out
-      title: 超时时间
-      tip: 指定超时时间，单位为秒
+      title: Timeout
+      tip: Specify timeout, in seconds
     outputList:
     - key: termination_process
-      title: 保存执行结果至
-      tip: 输出执行结果并保存到变量，数据类型为布尔值
+      title: Save Execution Result to
+      tip: Output execution result and save to variable, data type is boolean
   System.printer:
-    title: 打印机打印
-    comment: 使用打印机 @{printer_name} @{batch_print} 打印指定文件 @{file_path||folder_path}
-      ，并保存执行结果至输出变量 @{printer_status}
+    title: Printer Print
+    comment: Use printer @{printer_name} @{batch_print} to print specified file @{file_path||folder_path}, and save execution result to output variable @{printer_status}
     icon: printer-print
-    helpManual: 连接指定打印机进行文档打印
+    helpManual: Connect to specified printer for document printing
     inputList:
     - key: file_type
-      title: 打印对象
-      tip: 指定打印对象，支持打印WORD、EXCEL、PDF和图像文件，或批量打印文件夹中文件
+      title: Print Object
+      tip: Specify print object, supports printing WORD, EXCEL, PDF and image files, or batch printing files in folder
     - key: batch_print
-      title: 批量打印
-      tip: 设置批量打印
+      title: Batch Print
+      tip: Set batch print
     - key: file_path
-      title: 待打印文件路径
-      tip: 选择或输入待打印文件路径
+      title: File Path to Print
+      tip: Select or enter file path to print
     - key: folder_path
-      title: 待打印文件目录
-      tip: 选择或输入待打印文件目录
+      title: File Directory to Print
+      tip: Select or enter file directory to print
     - key: printer_type
-      title: 打印设置
-      tip: 设置打印相关参数
+      title: Print Settings
+      tip: Set print related parameters
     - key: printer_name
-      title: 打印机名称
-      tip: 输入打印机名称，为空时使用默认打印机
+      title: Printer Name
+      tip: Enter printer name, if empty uses default printer
     - key: paper_size
-      title: 纸张尺寸
-      tip: 指定打印纸张尺寸
+      title: Paper Size
+      tip: Specify print paper size
     - key: page_weight
-      title: 纸张宽度
-      tip: 输入打印纸张宽度
+      title: Paper Width
+      tip: Enter print paper width
     - key: page_height
-      title: 纸张高度
-      tip: 输入打印纸张高度
+      title: Paper Height
+      tip: Enter print paper height
     - key: print_num
-      title: 打印份数
-      tip: 输入打印份数，默认1份
+      title: Number of Copies
+      tip: Enter number of copies, default 1 copy
     - key: orientation_type
-      title: 打印版式
+      title: Print Orientation
       tip: ''
     - key: scale
-      title: 缩放(%)
+      title: Scale (%)
       tip: ''
     - key: margin_type
-      title: 边距（单位毫米）
+      title: Margin (millimeters)
       tip: ''
     - key: left_margin
-      title: 左
+      title: Left
       tip: ''
     - key: top_margin
-      title: 上
+      title: Top
       tip: ''
     - key: right_margin
-      title: 右
+      title: Right
       tip: ''
     - key: bottom_margin
-      title: 下
+      title: Bottom
       tip: ''
     - key: page
-      title: 页码范围
+      title: Page Range
       tip: ''
     outputList:
     - key: printer_status
-      title: 打印结果
-      tip: 保存打印结果到输出变量，数据类型为布尔值
+      title: Print Result
+      tip: Save print result to output variable, data type is boolean
   File.file_exist:
-    title: IF 文件存在
-    comment: 判断文件 @{file_path} 是否存在，存在就执行以下操作
+    title: IF File Exists
+    comment: Check if file @{file_path} exists, if it exists execute the following operations
     icon: check-file-exists
-    helpManual: 判断文件是否存在并将判断结果输出至变量
+    helpManual: Check if file exists and output judgment result to variable
     inputList:
     - key: file_path
-      title: 文件路径
-      tip: 输入或选择文件路径
+      title: File Path
+      tip: Enter or select file path
     - key: exist_type
-      title: 判断类型
-      tip: 选择判断类型
+      title: Check Type
+      tip: Select check type
     outputList: []
   File.file_create:
-    title: 新建文件
-    comment: 在指定目录 @{dst_path} 下创建文件 @{file_name} ，并保存新建文件路径到 @{new_file_path}
+    title: Create New File
+    comment: Create file @{file_name} in specified directory @{dst_path}, and save new file path to @{new_file_path}
     icon: create-new-file
-    helpManual: 在指定目录下新建文件
+    helpManual: Create new file in specified directory
     inputList:
     - key: dst_path
-      title: 指定目录
-      tip: 输入或选择指定文件夹目录
+      title: Specified Directory
+      tip: Enter or select specified folder directory
     - key: file_name
-      title: 文件名称
-      tip: 输入文件名称及扩展名
+      title: File Name
+      tip: Enter file name and extension
     - key: exist_options
-      title: 文件存在时
-      tip: 选择新建文件已存在时的操作；生成副本:将在文件名称后增加数字标识，如a(1).txt，如果副本文件同样存在，则数字递增；覆盖:删除已存在文件并重新创建；跳过:返回当前已存在文件路径
+      title: When File Exists
+      tip: Select operation when new file already exists; Create copy:will add numeric identifier after file name, such as a(1).txt, if copy file also exists, number increments; Overwrite:delete existing file and recreate; Skip:return current existing file path
     outputList:
     - key: new_file_path
-      title: 新建文件路径
-      tip: 输出新建文件路径，并保存到变量中，数据类型为字符串
+      title: New File Path
+      tip: Output new file path and save to variable, data type is string
   File.file_delete:
-    title: 删除文件
-    comment: 删除文件 @{file_path} ，并将结果输出至变量 @{delete_file_result}
+    title: Delete File
+    comment: Delete file @{file_path} and output result to variable @{delete_file_result}
     icon: delete-file
-    helpManual: 删除指定文件，并将执行结果输出至变量
+    helpManual: Delete specified file and output execution result to variable
     inputList:
     - key: file_path
-      title: 待删除文件
-      tip: 选择或输入待删除文件路径
+      title: File to Delete
+      tip: Select or enter file path to delete
     - key: delete_options
-      title: 删除操作
-      tip: 选择将文件彻底删除或移入回收站
+      title: Delete Operation
+      tip: Select to permanently delete file or move to recycle bin
     outputList:
     - key: delete_file_result
-      title: 输出删除结果至
-      tip: 将文件删除结果保存至变量，数据类型为布尔值
+      title: Output Delete Result to
+      tip: Save file delete result to variable, data type is boolean
   File.file_copy:
-    title: 复制文件
-    comment: 复制文件 @{file_path} 到指定目录 @{target_path} 下，并保存复制后的文件路径 @{copy_file_path}
+    title: Copy File
+    comment: Copy file @{file_path} to specified directory @{target_path}, and save copied file path @{copy_file_path}
     icon: copy-file
-    helpManual: 复制目标文件到指定目录
+    helpManual: Copy target file to specified directory
     inputList:
     - key: file_path
-      title: 待复制文件
-      tip: 选择或输入待复制文件路径
+      title: File to Copy
+      tip: Select or enter file path to copy
     - key: target_path
-      title: 指定目录
-      tip: 选择或输入目标目录
+      title: Specified Directory
+      tip: Select or enter target directory
     - key: state_type
-      title: 目录不存在时
-      tip: 设置指定目录不存在时执行的操作
+      title: When Directory Does Not Exist
+      tip: Set the operation to perform when specified directory does not exist
     - key: file_name
-      title: 复制后文件名
-      tip: 指定复制后文件名，无需输入文件扩展名，为空默认使用原文件名称
+      title: Copied File Name
+      tip: Specify copied file name, no need to enter file extension, if empty defaults to original file name
     - key: copy_options
-      title: 文件存在时
-      tip: 选择指定目录下文件已存在时的操作； 生成副本:将在文件名称后增加数字标识，如a(1).txt，如果副本文件同样存在，则数字递增； 覆盖:删除已存在文件并重新创建；
-        跳过:返回当前已存在文件路径
+      title: When File Exists
+      tip: Select operation when file already exists in specified directory; Create copy:will add numeric identifier after file name, such as a(1).txt, if copy file also exists, number increments; Overwrite:delete existing file and recreate; Skip:return current existing file path
     outputList:
     - key: copy_file_path
-      title: 复制后文件路径
-      tip: 输出复制后文件路径，并保存至变量，数据类型为字符串
+      title: Copied File Path
+      tip: Output copied file path and save to variable, data type is string
   File.file_write:
-    title: 写入文件
-    comment: 写入内容 @{msg} 到文件 @{file_path} 中，并保存写入后的文件路径 @{write_file_path}
+    title: Write File
+    comment: Write content @{msg} to file @{file_path}, and save written file path @{write_file_path}
     icon: write-file
-    helpManual: 向指定文件中写入内容，并输出写入后的文件路径至变量
+    helpManual: Write content to specified file and output written file path to variable
     inputList:
     - key: file_path
-      title: 文件路径
-      tip: 选择或输入文件路径，支持写入的文件类型有：".txt"， ".docx"， ".md"， ".py"， ".json"， ".csv"
+      title: File Path
+      tip: "Select or enter file path, supported file types are: \".txt\", \".docx\", \".md\", \".py\", \".json\", \".csv\""
     - key: file_option
-      title: 文件不存在时
-      tip: 选择文件不存在时执行的操作
+      title: When File Does Not Exist
+      tip: Select operation to perform when file does not exist
     - key: msg
-      title: 写入内容
-      tip: 输入要写入的内容
+      title: Content to Write
+      tip: Enter content to write
     - key: write_type
-      title: 写入方式
-      tip: 指定写入方式
+      title: Write Method
+      tip: Specify write method
     - key: encode_type
-      title: 编码方式
-      tip: 选择写入内容的编码方式，文件内容为空时需指定，默认选项时自动使用待写入文件的编码方式
+      title: Encoding Method
+      tip: Select encoding method for written content, needs to be specified when file content is empty, when default option is selected automatically uses encoding method of file to write
     outputList:
     - key: write_file_path
-      title: 文件路径
-      tip: 输出写入后文件路径至变量，数据类型为字符串
+      title: File Path
+      tip: Output written file path to variable, data type is string
   File.get_file_encoding_type:
-    title: 获取文件编码类型
-    comment: 获取文件 @{file_path} 的编码类型并保存至变量 @{file_encoding_type}
+    title: Get File Encoding Type
+    comment: Get encoding type of file @{file_path} and save to variable @{file_encoding_type}
     icon: get-file-encoding
-    helpManual: 获取指定文件的编码类型，并输出编码类型至变量
+    helpManual: Get encoding type of specified file and output encoding type to variable
     inputList:
     - key: file_path
-      title: 文件路径
-      tip: 选择或输入待获取编码类型的文件路径
+      title: File Path
+      tip: Select or enter file path to get encoding type
     outputList:
     - key: file_encoding_type
-      title: 文件编码类型
-      tip: 输出文件编码类型至变量，数据类型为字符串
+      title: File Encoding Type
+      tip: Output file encoding type to variable, data type is string
   File.file_read:
-    title: 读取文件
-    comment: 按照 @{read_type} 方式读取文件 @{file_path} 中的内容，并保存至变量 @{read_file_content}
+    title: Read File
+    comment: Read content from file @{file_path} using @{read_type} method and save to variable @{read_file_content}
     icon: read-file
-    helpManual: 读取指定文件内容，并将读取内容输出保存至变量
+    helpManual: Read specified file content and output read content to variable
     inputList:
     - key: file_path
-      title: 待读取文件路径
-      tip: 选择或输入待读取文件路径， 支持读取的文件类型有：".txt"， ".docx"， ".md"， ".py"， ".json"， ".csv"
+      title: File Path to Read
+      tip: "Select or enter file path to read, supported file types are: \".txt\", \".docx\", \".md\", \".py\", \".json\", \".csv\""
     - key: read_type
-      title: 读取方式
-      tip: 选择读取方式，全部读取:读取全部内容； 按行读取:按行读取文本内容； 二进制:以二进制方式读取文件内容
+      title: Read Method
+      tip: "Select read method, Read all:read all content; Read by line:read text content by line; Binary:read file content in binary mode"
     - key: encode_type
-      title: 编码方式
-      tip: 选择读取内容的编码方式，默认选项时自动使用待读取文件的编码方式
+      title: Encoding Method
+      tip: Select encoding method for read content, when default option is selected automatically uses encoding method of file to read
     outputList:
     - key: read_file_content
-      title: 读取内容为
-      tip: 输出读取内容至变量，数据类型为字符串
+      title: Read Content is
+      tip: Output read content to variable, data type is string
   File.file_move:
-    title: 移动文件
-    comment: 将文件 @{file_path} 移动至指定目录 @{target_folder} 下，并保存移动后的文件路径 @{move_file_path}
+    title: Move File
+    comment: Move file @{file_path} to specified directory @{target_folder}, and save moved file path @{move_file_path}
     icon: move-file
-    helpManual: 将指定文件移动到目标目录，并输出移动后的文件路径至变量
+    helpManual: Move specified file to target directory and output moved file path to variable
     inputList:
     - key: file_path
-      title: 待移动文件路径
-      tip: 选择或输入待移动文件路径
+      title: File Path to Move
+      tip: Select or enter file path to move
     - key: target_folder
-      title: 指定目录
-      tip: 选择或输入目标目录， 指定目录不存在时默认自动创建
+      title: Specified Directory
+      tip: Select or enter target directory, when specified directory does not exist default is to create automatically
     - key: state_type
-      title: 目录不存在时
-      tip: 设置指定目录不存在时执行的操作
+      title: When Directory Does Not Exist
+      tip: Set the operation to perform when specified directory does not exist
     - key: file_name
-      title: 移动后文件名
-      tip: 输入移动后文件名(不需后缀名)，默认为空使用原文件名
+      title: Moved File Name
+      tip: Enter moved file name (no extension needed), default is empty uses original file name
     - key: exist_options
-      title: 文件存在时
-      tip: 选择文件存在时执行的操作（覆盖、跳过、生成副本）
+      title: When File Exists
+      tip: Select operation to perform when file exists (overwrite, skip, create copy)
     outputList:
     - key: move_file_path
-      title: 移动后文件路径
-      tip: 输出移动后文件路径至变量，数据类型为字符串
+      title: Moved File Path
+      tip: Output moved file path to variable, data type is string
   File.file_rename:
-    title: 重命名文件
-    comment: 将文件 @{file_path} 重命名为 @{new_name} 并保存重命名后的文件路径 @{rename_file_path}
+    title: Rename File
+    comment: Rename file @{file_path} to @{new_name} and save renamed file path @{rename_file_path}
     icon: rename-file
-    helpManual: 将指定文件重命名，并输出重命名后的文件路径至变量
+    helpManual: Rename specified file and output renamed file path to variable
     inputList:
     - key: file_path
-      title: 待重命名文件路径
-      tip: 选择或输入待重命名文件路径
+      title: File Path to Rename
+      tip: Select or enter file path to rename
     - key: new_name
-      title: 新文件名
-      tip: 输入新文件名(不需后缀名)
+      title: New File Name
+      tip: Enter new file name (no extension needed)
     - key: exist_options
-      title: 文件存在时
-      tip: 选择文件存在时执行的操作（覆盖、跳过、生成副本）
+      title: When File Exists
+      tip: Select operation to perform when file exists (overwrite, skip, create copy)
     outputList:
     - key: rename_file_path
-      title: 重命名后文件路径
-      tip: 输出重命名后文件路径至变量，数据类型为字符串
+      title: Renamed File Path
+      tip: Output renamed file path to variable, data type is string
   File.file_search:
-    title: 查找文件
-    comment: 在 @{folder_path} 目录中查找文件名包含 @{search_pattern} 的文件，并保存匹配文件路径至变量 @{find_file_result}
+    title: Find File
+    comment: Find files with name containing @{search_pattern} in @{folder_path} directory and save matching file paths to variable @{find_file_result}
     icon: find-file
-    helpManual: 在指定目录中查找文件名包含指定内容的文件，并输出文件列表至变量
+    helpManual: Find files with specified content in file name in specified directory and output file list to variable
     inputList:
     - key: folder_path
-      title: 待查找文件所在目录
-      tip: 选择或输入待查找文件所在目录
+      title: Directory Containing Files to Find
+      tip: Select or enter directory containing files to find
     - key: find_type
-      title: 查找方式
-      tip: 指定查找方式：精确匹配需输入完整文件名；模糊匹配输入部分文件名，需区分大小写；正则表达式匹配输入正则表达式
+      title: Find Method
+      tip: "Specify find method: exact match requires entering complete file name; fuzzy match enter partial file name, case-sensitive; regular expression match enter regular expression"
     - key: search_pattern
-      title: 查找文件名
-      tip: 输入查找内容
+      title: Find File Name
+      tip: Enter find content
     - key: traverse_subfolder
-      title: 遍历子文件夹
-      tip: 选择是否遍历子文件夹
+      title: Traverse Subfolders
+      tip: Select whether to traverse subfolders
     outputList:
     - key: find_file_result
-      title: 保存查找结果至
-      tip: 输出匹配文件路径列表，并保存到变量，数据类型为列表
+      title: Save Find Result to
+      tip: Output matching file path list and save to variable, data type is list
   File.file_wait_status:
-    title: 等待文件
-    comment: 等待文件 @{file_path} 状态为 @{status_type} 时执行下一步，保存等待结果到 @{wait_file_result}
+    title: Wait for File
+    comment: Wait for file @{file_path} status to be @{status_type} then execute next step, save wait result to @{wait_file_result}
     icon: wait-file
-    helpManual: 等待文件状态为指定状态时执行下一步，并输出等待结果至变量
+    helpManual: Wait for file status to be specified status then execute next step and output wait result to variable
     inputList:
     - key: file_path
-      title: 文件路径
-      tip: 选择或输入文件路径
+      title: File Path
+      tip: Select or enter file path
     - key: status_type
-      title: 等待状态
-      tip: 选择等待文件的状态
+      title: Wait Status
+      tip: Select wait file status
     - key: wait_time
-      title: 超时时间
-      tip: 设置等待超时时间，单位为秒
+      title: Timeout
+      tip: Set wait timeout, in seconds
     outputList:
     - key: wait_file_result
-      title: 保存等待结果至
-      tip: 输出等待结果至变量，数据类型为布尔值
+      title: Save Wait Result to
+      tip: Output wait result to variable, data type is boolean
   File.file_info:
-    title: 获取文件信息
-    comment: 获取指定文件 @{file_path} 的 @{info_type} 信息，并保存文件信息至变量 @{file_info}
+    title: Get File Information
+    comment: Get @{info_type} information of specified file @{file_path} and save file information to variable @{file_info}
     icon: get-file-info
-    helpManual: 获取文件的全部信息/大小/文件路径/大小(字节)/根目录/文件夹目录/名称与扩展名/名称/扩展名/创建时间/修改时间，并保存到输出变量
+    helpManual: Get all information/size/file path/size (bytes)/root directory/folder directory/name and extension/name/extension/creation time/modification time of file and save to output variable
     inputList:
     - key: file_path
-      title: 文件路径
-      tip: 选择或输入文件路径
+      title: File Path
+      tip: Select or enter file path
     - key: info_type
-      title: 获取信息类型
-      tip: 指定获取的信息类型
+      title: Get Information Type
+      tip: Specify information type to get
     outputList:
     - key: file_info
-      title: 文件信息为
-      tip: 输出文件信息至变量，获取全部信息时数据类型为字典，获取其他信息时数据类型为字符串
+      title: File Information is
+      tip: Output file information to variable, when getting all information data type is dictionary, when getting other information data type is string
   File.get_file_list:
-    title: 获取文件列表
-    comment: 获取指定目录 @{folder_path} 中的文件列表，并保存文件列表至变量 @{file_list}
+    title: Get File List
+    comment: Get file list in specified directory @{folder_path} and save file list to variable @{file_list}
     icon: get-file-list
-    helpManual: 获取指定目录中的文件列表，并保存至输出变量
+    helpManual: Get file list in specified directory and save to output variable
     inputList:
     - key: folder_path
-      title: 文件目录
-      tip: 选择或输入文件目录路径
+      title: File Directory
+      tip: Select or enter file directory path
     - key: traverse_subfolder
-      title: 遍历子目录
-      tip: 选择是否遍历子目录
+      title: Traverse Subdirectories
+      tip: Select whether to traverse subdirectories
     - key: output_type
-      title: 输出方式
-      tip: 设置输出方式
+      title: Output Method
+      tip: Set output method
     - key: excel_path
-      title: Excel文件保存目录
-      tip: 选择或输入保存的Excel文件保存目录
+      title: Excel File Save Directory
+      tip: Select or enter Excel file save directory
     - key: state_type
-      title: 目录不存在时
-      tip: 选择Excel文件保存目录不存在时执行的操作
+      title: When Directory Does Not Exist
+      tip: Select operation to perform when Excel file save directory does not exist
     - key: excel_name
-      title: Excel文件名
-      tip: 输入保存的Excel文件名，不需输入文件扩展名，默认扩展名为.xlsx
+      title: Excel File Name
+      tip: Enter Excel file name to save, no need to enter file extension, default extension is .xlsx
     - key: sort_method
-      title: 排序方式
-      tip: 指定排序方式
+      title: Sort Method
+      tip: Specify sort method
     - key: sort_type
-      title: 排序类型
-      tip: 指定排序类型
+      title: Sort Type
+      tip: Specify sort type
     outputList:
     - key: file_list
-      title: 获取文件列表为
-      tip: 输出获取到的文件列表到变量，数据类型为列表
+      title: Get File List is
+      tip: Output obtained file list to variable, data type is list
   Folder.folder_exist:
-    title: IF 文件夹存在
-    comment: 判断文件夹 @{folder_path}  @{exist_type}，存在就执行以下操作
+    title: IF Folder Exists
+    comment: Check if folder @{folder_path} @{exist_type}, if it exists execute the following operations
     icon: check-folder-exists
-    helpManual: 判断文件夹是否存在
+    helpManual: Check if folder exists
     inputList:
     - key: folder_path
-      title: 文件夹路径
-      tip: 选择或输入文件夹路径
+      title: Folder Path
+      tip: Select or enter folder path
     - key: exist_type
-      title: 判断类型
-      tip: 设置判断类型
+      title: Check Type
+      tip: Set check type
     outputList: []
   Folder.folder_open:
-    title: 打开文件夹
-    comment: 打开指定文件夹 @{folder_path}
+    title: Open Folder
+    comment: Open specified folder @{folder_path}
     icon: open-folder
-    helpManual: 打开指定文件夹
+    helpManual: Open specified folder
     inputList:
     - key: folder_path
-      title: 文件夹路径
-      tip: 选择或输入文件夹路径
+      title: Folder Path
+      tip: Select or enter folder path
     outputList: []
   Folder.folder_create:
-    title: 创建文件夹
-    comment: 在指定目录 @{target_path} 创建文件夹 @{folder_name} ，并保存新文件夹路径至变量 @{new_folder_path}
+    title: Create Folder
+    comment: Create folder @{folder_name} in specified directory @{target_path} and save new folder path to variable @{new_folder_path}
     icon: create-folder
-    helpManual: 在指定目录下创建文件夹，并保存新建文件夹路径到输出变量
+    helpManual: Create folder in specified directory and save new folder path to output variable
     inputList:
     - key: target_path
-      title: 指定目录
-      tip: 选择或输入创建文件夹路径，路径不存在时自动创建
+      title: Specified Directory
+      tip: Select or enter folder creation path, automatically creates if path does not exist
     - key: folder_name
-      title: 文件夹名称
-      tip: 输入创建文件夹名称
+      title: Folder Name
+      tip: Enter folder name to create
     - key: exist_options
-      title: 文件夹存在时
-      tip: 选择新建文件夹已存在时的操作；生成副本:将在文件名称后增加数字标识，如a(1)，如果副本文件同样存在，则数字递增；覆盖:删除已存在文件夹并重新创建；跳过:返回当前已存在文件夹路径
+      title: When Folder Exists
+      tip: Select operation when new folder already exists; Create copy:will add numeric identifier after folder name, such as a(1), if copy folder also exists, number increments; Overwrite:delete existing folder and recreate; Skip:return current existing folder path
     outputList:
     - key: new_folder_path
-      title: 创建文件夹路径
-      tip: 保存创建的文件夹路径到输出变量，数据类型为字符串
+      title: Created Folder Path
+      tip: Save created folder path to output variable, data type is string
   Folder.folder_delete:
-    title: 删除文件夹
-    comment: 删除文件夹 @{folder_path} ，并将结果输出至变量 @{delete_folder_result}
+    title: Delete Folder
+    comment: Delete folder @{folder_path} and output result to variable @{delete_folder_result}
     icon: delete-folder-ftp
-    helpManual: 删除文件夹
+    helpManual: Delete folder
     inputList:
     - key: folder_path
-      title: 文件夹路径
-      tip: 选择或输入文件夹路径
+      title: Folder Path
+      tip: Select or enter folder path
     - key: delete_options
-      title: 删除操作
-      tip: 选择将文件夹彻底删除或移入回收站
+      title: Delete Operation
+      tip: Select to permanently delete folder or move to recycle bin
     outputList:
     - key: delete_folder_result
-      title: 删除文件夹结果
-      tip: 保存删除文件夹的结果到输出变量，数据类型为布尔值
+      title: Delete Folder Result
+      tip: Save folder delete result to output variable, data type is boolean
   Folder.folder_copy:
-    title: 复制文件夹
-    comment: 将文件夹 @{source_path} 复制到指定目录 @{target_path} 下，并保存复制后的文件夹路径至变量 @{copy_folder_path}
+    title: Copy Folder
+    comment: Copy folder @{source_path} to specified directory @{target_path} and save copied folder path to variable @{copy_folder_path}
     icon: copy-folder
-    helpManual: 复制文件夹到指定目录，并保存复制后的文件夹路径到输出变量
+    helpManual: Copy folder to specified directory and save copied folder path to output variable
     inputList:
     - key: source_path
-      title: 文件夹路径
-      tip: 选择或输入待复制文件夹路径
+      title: Folder Path
+      tip: Select or enter folder path to copy
     - key: target_path
-      title: 指定目录
-      tip: 选择或输入目标文件夹路径
+      title: Specified Directory
+      tip: Select or enter target folder path
     - key: state_type
-      title: 目录不存在时
-      tip: 设置指定目录不存在时执行的操作
+      title: When Directory Does Not Exist
+      tip: Set the operation to perform when specified directory does not exist
     - key: folder_name
-      title: 文件夹名称
-      tip: 默认为空，使用源文件夹名称
+      title: Folder Name
+      tip: Default is empty, uses source folder name
     - key: exist_options
-      title: 文件夹存在时
-      tip: 选择文件夹已存在时的操作；生成副本:将在文件名称后增加数字标识，如a(1)，如果副本文件夹同样存在，则数字递增；覆盖:删除已存在文件夹；跳过:返回当前已存在文件路径
+      title: When Folder Exists
+      tip: Select operation when folder already exists; Create copy:will add numeric identifier after folder name, such as a(1), if copy folder also exists, number increments; Overwrite:delete existing folder; Skip:return current existing file path
     outputList:
     - key: copy_folder_path
-      title: 复制后文件夹路径
-      tip: 保存复制后的文件夹路径到输出变量，数据类型为字符串
+      title: Copied Folder Path
+      tip: Save copied folder path to output variable, data type is string
   Folder.folder_move:
-    title: 移动文件夹
-    comment: 移动文件夹 @{folder_path} 到指定目录 @{target_folder} 下，并保存移动后的文件夹路径至变量 @{move_folder_path}
+    title: Move Folder
+    comment: Move folder @{folder_path} to specified directory @{target_folder} and save moved folder path to variable @{move_folder_path}
     icon: move-folder
-    helpManual: 移动文件夹到指定目录，并保存移动后的文件夹路径到输出变量
+    helpManual: Move folder to specified directory and save moved folder path to output variable
     inputList:
     - key: folder_path
-      title: 文件夹路径
-      tip: 选择或输入待移动文件夹路径
+      title: Folder Path
+      tip: Select or enter folder path to move
     - key: target_folder
-      title: 指定目录
-      tip: 选择或输入目标文件夹路径
+      title: Specified Directory
+      tip: Select or enter target folder path
     - key: state_type
-      title: 目录不存在时
-      tip: 设置指定目录不存在时执行的操作
+      title: When Directory Does Not Exist
+      tip: Set the operation to perform when specified directory does not exist
     - key: folder_name
-      title: 文件夹名称
-      tip: 默认为空，使用原文件夹名称
+      title: Folder Name
+      tip: Default is empty, uses original folder name
     - key: exist_options
-      title: 文件夹存在时
-      tip: 选择文件夹已存在时的操作；生成副本:将在文件名称后增加数字标识，如a(1)，如果副本文件夹同样存在，则数字递增；覆盖:删除已存在文件夹；跳过:返回当前已存在文件路径
+      title: When Folder Exists
+      tip: Select operation when folder already exists; Create copy:will add numeric identifier after folder name, such as a(1), if copy folder also exists, number increments; Overwrite:delete existing folder; Skip:return current existing file path
     outputList:
     - key: move_folder_path
-      title: 移动后文件夹路径
-      tip: 保存移动后文件夹路径至输出变量，数据类型为字符串
+      title: Moved Folder Path
+      tip: Save moved folder path to output variable, data type is string
   Folder.folder_rename:
-    title: 重命名文件夹
-    comment: 重命名文件夹 @{folder_path} 为 @{new_name} ，并保存重命名后的文件夹路径至变量 @{rename_folder_path}
+    title: Rename Folder
+    comment: Rename folder @{folder_path} to @{new_name} and save renamed folder path to variable @{rename_folder_path}
     icon: rename-folder
-    helpManual: 重命名文件夹，并保存重命名后的文件夹路径到输出变量
+    helpManual: Rename folder and save renamed folder path to output variable
     inputList:
     - key: folder_path
-      title: 文件夹路径
-      tip: 选择或输入待重命名文件夹路径
+      title: Folder Path
+      tip: Select or enter folder path to rename
     - key: new_name
-      title: 新文件夹名称
-      tip: 输入新文件夹名称
+      title: New Folder Name
+      tip: Enter new folder name
     - key: exist_options
-      title: 文件夹存在时
-      tip: 选择文件夹已存在时的操作；生成副本:将在文件名称后增加数字标识，如a(1)，如果副本文件夹同样存在，则数字递增；覆盖:删除已存在文件夹；跳过:返回当前已存在文件路径
+      title: When Folder Exists
+      tip: Select operation when folder already exists; Create copy:will add numeric identifier after folder name, such as a(1), if copy folder also exists, number increments; Overwrite:delete existing folder; Skip:return current existing file path
     outputList:
     - key: rename_folder_path
-      title: 重命名文件夹路径
-      tip: 保存重命名后文件夹路径到输出变量，数据类型为字符串
+      title: Renamed Folder Path
+      tip: Save renamed folder path to output variable, data type is string
   Folder.folder_clear:
-    title: 清空文件夹
-    comment: 清空文件夹 @{folder_path} ，并保存清空结果到变量 @{clear_folder_result}
+    title: Clear Folder
+    comment: Clear folder @{folder_path} and save clear result to variable @{clear_folder_result}
     icon: clear-folder
-    helpManual: 清空指定文件夹，并保存操作结果到输出变量
+    helpManual: Clear specified folder and save operation result to output variable
     inputList:
     - key: folder_path
-      title: 文件夹路径
-      tip: 选择或输入待清空文件夹
+      title: Folder Path
+      tip: Select or enter folder to clear
     outputList:
     - key: clear_folder_result
-      title: 清空操作结果
-      tip: 保存清空结果到输出变量，数据类型为布尔值
+      title: Clear Operation Result
+      tip: Save clear result to output variable, data type is boolean
   Folder.get_folder_list:
-    title: 获取文件夹列表
-    comment: 获取指定目录 @{folder_path} 下的文件夹列表，并保存文件夹列表至变量 @{folder_list}
+    title: Get Folder List
+    comment: Get folder list in specified directory @{folder_path} and save folder list to variable @{folder_list}
     icon: get-folder-list
-    helpManual: 获取文件夹列表，并保存到输出变量
+    helpManual: Get folder list and save to output variable
     inputList:
     - key: folder_path
-      title: 文件夹目录
-      tip: 选择或输入文件夹目录路径
+      title: Folder Directory
+      tip: Select or enter folder directory path
     - key: traverse_subfolder
-      title: 遍历子目录
-      tip: 选择是否遍历目录下的子目录
+      title: Traverse Subdirectories
+      tip: Select whether to traverse subdirectories
     - key: output_type
-      title: 输出类型
-      tip: 选择文件夹列表的输出类型
+      title: Output Type
+      tip: Select folder list output type
     - key: excel_path
-      title: Excel文件保存目录
-      tip: 选择或输入保存的Excel文件保存目录
+      title: Excel File Save Directory
+      tip: Select or enter Excel file save directory
     - key: state_type
-      title: 目录不存在时
-      tip: 选择Excel文件保存目录不存在时执行的操作
+      title: When Directory Does Not Exist
+      tip: Select operation to perform when Excel file save directory does not exist
     - key: excel_name
-      title: Excel文件名
-      tip: 输入保存的Excel文件名，不需输入文件扩展名，默认扩展名为.xlsx
+      title: Excel File Name
+      tip: Enter Excel file name to save, no need to enter file extension, default extension is .xlsx
     - key: sort_method
-      title: 排序方式
-      tip: 选择排序方式
+      title: Sort Method
+      tip: Select sort method
     - key: sort_type
-      title: 排序类型
-      tip: 指定排序类型
+      title: Sort Type
+      tip: Specify sort type
     outputList:
     - key: folder_list
-      title: 文件夹列表
-      tip: 保存获取的文件夹列表到输出变量，数据类型为列表
+      title: Folder List
+      tip: Save obtained folder list to output variable, data type is list
 options:
   StateType:
   - value: create
-    label: 创建
+    label: Create
   - value: error
-    label: 提示并报错
+    label: Prompt and Report Error
   SaveType:
   - value: delete
-    label: 删除
+    label: Delete
   - value: save
-    label: 保留
+    label: Keep
   ContentType:
   - value: msg
-    label: 文本内容
+    label: Text Content
   - value: html
-    label: HTML格式文本内容
+    label: HTML Format Text Content
   - value: file
-    label: 文件
+    label: File
   - value: folder
-    label: 文件夹
+    label: Folder
   ScreenType:
   - value: full
-    label: 全屏
+    label: Full Screen
   - value: region
-    label: 选择区域
+    label: Select Region
   PwdType:
   - value: rsa
-    label: 密钥
+    label: Key
   - value: password
-    label: 密码
+    label: Password
   CmdType:
   - value: normal
-    label: 运行
+    label: Run
   - value: admin
-    label: 管理员身份运行
+    label: Run as Administrator
   RunType:
   - value: continue
-    label: 继续执行下一指令
+    label: Continue to Next Command
   - value: complete
-    label: 等待指令执行结束
+    label: Wait for Command to Complete
   SearchType:
   - value: exact
-    label: 精确匹配
+    label: Exact Match
   - value: fuzzy
-    label: 模糊匹配
+    label: Fuzzy Match
   - value: regex
-    label: 正则表达式匹配
+    label: Regular Expression Match
   PidType:
   - value: all
-    label: 获取全部
+    label: Get All
   - value: one
-    label: 获取一个
+    label: Get One
   TerminationType:
   - value: pid
-    label: 进程PID
+    label: Process PID
   - value: name
-    label: 进程名称
+    label: Process Name
   FileType:
   - value: picture
-    label: 图片
+    label: Picture
   - value: word
-    label: word
+    label: Word
   - value: pdf
-    label: pdf
+    label: PDF
   - value: excel
-    label: excel
+    label: Excel
   BatchType:
   - value: batch
-    label: 批量打印
+    label: Batch Print
   - value: single
-    label: 单张打印
+    label: Single Print
   PrinterType:
   - value: custom
-    label: 自定义
+    label: Custom
   - value: default
-    label: 默认
+    label: Default
   PaperType:
   - value: A3
     label: A3
@@ -845,42 +841,42 @@ options:
   - value: D_SHEET
     label: D_SHEET
   - value: CUSTOM
-    label: 默认
+    label: Default
   OrientationType:
   - value: horizontal
-    label: 水平方向
+    label: Horizontal
   - value: vertical
-    label: 垂直方向
+    label: Vertical
   MarginType:
   - value: custom
-    label: 自定义
+    label: Custom
   - value: default
-    label: 默认
+    label: Default
   ExistType:
   - value: exist
-    label: 存在
+    label: Exists
   - value: not_exist
-    label: 不存在
+    label: Does Not Exist
   OptionType:
   - value: overwrite
-    label: 覆盖原有文件夹
+    label: Overwrite Original Folder
   - value: skip
-    label: 取消保存操作
+    label: Cancel Save Operation
   - value: generate
-    label: 创建文件夹副本
+    label: Create Folder Copy
   DeleteType:
   - value: delete
-    label: 彻底删除
+    label: Permanently Delete
   - value: trash
-    label: 移入回收站
+    label: Move to Recycle Bin
   WriteType:
   - value: overwrite
-    label: 覆盖写入
+    label: Overwrite
   - value: append
-    label: 追加写入
+    label: Append
   EncodeType:
   - value: default
-    label: 默认
+    label: Default
   - value: ansi
     label: ansi
   - value: utf-8
@@ -897,63 +893,63 @@ options:
     label: gb18030
   ReadType:
   - value: all
-    label: 读取全部内容
+    label: Read All Content
   - value: list
-    label: 按行读取到列表中
+    label: Read by Line to List
   - value: byte
-    label: 二进制方式读取
+    label: Read in Binary Mode
   TraverseType:
   - value: 'yes'
-    label: 遍历子目录
+    label: Traverse Subdirectories
   - value: 'no'
-    label: 不遍历子目录
+    label: Do Not Traverse Subdirectories
   StatusType:
   - value: created
-    label: 被创建
+    label: Created
   - value: deleted
-    label: 被删除
+    label: Deleted
   InfoType:
   - value: all
-    label: 全部信息
+    label: All Information
   - value: abs_path
-    label: 绝对路径
+    label: Absolute Path
   - value: root
-    label: 根目录
+    label: Root Directory
   - value: directory
-    label: 文件路径
+    label: File Path
   - value: size
-    label: 文件大小(字节)
+    label: File Size (bytes)
   - value: name_ext
-    label: 文件名
+    label: File Name
   - value: name
-    label: 单独文件名
+    label: Name Only
   - value: extension
-    label: 文件扩展名
+    label: File Extension
   - value: c_time
-    label: 文件创建时间
+    label: File Creation Time
   - value: m_time
-    label: 文件修改时间
+    label: File Modification Time
   OutputType:
   - value: list
-    label: 列表输出
+    label: List Output
   - value: excel
-    label: 存储到表格文件
+    label: Save to Excel File
   SortMethod:
   - value: none
-    label: 无
+    label: None
   - value: ctime
-    label: 按创建时间排序
+    label: Sort by Creation Time
   - value: mtime
-    label: 按修改时间排序
+    label: Sort by Modification Time
   SortType:
   - value: ascending
-    label: 升序
+    label: Ascending
   - value: descending
-    label: 降序
+    label: Descending
   FileFolderType:
   - value: file
-    label: 文件
+    label: File
   - value: folder
-    label: 文件夹
+    label: Folder
   - value: both
-    label: 文件和文件夹
+    label: Files and Folders

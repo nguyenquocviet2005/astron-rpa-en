@@ -47,16 +47,16 @@
           "params": {}
         },
         "key": "file_flag",
-        "title": "是否上传文件",
+        "title": "YesNo上传文件",
         "name": "file_flag",
         "tip": "",
         "options": [
           {
-            "label": "是",
+            "label": "Yes",
             "value": true
           },
           {
-            "label": "否",
+            "label": "No",
             "value": false
           }
         ],
@@ -246,7 +246,7 @@
           "type": "INPUT"
         },
         "key": "input_value",
-        "title": "工作流默认输入",
+        "title": "工作流默认Input",
         "name": "input_value",
         "tip": "",
         "default": "",
@@ -272,7 +272,7 @@
     "title": "单轮会话",
     "version": "1.0.0",
     "src": "astronverse.ai.chat.ChatAI().single_turn_chat",
-    "comment": "大模型将对你提出的问题： @{query} 进行回答。",
+    "comment": "Large Language Models将对你提出的问题： @{query} 进行回答。",
     "inputList": [
       {
         "types": "Str",
@@ -280,9 +280,9 @@
           "type": "INPUT_VARIABLE_PYTHON"
         },
         "key": "query",
-        "title": "用户输入",
+        "title": "用户Input",
         "name": "query",
-        "tip": "用户输入的问题。",
+        "tip": "用户Input的问题。",
         "value": [
           {
             "type": "str",
@@ -322,7 +322,7 @@
         },
         "key": "single_chat_res",
         "title": "答案输出",
-        "tip": "将大模型生成的答案输出为变量。"
+        "tip": "将Large Language Models生成的答案输出为变量。"
       }
     ],
     "icon": "single-chat",
@@ -333,7 +333,7 @@
     "title": "多轮会话",
     "version": "1.0.0",
     "src": "astronverse.ai.chat.ChatAI().chat",
-    "comment": "大模型将扮演角色，并进行最多 (@{max_turns}) 问答次数。",
+    "comment": "Large Language Models将扮演角色，并进行最多 (@{max_turns}) 问答次数。",
     "inputList": [
       {
         "types": "Bool",
@@ -344,14 +344,14 @@
         "key": "is_save",
         "title": "保存会话",
         "name": "is_save",
-        "tip": "是否在对话结束时保存对话。",
+        "tip": "YesNo在对话结束时保存对话。",
         "options": [
           {
-            "label": "是",
+            "label": "Yes",
             "value": true
           },
           {
-            "label": "否",
+            "label": "No",
             "value": false
           }
         ],
@@ -363,9 +363,9 @@
           "type": "INPUT_VARIABLE_PYTHON"
         },
         "key": "title",
-        "title": "窗口标题",
+        "title": "Window标题",
         "name": "title",
-        "tip": "定义对话窗口标题。",
+        "tip": "定义对话Window标题。",
         "value": [
           {
             "type": "str",
@@ -433,7 +433,7 @@
     "title": "知识问答",
     "version": "1.0.0",
     "src": "astronverse.ai.chat.ChatAI().knowledge_chat",
-    "comment": "大模型将读取的文件位于 @{file_path} 。",
+    "comment": "Large Language Models将读取的文件位于 @{file_path} 。",
     "inputList": [
       {
         "types": "Str",
@@ -459,14 +459,14 @@
         "key": "is_save",
         "title": "保存会话",
         "name": "is_save",
-        "tip": "是否在对话结束时保存对话。",
+        "tip": "YesNo在对话结束时保存对话。",
         "options": [
           {
-            "label": "是",
+            "label": "Yes",
             "value": true
           },
           {
-            "label": "否",
+            "label": "No",
             "value": false
           }
         ],
@@ -519,7 +519,7 @@
           "type": "RADIO"
         },
         "key": "contract_type",
-        "title": "输入合同方式",
+        "title": "Input合同方式",
         "name": "contract_type",
         "tip": "",
         "options": [
@@ -651,7 +651,7 @@
     "title": "主题扩写",
     "version": "1.0.0",
     "src": "astronverse.ai.document.DocumentAI().theme_expand",
-    "comment": "大模型将根据您给定的主题： @{text} ，对其进行扩写。",
+    "comment": "Large Language Models将根据您给定的主题： @{text} ，对其进行扩写。",
     "inputList": [
       {
         "types": "Str",
@@ -661,7 +661,7 @@
         "key": "text",
         "title": "主题",
         "name": "text",
-        "tip": "输入您需要扩展的主题。",
+        "tip": "Input您需要扩展的主题。",
         "value": [
           {
             "type": "str",
@@ -690,7 +690,7 @@
     "title": "段落扩写",
     "version": "1.0.0",
     "src": "astronverse.ai.document.DocumentAI().sentence_expand",
-    "comment": "大模型将根据您给定的段落 @{text} ，对其进行扩写。",
+    "comment": "Large Language Models将根据您给定的段落 @{text} ，对其进行扩写。",
     "inputList": [
       {
         "types": "Str",
@@ -700,7 +700,7 @@
         "key": "text",
         "title": "段落",
         "name": "text",
-        "tip": "输入您需要扩展的段落。",
+        "tip": "Input您需要扩展的段落。",
         "value": [
           {
             "type": "str",
@@ -729,7 +729,7 @@
     "title": "段落缩写",
     "version": "1.0.0",
     "src": "astronverse.ai.document.DocumentAI().sentence_reduce",
-    "comment": "大模型将根据您给定的段落 @{text} ，对其进行缩写。",
+    "comment": "Large Language Models将根据您给定的段落 @{text} ，对其进行缩写。",
     "inputList": [
       {
         "types": "Str",
@@ -739,7 +739,7 @@
         "key": "text",
         "title": "段落",
         "name": "text",
-        "tip": "输入您需要缩写的段落。",
+        "tip": "Input您需要缩写的段落。",
         "value": [
           {
             "type": "str",
@@ -871,7 +871,7 @@
           "type": "RADIO"
         },
         "key": "resume_input_type",
-        "title": "简历输入方式",
+        "title": "简历Input方式",
         "name": "resume_input_type",
         "tip": "",
         "options": [
@@ -966,7 +966,7 @@
             "value": "default"
           },
           {
-            "label": "自定义判断标准",
+            "label": "Custom判断标准",
             "value": "custom"
           }
         ],

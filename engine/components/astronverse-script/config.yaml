@@ -1,15 +1,15 @@
 atomic:
   Script.module:
-    title: 运行Python模块
-    comment: 运行Python模块(@{content:Python模块})
+    title: Run Python Module
+    comment: Run Python Module(@{content:Python module})
     icon: run-python-module
     helpManual: ''
     inputList:
     - key: content
-      title: 选择Python模块
+      title: Select Python Module
       tip: ''
     outputList:
     - key: program_script
-      title: 执行结果
+      title: Execution Result
       tip: ''
 options: {}

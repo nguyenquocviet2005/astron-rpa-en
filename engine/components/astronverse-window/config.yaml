@@ -1,69 +1,69 @@
 atomic:
   Window.exist:
-    title: IF 窗口存在
-    comment: 判断拾取窗口(@{pick})是否(@{check_type})，是就执行以下操作
+    title: IF Window Exists
+    comment: Check if the picked window (@{pick}) @{check_type}, if true execute the following operations
     icon: check-window-exists
     helpManual: ''
     inputList:
     - key: pick
-      title: 窗口拾取
-      tip: 选择需要判断是否存在的窗口对象
+      title: Window Picker
+      tip: Select the window object to check for existence
     - key: check_type
-      title: 判断方式
-      tip: 选择判断方式，默认为存在
+      title: Check Type
+      tip: Select the check type, default is exists
     - key: wait_time
-      title: 等待时间（秒）
-      tip: 等待判断结果的时间
+      title: Wait Time (seconds)
+      tip: Time to wait for the check result
     outputList: []
   Window.top:
-    title: 置顶窗口
-    comment: 置顶窗口对象(@{pick})
+    title: Pin Window
+    comment: Pin window object (@{pick})
     icon: pin-window
     helpManual: ''
     inputList:
     - key: pick
-      title: 窗口拾取
-      tip: 拾取需要置顶的窗口对象
+      title: Window Picker
+      tip: Pick the window object to pin on top
     outputList: []
   Window.close:
-    title: 关闭窗口
-    comment: 关闭桌面软件窗口对象(@{pick})
+    title: Close Window
+    comment: Close desktop application window object (@{pick})
     icon: close-window
     helpManual: ''
     inputList:
     - key: pick
-      title: 窗口拾取
-      tip: 拾取需要置顶的窗口对象
+      title: Window Picker
+      tip: Pick the window object to close
     outputList: []
   Window.set_size:
-    title: 调整窗口大小
-    comment: 调整拾取到的窗口(@{pick})大小，通过(@{size_type:自定义})的形式将窗口宽度和高度分别设置为(@{width}) (@{height})
+    title: Resize Window
+    comment: Resize the picked window (@{pick}), set the window width and height to (@{width}) (@{height}) using (@{size_type:Custom}) method
     icon: resize-window
     helpManual: ''
     inputList:
     - key: pick
-      title: 窗口拾取
-      tip: 拾取需要调整大小的桌面软件窗口
+      title: Window Picker
+      tip: Pick the desktop application window to resize
     - key: size_type
-      title: 调整方式
+      title: Resize Method
       tip: ''
     - key: width
-      title: 窗口宽度
-      tip: 设置指定窗口宽度值，单位为屏幕的分辨率像素px，一般为0-9999之间的数值
+      title: Window Width
+      tip: Set the specified window width value in screen resolution pixels (px), typically a value between 0-9999
     - key: height
-      title: 窗口高度
-      tip: 设置指定窗口高度值，单位为屏幕的分辨率像素px，一般为0-9999之间的数值
+      title: Window Height
+      tip: Set the specified window height value in screen resolution pixels (px), typically a value between 0-9999
     outputList: []
 options:
   WindowExistType:
   - value: exist
-    label: 存在
+    label: Exists
   - value: not_exist
-    label: 不存在
+    label: Does Not Exist
   WindowSizeType:
   - value: custom
-    label: 自定义
+    label: Custom
   - value: max
-    label: 最大化
+    label: Maximize
   - value: min
-    label: 最小化
+    label: Minimize

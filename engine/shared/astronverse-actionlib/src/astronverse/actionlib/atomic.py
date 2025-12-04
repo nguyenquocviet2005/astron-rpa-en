@@ -278,8 +278,8 @@ class AtomicManager:
             if __annotation__ is bool:
                 if options is None:
                     options = []
-                options.append(AtomicOption("是", True))
-                options.append(AtomicOption("否", False))
+                options.append(AtomicOption("Yes", True))
+                options.append(AtomicOption("No", False))
                 formType = AtomicFormTypeMeta(type=AtomicFormType.SWITCH.value, params={})
         elif kind == InspectType.ENUM:
             default = default.value

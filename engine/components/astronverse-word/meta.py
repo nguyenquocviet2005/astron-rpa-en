@@ -17,5 +17,5 @@ if __name__ == "__main__":
     atomicMg.meta()
 
     config.set_config_file("config_type.yaml")
-    typesMg.register_types(DocumentObject, version=get_version(), channel="global", template="Word对象")
+    typesMg.register_types(DocumentObject, version=get_version(), channel="global", template="Word Object")
     typesMg.meta()

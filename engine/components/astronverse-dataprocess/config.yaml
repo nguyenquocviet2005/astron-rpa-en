@@ -1,1038 +1,1054 @@
 atomic:
   DataProcess.set_variable_value:
-    title: 设置变量值
-    comment: 赋值 @{value} 给变量 @{variable_var}
+    title: Set Variable Value
+    comment: assign @{value} to variable @{variable_var}
     icon: set-variable-value
     helpManual: ''
     inputList:
     - key: value
-      title: 变量值
-      tip: 输入需要设置的变量值
+      title: Variable Value
+      tip: Enter the value to set
     - key: variable_type
-      title: 变量类型
-      tip: 选择需要设置的变量类型
+      title: Variable Type
+      tip: Select the variable type to set
     outputList:
     - key: variable_var
-      title: 设置后的变量值
+      title: Variable Value After Setting
       tip: ''
   DataConvertProcess.json_convertor:
-    title: JSON字符串互转
-    comment: 将输入文本 @{input_data} 从JSON格式转换为字符串或从字符串格式转换为JSON格式，返回转换后的文本 @{json_convert_data}
+    title: JSON String Conversion
+    comment: Convert input text @{input_data} from JSON format to String or from String format to JSON format, return converted text
+      @{json_convert_data}
     icon: json-string-convert
     helpManual: ''
     inputList:
     - key: input_data
-      title: 输入内容
+      title: Input Content
       tip: ''
     - key: convert_type
-      title: 转换类型
+      title: Conversion Type
       tip: ''
     outputList:
     - key: json_convert_data
-      title: 转换结果
+      title: Conversion Result
       tip: ''
   DataConvertProcess.other_to_str:
-    title: 其他格式转文本
-    comment: 将输入内容 @{input_data} 转换为文本（字符串）格式，返回转换后的结果 @{other_convert_str}
+    title: Other Format to Text
+    comment: Convert input content @{input_data} to text (String) format, return conversion result
+      @{other_convert_str}
     icon: format-to-text
     helpManual: ''
     inputList:
     - key: input_data
-      title: 输入内容
+      title: Input Content
       tip: ''
     outputList:
     - key: other_convert_str
-      title: 转换结果
+      title: Conversion Result
       tip: ''
   DataConvertProcess.str_to_other:
-    title: 文本转其他格式
-    comment: 将输入文本（字符串） @{input_data} 转换为其他格式，返回转换后的结果 @{str_convert_other}
+    title: Text to Other Format
+    comment: Convert input text (String) @{input_data} to other format, return conversion result
+      @{str_convert_other}
     icon: text-convert-format
     helpManual: ''
     inputList:
     - key: input_data
-      title: 输入内容
+      title: Input Content
       tip: ''
     - key: convert_type
-      title: 转换类型
+      title: Conversion Type
       tip: ''
     outputList:
     - key: str_convert_other
-      title: 转换结果
+      title: Conversion Result
       tip: ''
   DictProcess.create_new_dict:
-    title: 创建新字典
-    comment: 创建一个字典，返回创建的字典 @{created_new_dict_data}
+    title: Create New Dictionary
+    comment: Create a dictionary, return created dictionary @{created_new_dict_data}
     icon: create-new-dict
     helpManual: ''
     inputList:
     - key: dict_data
-      title: 字典数据
+      title: Dictionary Data
       tip: ''
     outputList:
     - key: created_new_dict_data
-      title: 新创建的字典
+      title: Newly Created Dictionary
       tip: ''
   DictProcess.set_value_to_dict:
-    title: 字典设置值
-    comment: 设置字典 @{dict_data} 的键为 @{dict_key} ，值为 @{value} ，返回设置后的字典 @{inserted_dict_data}
+    title: Dictionary Set Value
+    comment: Set dictionary @{dict_data} key to @{dict_key}, value to @{value}, return dictionary
+      after setting @{inserted_dict_data}
     icon: dict-set-value
     helpManual: ''
     inputList:
     - key: dict_data
-      title: 字典数据
+      title: Dictionary Data
       tip: ''
     - key: dict_key
-      title: 键（key）
+      title: Key
       tip: ''
     - key: value
-      title: 值（value）
+      title: Value
       tip: ''
     outputList:
     - key: inserted_dict_data
-      title: 设置后的字典
+      title: Dictionary After Setting
       tip: ''
   DictProcess.delete_value_from_dict:
-    title: 字典删除值
-    comment: 从字典 @{dict_data} 中删除键为 @{dict_key} 的值，返回删除后的字典 @{deleted_dict_data}
+    title: Dictionary Delete Value
+    comment: From dictionary @{dict_data} delete key @{dict_key} and its value, return dictionary
+      after deletion @{deleted_dict_data}
     icon: dict-delete-value
     helpManual: ''
     inputList:
     - key: dict_data
-      title: 字典数据
+      title: Dictionary Data
       tip: ''
     - key: dict_key
-      title: 键（key）
+      title: Key
       tip: ''
     outputList:
     - key: deleted_dict_data
-      title: 删除后的字典
+      title: Dictionary After Deletion
       tip: ''
   DictProcess.get_value_from_dict:
-    title: 字典获取值
-    comment: 获取字典 @{dict_data} 的键为 @{dict_key} 的值 @{get_dict_value}
+    title: Dictionary Get Value
+    comment: Get dictionary @{dict_data} value for key @{dict_key} @{get_dict_value}
     icon: dict-get-value
     helpManual: ''
     inputList:
     - key: dict_data
-      title: 字典数据
+      title: Dictionary Data
       tip: ''
     - key: dict_key
-      title: 键（key）
+      title: Key
       tip: ''
     - key: fail_option
-      title: 键不存在时处理方式
-      tip: 键不存在时是否抛出异常或返回默认值
+      title: Handling When Key Not Exists
+      tip: When key does not exist, either raise error or return default value
     - key: default_value
-      title: 默认值
+      title: Default Value
       tip: ''
     outputList:
     - key: get_dict_value
-      title: 字典值
+      title: Dictionary Value
       tip: ''
   DictProcess.get_keys_from_dict:
-    title: 获取字典所有键
-    comment: 获取字典 @{dict_data} 的所有键 @{get_dict_keys}
+    title: Get All Dictionary Keys
+    comment: Get all keys from dictionary @{dict_data} @{get_dict_keys}
     icon: get-dict-all-keys
     helpManual: ''
     inputList:
     - key: dict_data
-      title: 字典数据
+      title: Dictionary Data
       tip: ''
     outputList:
     - key: get_dict_keys
-      title: 键列表
+      title: Key List
       tip: ''
   DictProcess.get_values_from_dict:
-    title: 获取字典所有值
-    comment: 获取字典 @{dict_data} 的所有值 @{get_dict_values}
+    title: Get All Dictionary Values
+    comment: Get all values from dictionary @{dict_data} @{get_dict_values}
     icon: get-dict-all-values
     helpManual: ''
     inputList:
     - key: dict_data
-      title: 字典数据
+      title: Dictionary Data
       tip: ''
     outputList:
     - key: get_dict_values
-      title: 值列表
+      title: Value List
       tip: ''
   ListProcess.create_new_list:
-    title: 创建新列表
-    comment: 创建一个 @{list_type} 类型的列表，返回创建的列表 @{created_list_data}
+    title: Create New List
+    comment: Create a @{list_type} type of list, return created list @{created_list_data}
     icon: create-new-list
     helpManual: ''
     inputList:
     - key: list_type
-      title: 列表类型
+      title: List Type
       tip: ''
     - key: size
-      title: 列表长度
+      title: List Length
       tip: ''
     - key: value
-      title: 初始值
+      title: Initial Value
       tip: ''
     outputList:
     - key: created_list_data
-      title: 创建的列表
+      title: Created List
       tip: ''
   ListProcess.clear_list:
-    title: 清空列表
-    comment: 清空列表 @{list_data} ，返回清空后的列表 @{cleared_list_data}
+    title: Clear List
+    comment: Clear list @{list_data}, return cleared list @{cleared_list_data}
     icon: list-clear
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     outputList:
     - key: cleared_list_data
-      title: 清空后的列表
+      title: Cleared List
       tip: ''
   ListProcess.insert_value_to_list:
-    title: 列表插入值
-    comment: 将值 @{value} 插入到列表 @{list_data} 的 @{insert_method} 位置 @{index} ，返回插入后的列表
-      @{inserted_list_data}
+    title: List Insert Value
+    comment: Insert value @{value} into list @{list_data} at @{insert_method} position
+      @{index}, return inserted list @{inserted_list_data}
     icon: list-insert-value
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     - key: value
-      title: 插入值
+      title: Insert Value
       tip: ''
     - key: insert_method
-      title: 插入方式
+      title: Insert Method
       tip: ''
     - key: index
-      title: 插入位置
+      title: Insert Position
       tip: ''
     outputList:
     - key: inserted_list_data
-      title: 插入后的列表
+      title: Inserted List
       tip: ''
   ListProcess.change_value_in_list:
-    title: 列表修改值
-    comment: 将列表 @{list_data} 的 @{index} 位置的值修改为 @{new_value} ，返回修改后的列表 @{changed_list_data}
+    title: List Modify Value
+    comment: Modify list @{list_data} value at position @{index} to @{new_value},
+      return modified list @{changed_list_data}
     icon: list-modify-value
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     - key: index
-      title: 位置索引
-      tip: 填写需要修改值的位置索引，从0开始，修改第一个值索引为0，修改第二个值索引为1，以此类推
+      title: Position Index
+      tip: Enter the position index to modify, starting from 0. First value index is 0, second value index is 1, and so on
     - key: new_value
-      title: 新值
+      title: New Value
       tip: ''
     outputList:
     - key: changed_list_data
-      title: 修改后的列表
+      title: Modified List
       tip: ''
   ListProcess.get_list_position:
-    title: 获取值在列表位置
-    comment: 获取值 @{value} 在列表 @{list_data} 的位置 @{get_list_position}
+    title: Get Value Position in List
+    comment: Get position of value @{value} in list @{list_data} @{get_list_position}
     icon: get-value-position
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     - key: value
-      title: 值
+      title: value
       tip: ''
     outputList:
     - key: get_list_position
-      title: 位置索引
+      title: Position Index
       tip: ''
   ListProcess.remove_value_from_list:
-    title: 列表删除值
-    comment: 以 @{del_mode} 删除@{list_data}@{del_value||del_pos}的内容，返回删除后的列表 @{removed_list_data}
+    title: List Remove Value
+    comment: Use @{del_mode} to delete @{del_value||del_pos} content from @{list_data}, return deleted
+      list @{removed_list_data}
     icon: list-remove-value
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     - key: del_mode
-      title: 删除方式
+      title: Delete Method
       tip: ''
     - key: del_value
-      title: 删除值
+      title: Delete Value
       tip: ''
     - key: del_pos
-      title: 删除位置
-      tip: 可指定单个或多个位置数据，多个位置索引之间用逗号隔开，如：1,3,5
+      title: Delete Position
+      tip: "Can specify single or multiple position data, separate multiple position indices with commas, for example: 1,3,5"
     outputList:
     - key: removed_list_data
-      title: 删除后的列表
+      title: Deleted List
       tip: ''
   ListProcess.sort_list:
-    title: 列表排序
-    comment: 对列表 @{list_data} 进行 @{sort_method} 排序，返回排序后的列表 @{sorted_list_data}
+    title: List Sort
+    comment: Sort list @{list_data} using @{sort_method}, return sorted list @{sorted_list_data}
     icon: list-sort
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     - key: sort_method
-      title: 排序方式
+      title: Sort Method
       tip: ''
     outputList:
     - key: sorted_list_data
-      title: 排序后的列表
+      title: Sorted List
       tip: ''
   ListProcess.random_shuffle_list:
-    title: 列表随机打乱顺序
-    comment: 对列表 @{list_data} 进行随机打乱顺序，返回打乱顺序后的列表 @{shuffled_list_data}
+    title: List Random Shuffle
+    comment: Randomly shuffle list @{list_data} order, return shuffled list @{shuffled_list_data}
     icon: list-shuffle
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     outputList:
     - key: shuffled_list_data
-      title: 打乱顺序后的列表
+      title: Shuffled List
       tip: ''
   ListProcess.filter_elements_from_list:
-    title: 剔除列表中的多项
-    comment: 从列表 @{list_data_1} 中剔除列表 @{list_data_2} 中的元素，返回剔除后的列表 @{filter_list_data}
+    title: Remove Multiple Items from List
+    comment: Remove elements from list @{list_data_1} that exist in list @{list_data_2}, return filtered
+      list @{filter_list_data}
     icon: list-remove-multiple
     helpManual: ''
     inputList:
     - key: list_data_1
-      title: 待处理列表
-      tip: 填写需要处理的列表
+      title: List to Process
+      tip: Enter the list to process
     - key: list_data_2
-      title: 剔除元素列表
-      tip: 填写需要剔除的元素列表，如果待处理列表中有剔除元素列表中的元素，则剔除
+      title: Elements to Remove List
+      tip: Enter the list of elements to remove. If list to process contains elements from this list, those elements will be removed
     outputList:
     - key: filter_list_data
-      title: 剔除后的列表
-      tip: 返回剔除后的列表
+      title: Filtered List
+      tip: Return filtered list
   ListProcess.reverse_list:
-    title: 列表反转
-    comment: 将列表 @{list_data} 反转，返回反转后的列表 @{reversed_list_data}
+    title: List Reverse
+    comment: Reverse list @{list_data}, return reversed list @{reversed_list_data}
     icon: list-reverse
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     outputList:
     - key: reversed_list_data
-      title: 反转后的列表
+      title: Reversed List
       tip: ''
   ListProcess.merge_list:
-    title: 列表合并
-    comment: 将列表 @{list_data_1} 和列表 @{list_data_2} 合并为一个列表 @{merged_list_data}
+    title: List Merge
+    comment: Merge list @{list_data_1} and list @{list_data_2} into a list @{merged_list_data}
     icon: list-merge
     helpManual: ''
     inputList:
     - key: list_data_1
-      title: 第一个列表
+      title: First List
       tip: ''
     - key: list_data_2
-      title: 第二个列表
+      title: Second List
       tip: ''
     outputList:
     - key: merged_list_data
-      title: 合并后的列表
+      title: Merged List
       tip: ''
   ListProcess.get_unique_list:
-    title: 列表去重
-    comment: 将列表 @{list_data} 去重，返回去重后的列表 @{unique_list_data}
+    title: List Remove Duplicates
+    comment: Remove duplicates from list @{list_data}, return deduplicated list @{unique_list_data}
     icon: list-remove-duplicates
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     outputList:
     - key: unique_list_data
-      title: 去重后的列表
+      title: Deduplicated List
       tip: ''
   ListProcess.get_common_elements_from_list:
-    title: 获取两个列表的重复项
-    comment: 获取列表 @{list_data_1} 和列表 @{list_data_2} 的重复项，返回重复项列表 @{common_list_data}
+    title: Get Duplicate Items from Two Lists
+    comment: Get common elements from list @{list_data_1} and list @{list_data_2}, return duplicate items
+      list @{common_list_data}
     icon: get-list-duplicates
     helpManual: ''
     inputList:
     - key: list_data_1
-      title: 第一个列表
+      title: First List
       tip: ''
     - key: list_data_2
-      title: 第二个列表
+      title: Second List
       tip: ''
     outputList:
     - key: common_list_data
-      title: 重复项列表
+      title: Duplicate Items List
       tip: ''
   ListProcess.get_value_from_list:
-    title: 根据索引获取列表值
-    comment: 根据索引 @{index} 获取列表 @{list_data} 的值 @{get_list_value}
+    title: Get List Value by Index
+    comment: Get value from list @{list_data} at index @{index} @{get_list_value}
     icon: get-list-value-by-index
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     - key: index
-      title: 索引
+      title: Index
       tip: ''
     outputList:
     - key: get_list_value
-      title: 值
+      title: value
       tip: ''
   ListProcess.get_length_of_list:
-    title: 获取列表长度
-    comment: 获取列表 @{list_data} 的长度 @{get_list_length}
+    title: Get List Length
+    comment: Get length of list @{list_data} @{get_list_length}
     icon: get-list-length
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
+      title: List Data
       tip: ''
     outputList:
     - key: get_list_length
-      title: 长度
+      title: Length
       tip: ''
   MathProcess.generate_random_number:
-    title: 生成随机数
-    comment: 生成 @{number_type} 类型 @{size} 个随机数，范围为 @{start} 到 @{end} ，返回生成的随机数 @{generated_random_numbers}
+    title: Generate Random Number
+    comment: Generate @{number_type} type @{size} random numbers, range from @{start} to @{end},
+      return generated random numbers @{generated_random_numbers}
     icon: generate-random-number
     helpManual: ''
     inputList:
     - key: number_type
-      title: 随机数类型
+      title: Random Number Type
       tip: ''
     - key: size
-      title: 随机数个数
+      title: Random Number Count
       tip: ''
     - key: start
-      title: 开始范围
+      title: Start Range
       tip: ''
     - key: end
-      title: 结束范围
+      title: End Range
       tip: ''
     outputList:
     - key: generated_random_numbers
-      title: 生成的随机数
+      title: Generated Random Numbers
       tip: ''
   MathProcess.get_rounding_number:
-    title: 四舍五入
-    comment: 将数字 @{number} 四舍五入 @{precision} 位，返回四舍五入后的数字 @{rounding_number}
+    title: Round
+    comment: Round number @{number} to @{precision} decimal places, return rounded number @{rounding_number}
     icon: round-number
     helpManual: ''
     inputList:
     - key: number
-      title: 原有数据
+      title: Original Data
       tip: ''
     - key: precision
-      title: 精度
-      tip: 可填写小数位数，如填写2，则四舍五入到小数点后2位；也支持填写负数和0，如填写-2，则四舍五入到小数点前2位。
+      title: Precision
+      tip: Can specify decimal places, for example 2 rounds to 2 decimal places. Also supports negative numbers and 0, for example -2 rounds to 2 places before decimal point
     outputList:
     - key: rounding_number
-      title: 四舍五入后的数字
+      title: Rounded Number
       tip: ''
   MathProcess.self_calculation_number:
-    title: 自增自减
-    comment: 对数字 @{number} 自增或自减 @{add_sub_number} ，返回计算后的结果 @{self_calculation_number}
+    title: Increment/Decrement
+    comment: Increment or decrement number @{number} by @{add_sub_number}, return result after calculation @{self_calculation_number}
     icon: increment-decrement
     helpManual: ''
     inputList:
     - key: number
-      title: 原数据
+      title: Original Data
       tip: ''
     - key: add_sub
-      title: 自增/自减
-      tip: 选择是自增还是自减
+      title: Increment/Decrement
+      tip: Select whether to increment or decrement
     - key: add_sub_number
-      title: 自增或自减的数字
+      title: Increment/Decrement Number
       tip: ''
     outputList:
     - key: self_calculation_number
-      title: 自增自减后的结果
+      title: Result After Increment/Decrement
       tip: ''
   MathProcess.get_absolute_number:
-    title: 获取绝对值
-    comment: 获取数字 @{raw_number} 的绝对值 @{absolute_number}
+    title: Get Absolute Value
+    comment: Get absolute value of number @{raw_number} @{absolute_number}
     icon: get-absolute-value
     helpManual: ''
     inputList:
     - key: raw_number
-      title: 原数据
+      title: Original Data
       tip: ''
     outputList:
     - key: absolute_number
-      title: 原数据绝对值
+      title: Absolute Value of Original Data
       tip: ''
   MathProcess.calculate_expression:
-    title: 数学计算
-    comment: 进行基本的数学计算 @{left}  @{operator}  @{right} ，返回计算结果 @{calculation_number}
+    title: Math Calculation
+    comment: Perform basic math calculation @{left}  @{operator}  @{right}, return calculation
+      result @{calculation_number}
     icon: math-calculation
     helpManual: ''
     inputList:
     - key: left
-      title: 运算符左侧值
+      title: Left Operand
       tip: ''
     - key: operator
-      title: 运算符
+      title: Operator
       tip: ''
     - key: right
-      title: 运算符右侧值
+      title: Right Operand
       tip: ''
     - key: handle_method
-      title: 返回值处理方式
+      title: Result Handling Method
       tip: ''
     - key: precision
-      title: 四舍五入保留位数
+      title: Round to Decimal Places
       tip: ''
     outputList:
     - key: calculation_number
-      title: 计算结果
+      title: Calculation Result
       tip: ''
   StringProcess.extract_content_from_string:
-    title: 文本提取内容
-    comment: 从文本 @{text} 中提取 @{extract_type} 类型的内容
+    title: Extract Content from Text
+    comment: Extract @{extract_type} type content from text @{text}
     icon: text-extract-content
     helpManual: ''
     inputList:
     - key: text
-      title: 原文本
-      tip: 输入需要提取内容的文本
+      title: Original Text
+      tip: Enter text to extract content from
     - key: extract_type
-      title: 提取类型
-      tip: 选择需要提取的类型
+      title: Extract Type
+      tip: Select the type to extract
     - key: regex_formula
-      title: 正则表达式
-      tip: 输入正则表达式，例如[\u4e00-\u9fff]用于提取中文，\d用于提取数字，[a-zA-Z]用于提取英文等
+      title: Regular Expression
+      tip: Enter regular expression, for example [\u4e00-\u9fff] to extract Chinese characters, \d to
+        extract numbers, [a-zA-Z] to extract English letters, etc
     - key: first_flag
-      title: 仅提取第一项匹配内容
-      tip: 是否仅提取第一项匹配内容
+      title: Extract Only First Match
+      tip: Whether to extract only first match
     outputList:
     - key: extract_from_string
-      title: 提取内容
-      tip: 返回提取的内容
+      title: Extracted Content
+      tip: Return extracted content
   StringProcess.replace_content_in_string:
-    title: 文本替换内容
-    comment: 将文本 @{text} 中的 @{replace_type} 类型内容替换为 @{new_value}
+    title: Replace Content in Text
+    comment: Replace @{replace_type} type content in text @{text} with @{new_value}
     icon: text-replace-content
     helpManual: ''
     inputList:
     - key: text
-      title: 原文本
-      tip: 输入需要替换内容的文本
+      title: Original Text
+      tip: Enter text with content to replace
     - key: replace_type
-      title: 替换类型
-      tip: 选择需要替换的类型
+      title: Replace Type
+      tip: Select the type to replace
     - key: replaced_string
-      title: 需要替换的字符串
-      tip: 输入需要替换的字符串
+      title: String to Replace
+      tip: Enter string to replace
     - key: regex_formula
-      title: 用正则表达式替换
-      tip: 输入正则表达式用于替换内容
+      title: Replace with Regular Expression
+      tip: Enter regular expression to replace content
     - key: new_value
-      title: 替换为
-      tip: 输入新值
+      title: Replace With
+      tip: Enter new value
     - key: first_flag
-      title: 仅替换第一项匹配内容
-      tip: 是否仅替换第一项匹配内容
+      title: Replace Only First Match
+      tip: Whether to replace only first match
     - key: ignore_case_flag
-      title: 忽略大小写
-      tip: 是否忽略大小写
+      title: Ignore Case
+      tip: Whether to ignore case
     outputList:
     - key: replaced_content_string
-      title: 替换后的文本
-      tip: 返回替换后的文本
+      title: Replaced Text
+      tip: Return replaced text
   StringProcess.merge_list_to_string:
-    title: 列表聚合为文本
-    comment: 将列表 @{list_data} 中的内容聚合为文本 @{merged_string_from_list}
+    title: Aggregate List to Text
+    comment: Aggregate content from list @{list_data} to text @{merged_string_from_list}
     icon: list-to-text
     helpManual: ''
     inputList:
     - key: list_data
-      title: 列表数据
-      tip: 输入需要聚合的列表数据
+      title: List Data
+      tip: Enter list data to aggregate
     - key: separator
-      title: 分隔符
-      tip: 输入分隔符
+      title: Separator
+      tip: Enter separator
     outputList:
     - key: merged_string_from_list
-      title: 聚合后的文本
-      tip: 返回聚合后的文本
+      title: Aggregated Text
+      tip: Return aggregated text
   StringProcess.split_string_to_list:
-    title: 文本分割为列表
-    comment: 将文本 @{string_data} 按 @{separator} 分割为列表 @{split_list_from_string}
+    title: Split Text to List
+    comment: Split text @{string_data} by @{separator} to list @{split_list_from_string}
     icon: text-split-to-list
     helpManual: ''
     inputList:
     - key: string_data
-      title: 文本数据
-      tip: 输入需要分割的文本数据
+      title: Text Data
+      tip: Enter text data to split
     - key: separator
-      title: 分隔符
-      tip: 输入分隔符
+      title: Separator
+      tip: Enter separator
     outputList:
     - key: split_list_from_string
-      title: 分割后的列表
-      tip: 返回分割后的列表
+      title: Split List
+      tip: Return split list
   StringProcess.concatenate_string:
-    title: 文本合并
-    comment: 将 @{string_data_1} 和 @{string_data_2} 合并为 @{concat_string}
+    title: Merge Text
+    comment: Merge @{string_data_1} and @{string_data_2} to @{concat_string}
     icon: text-merge
     helpManual: ''
     inputList:
     - key: string_data_1
-      title: 第一个文本
-      tip: 输入需要合并的第一个文本
+      title: First Text
+      tip: Enter first text to merge
     - key: string_data_2
-      title: 第二个文本
-      tip: 输入需要合并的第二个文本
+      title: Second Text
+      tip: Enter second text to merge
     - key: concat_type
-      title: 合并类型
-      tip: 选择需要合并的类型，可以自定义分隔符
+      title: Merge Type
+      tip: Select merge type, can use custom separator
     - key: separator
-      title: 分隔符
-      tip: 输入分隔符
+      title: Separator
+      tip: enterSeparator
     outputList:
     - key: concat_string
-      title: 合并后的文本
-      tip: 返回合并后的文本
+      title: Merged Text
+      tip: returnMerged Text
   StringProcess.fill_string_to_length:
-    title: 文本补齐至固定长度
-    comment: 将文本 @{string_data} 补齐至 @{total_length} 长度，补齐方式为 @{fill_type}
+    title: Pad Text to Fixed Length
+    comment: Pad text @{string_data} to @{total_length} length, padding method
+      @{fill_type}
     icon: text-pad-to-length
     helpManual: ''
     inputList:
     - key: string_data
-      title: 文本数据
-      tip: 输入需要补齐的文本数据
+      title: Text Data
+      tip: Enter text data to pad
     - key: add_str
-      title: 补齐字符
+      title: Padding Character
       tip: ''
     - key: total_length
-      title: 总长度
-      tip: 输入需要补齐的总长度
+      title: Total Length
+      tip: Enter total length to pad to
     - key: fill_type
-      title: 补齐方式
-      tip: 选择补齐方式，可以选择左补齐、右补齐
+      title: Padding Method
+      tip: Select padding method, can choose left pad or right pad
     outputList:
     - key: complete_string
-      title: 补齐后的文本
+      title: Padded Text
       tip: ''
   StringProcess.strip_string:
-    title: 文本去除两侧空格
-    comment: 将文本 @{string_data} 两侧的空格去除 @{stripped_string}
+    title: Trim Text Spaces
+    comment: Remove spaces from both sides of text @{string_data} @{stripped_string}
     icon: text-trim-spaces
     helpManual: ''
     inputList:
     - key: string_data
-      title: 文本数据
+      title: Text Data
       tip: ''
     - key: strip_method
-      title: 去除方式
+      title: Trim Method
       tip: ''
     outputList:
     - key: stripped_string
-      title: 去除两侧空格后的文本
+      title: Text After Trimming Spaces
       tip: ''
   StringProcess.cut_string_to_length:
-    title: 截取固定长度文本
-    comment: 将文本 @{string_data} 截取 @{length} 长度，截取方式为 @{cut_type} ，返回截取后的文本 @{cut_string}
+    title: Extract Fixed Length Text
+    comment: Extract @{length} length from text @{string_data}, extraction method @{cut_type},
+      return extracted text @{cut_string}
     icon: screenshot-fixed-text
     helpManual: ''
     inputList:
     - key: string_data
-      title: 截取文本
+      title: Extract Text
       tip: ''
     - key: length
-      title: 截取长度
+      title: Extract Length
       tip: ''
     - key: cut_type
-      title: 截取类型
+      title: Extract Type
       tip: ''
     - key: index
-      title: 从第几个字符开始截取
+      title: Start Extraction from Character
       tip: ''
     - key: find_str
-      title: 需要检索的字符串
+      title: String to Search
       tip: ''
     outputList:
     - key: cut_string
-      title: 截取后的文本
+      title: Extracted Text
       tip: ''
   StringProcess.change_case_of_string:
-    title: 更改文本大小写
-    comment: 将文本 @{string_data} 的大小写更改为 @{case_type} ，返回更改后的文本 @{change_case_string}
+    title: Change Text Case
+    comment: Change text @{string_data} case to @{case_type}, return changed text @{change_case_string}
     icon: change-text-case
     helpManual: ''
     inputList:
     - key: string_data
-      title: 文本数据
+      title: Text Data
       tip: ''
     - key: case_type
-      title: 大小写类型
+      title: Case Type
       tip: ''
     outputList:
     - key: change_case_string
-      title: 更改后的文本
+      title: Changed Text
       tip: ''
   StringProcess.get_string_length:
-    title: 获取文本长度
-    comment: 获取文本 @{string_data} 的长度 @{string_length}
+    title: Get Text Length
+    comment: Get length of text @{string_data} @{string_length}
     icon: get-text-length
     helpManual: ''
     inputList:
     - key: string_data
-      title: 文本数据
+      title: Text Data
       tip: ''
     outputList:
     - key: string_length
-      title: 文本长度
+      title: Text Length
       tip: ''
   TimeProcess.get_current_time:
-    title: 获取当前时间
-    comment: 获取当前时间，格式为 @{time_format}，返回当前时间对象 @{current_time}
+    title: Get Current Time
+    comment: Get current time, format as @{time_format}, return current time object @{current_time}
     icon: get-current-time
     helpManual: ''
     inputList:
     - key: time_format
-      title: 时间格式
+      title: Time Format
       tip: ''
     outputList:
     - key: current_time
-      title: 当前时间对象
-      tip: 返回值为时间对象，可通过快捷函数或转化原子能力输出字符串形式
+      title: Current Time Object
+      tip: Return value is time object, can output as string format via shortcut function or conversion atomic capability
   TimeProcess.set_time:
-    title: 设置时间
-    comment: 设置时间 @{time}，设置方式为 @{change_type}，返回设置后的时间对象 @{set_time}
+    title: Set Time
+    comment: Set time @{time}, setting method @{change_type}, return time object after setting @{set_time}
     icon: set-time
     helpManual: ''
     inputList:
     - key: time
-      title: 时间对象
+      title: Time Object
       tip: ''
     - key: change_type
-      title: 日期调整方式
+      title: Date Adjustment Method
       tip: ''
     - key: seconds
-      title: 秒
+      title: Second
       tip: ''
     - key: minutes
-      title: 分
+      title: Minute
       tip: ''
     - key: hours
-      title: 时
+      title: Hour
       tip: ''
     - key: days
-      title: 天
+      title: Day
       tip: ''
     - key: months
-      title: 月
+      title: Month
       tip: ''
     - key: years
-      title: 年
+      title: Year
       tip: ''
     outputList:
     - key: set_time
-      title: 设置时间对象
+      title: Set Time Object
       tip: ''
   TimeProcess.time_to_timestamp:
-    title: 时间对象转时间戳
-    comment: 将时间对象 @{time} 转换为 @{timestamp_unit} 精度的时间戳，返回转换后的时间戳 @{converted_timestamp}
+    title: DateTime to Timestamp
+    comment: Convert time object @{time} to timestamp with @{timestamp_unit} precision, return converted timestamp
+      @{converted_timestamp}
     icon: datetime-to-timestamp
     helpManual: ''
     inputList:
     - key: time
-      title: 时间对象
+      title: Time Object
       tip: ''
     - key: timestamp_unit
-      title: 时间戳精度
+      title: Timestamp Precision
       tip: ''
     outputList:
     - key: converted_timestamp
-      title: 时间戳
+      title: Timestamp
       tip: ''
   TimeProcess.timestamp_to_time:
-    title: 时间戳转时间对象
-    comment: 将时间戳 @{timestamp} 转换为时间对象 @{converted_time}
+    title: Timestamp to DateTime
+    comment: Convert timestamp @{timestamp} to time object @{converted_time}
     icon: timestamp-to-datetime
     helpManual: ''
     inputList:
     - key: timestamp
-      title: 时间戳
+      title: Timestamp
       tip: ''
     - key: time_zone
-      title: 选择时区
+      title: Select Time Zone
       tip: ''
     outputList:
     - key: converted_time
-      title: 时间对象
+      title: Time Object
       tip: ''
   TimeProcess.get_time_difference:
-    title: 获取时间差
-    comment: 获取 @{time_1} 和 @{time_2} 之间的时间差，单位为 @{time_unit}，返回时间差 @{time_difference}
+    title: Get Time Difference
+    comment: Get time difference between @{time_1} and @{time_2}, unit @{time_unit}, return time
+      difference @{time_difference}
     icon: get-time-difference
     helpManual: ''
     inputList:
     - key: time_1
-      title: 时间对象1
+      title: Time Object 1
       tip: ''
     - key: time_2
-      title: 时间对象2
+      title: Time Object 2
       tip: ''
     - key: time_unit
-      title: 时间单位
+      title: Time Unit
       tip: ''
     outputList:
     - key: time_difference
-      title: 时间差
+      title: Time Difference
       tip: ''
   TimeProcess.format_datetime:
-    title: 输出指定格式时间文本
-    comment: 将时间对象 @{time} 按照指定格式 @{format_type} 输出文本 @{format_datetime}
+    title: Output Formatted Time Text
+    comment: Output time object @{time} as text in specified format @{format_type} @{format_datetime}
     icon: output-formatted-time
     helpManual: ''
     inputList:
     - key: time
-      title: 时间对象
+      title: Time Object
       tip: ''
     - key: format_type
-      title: 时间格式
+      title: Time Format
       tip: ''
     outputList:
     - key: format_datetime
-      title: 时间文本
+      title: Time Text
       tip: ''
 options:
   VariableType:
   - value: str
-    label: 字符串
+    label: String
   - value: int
-    label: 整数
+    label: Integer
   - value: float
-    label: 浮点数
+    label: Float
   - value: bool
-    label: 布尔值
+    label: Boolean
   - value: list
-    label: 列表
+    label: List
   - value: dict
-    label: 字典
+    label: Dictionary
   - value: json
     label: JSON
   - value: tuple
-    label: 元组
+    label: Tuple
   - value: other
-    label: 其他
+    label: Other
   JSONConvertType:
   - value: json_to_str
-    label: JSON转字符串
+    label: JSON to String
   - value: str_to_json
-    label: 字符串转JSON
+    label: String to JSON
   StringConvertType:
   - value: str_to_list
-    label: 字符串转列表
+    label: String to List
   - value: str_to_dict
-    label: 字符串转字典
+    label: String to Dictionary
   - value: str_to_tuple
-    label: 字符串转元组
+    label: String to Tuple
   - value: str_to_bool
-    label: 字符串转布尔值
+    label: String to Boolean
   - value: str_to_int
-    label: 字符串转整数
+    label: String to Integer
   - value: str_to_float
-    label: 字符串转浮点数
+    label: String to Float
   NoKeyOptionType:
   - value: raise_error
-    label: 抛出异常
+    label: Raise Error
   - value: return_default
-    label: 返回默认值
+    label: Return Default Value
   ListType:
   - value: empty
-    label: 空列表
+    label: Empty List
   - value: same_data
-    label: 相同元素列表
+    label: Same Element List
   - value: user_defined
-    label: 用户自定义列表
+    label: User Defined List
   InsertMethodType:
   - value: append
-    label: 追加
+    label: Append
   - value: index
-    label: 指定位置插入
+    label: Insert at Position
   DeleteMethodType:
   - value: index
-    label: 指定位置删除
+    label: Delete at Position
   - value: value
-    label: 指定值删除
+    label: Delete by Value
   SortMethodType:
   - value: asc
-    label: 升序
+    label: Ascending
   - value: desc
-    label: 降序
+    label: Descending
   NumberType:
   - value: integer
-    label: 整数
+    label: Integer
   - value: float
-    label: 浮点数
+    label: Float
   AddSubType:
   - value: add
-    label: 加
+    label: Add
   - value: sub
-    label: 减
+    label: Subtract
   MathOperatorType:
   - value: +
-    label: 加
+    label: Add
   - value: '-'
-    label: 减
+    label: Subtract
   - value: '*'
-    label: 乘
+    label: Multiply
   - value: /
-    label: 除
+    label: Divide
   MathRoundType:
   - value: round
-    label: 四舍五入
+    label: Round
   - value: ceil
-    label: 向上取整
+    label: Ceil
   - value: floor
-    label: 向下取整
+    label: Floor
   - value: none
-    label: 不做操作
+    label: No Operation
   ExtractType:
   - value: phone_number
-    label: 中国大陆手机号码
+    label: China Mobile Number
   - value: email
-    label: 邮箱地址
+    label: Email Address
   - value: url
-    label: 网址
+    label: URL
   - value: digit
-    label: 数字
+    label: Number
   - value: id_number
-    label: 中国大陆身份证号码
+    label: China ID Number
   - value: regex
-    label: 正则表达式
+    label: Regular Expression
   Bool:
   - value: true
-    label: 是
+    label: 'Yes'
   - value: false
-    label: 否
+    label: 'No'
   ReplaceType:
   - value: string
-    label: 字符串
+    label: String
   - value: phone_number
-    label: 中国大陆手机号码
+    label: China Mobile Number
   - value: email
-    label: 邮箱地址
+    label: Email Address
   - value: url
-    label: 网址
+    label: URL
   - value: digit
-    label: 数字
+    label: Number
   - value: id_number
-    label: 中国大陆身份证号码
+    label: China ID Number
   - value: regex
-    label: 正则表达式
+    label: Regular Expression
   ConcatStringType:
   - value: none
-    label: 不使用分隔符
+    label: No Separator
   - value: linebreak
-    label: 换行符
+    label: Line Break
   - value: space
-    label: 空格（ ）
+    label: Space ( )
   - value: hyphen
-    label: 连字符（-）
+    label: Hyphen (-)
   - value: underline
-    label: 下划线（_）
+    label: Underscore (_)
   - value: other
-    label: 自定义
+    label: Custom
   FillStringType:
   - value: right
-    label: 右补齐
+    label: Right Pad
   - value: left
-    label: 左补齐
+    label: Left Pad
   StripStringType:
   - value: left
-    label: 左侧
+    label: Left
   - value: right
-    label: 右侧
+    label: Right
   - value: both
-    label: 两侧
+    label: Both Sides
   CutStringType:
   - value: first
-    label: 从第一个字符开始截取
+    label: Extract from First Character
   - value: index
-    label: 从指定位置开始截取
+    label: Extract from Specified Position
   - value: string
-    label: 从指定字符串开始截取
+    label: Extract from Specified String
   CaseChangeType:
   - value: upper
-    label: 全部大写
+    label: All Uppercase
   - value: lower
-    label: 全部小写
+    label: All Lowercase
   - value: caps
-    label: 首字母大写
+    label: Capitalize
   TimeFormatType:
   - value: '%Y-%m-%d'
-    label: 年-月-日
+    label: Year-Month-Day
   - value: '%Y-%m-%d %H:%M:%S'
-    label: 年-月-日 时:分:秒
+    label: Year-Month-Day Hour:Minute:Second
   - value: '%Y-%m-%d %H:%M'
-    label: 年-月-日 时:分
+    label: Year-Month-Day Hour:Minute
   - value: '%Y/%m/%d'
-    label: 年/月/日
+    label: Year/Month/Day
   - value: '%Y/%m/%d %H:%M'
-    label: 年/月/日 时:分
+    label: Year/Month/Day Hour:Minute
   - value: '%Y/%m/%d %H:%M:%S'
-    label: 年/月/日 时:分:秒
+    label: Year/Month/Day Hour:Minute:Second
   - value: '%Y%m%d'
-    label: 年月日
+    label: YearMonthDay
   - value: '%H:%M'
-    label: 时:分
+    label: Hour:Minute
   - value: '%H:%M:%S'
-    label: 时:分:秒
+    label: Hour:Minute:Second
   - value: '%w'
-    label: 一周的第几天
+    label: Day of Week
   - value: '%j'
-    label: 一年的第几天
+    label: Day of Year
   - value: '%W'
-    label: 一年的第几周
-  - value: '%Y年%m月%d日'
-    label: XXXX年XX月XX日
-  - value: '%Y年%m月%d日 %H:%M'
-    label: XXXX年XX月XX日 XX:XX
-  - value: '%Y年%m月%d日 %H:%M:%S'
-    label: XXXX年XX月XX日 XX:XX:XX
+    label: Week of Year
+  - value: '%Y-Year-%m-Month-%d-Day'
+    label: XXXX-Year-XX-Month-XX-Day
+  - value: '%Y-Year-%m-Month-%d-Day %H:%M'
+    label: XXXX-Year-XX-Month-XX-Day XX:XX
+  - value: '%Y-Year-%m-Month-%d-Day %H:%M:%S'
+    label: XXXX-Year-XX-Month-XX-Day XX:XX:XX
   TimeChangeType:
   - value: maintain
-    label: 保持不变
+    label: Keep Unchanged
   - value: add
-    label: 增加时间
+    label: Add Time
   - value: sub
-    label: 减少时间
+    label: Subtract Time
   TimestampUnitType:
   - value: second
-    label: 秒
+    label: Second
   - value: millisecond
-    label: 毫秒
+    label: Millisecond
   - value: microsecond
-    label: 微秒
+    label: Microsecond
   TimeZoneType:
   - value: UTC
-    label: UTC标准时间
+    label: UTC Standard Time
   - value: local
-    label: 本地时间
+    label: Local Time
   TimeUnitType:
   - value: second
-    label: 秒
+    label: Second
   - value: minute
-    label: 分
+    label: Minute
   - value: hour
-    label: 时
+    label: Hour
   - value: day
-    label: 天
+    label: Day
   - value: month
-    label: 月
+    label: Month
   - value: year
-    label: 年
+    label: Year

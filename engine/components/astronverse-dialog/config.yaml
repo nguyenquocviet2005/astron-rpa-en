@@ -1,280 +1,280 @@
 atomic:
   Dialog.message_box:
-    title: 消息提示框
+    title: Message Prompt Box
     comment: ''
     icon: message-dialog
-    helpManual: 打开消息提示对话框，可设定消息提示的内容和标题。
+    helpManual: Open message prompt dialog box, you can set the content and title of the message prompt.
     inputList:
     - key: box_title
-      title: 对话框标题
-      tip: 用户自定义的对话框上方的显示标题，限制标题内容字符数量为50个字符。不输入则默认标题为“消息提示框”
+      title: Dialog Title
+      tip: User-defined title displayed at the top of the dialog box, the title content is limited to 50 characters. If not entered, the default title is "Message Prompt Box"
     - key: message_type
-      title: 消息类型
-      tip: 可选消息类型
+      title: Message Type
+      tip: Selectable message type
     - key: message_content
-      title: 消息内容
-      tip: 用户自定义的对话框内的显示内容，限制内容字符数量为120个字符
+      title: Message Content
+      tip: User-defined content displayed in the dialog box, the content is limited to 120 characters
     - key: button_type
-      title: 展示按钮
-      tip: 消息框可展示给用户进行选择的按钮，只允许切换，不允许空选状态
+      title: Display Buttons
+      tip: Buttons that can be displayed in the message box for user selection, only switching is allowed, not empty state
     - key: auto_check
-      title: 无操作自动关闭对话框
+      title: Auto Close Dialog on No Operation
       tip: ''
     - key: wait_time
-      title: 无操作超时等待（秒）
-      tip: 设置超时等待时间，未识别到用户鼠标移动行为超过该时间则选中默认按钮，默认为60秒
+      title: No Operation Timeout Wait (seconds)
+      tip: Set timeout wait time, if no mouse movement behavior is detected beyond this time, the default button will be selected, default is 60 seconds
     - key: default_button_c
-      title: 超时默认选中按钮
+      title: Default Selected Button on Timeout
       tip: ''
     - key: default_button_cn
-      title: 超时默认选中按钮
+      title: Default Selected Button on Timeout
       tip: ''
     - key: default_button_y
-      title: 超时默认选中按钮
+      title: Default Selected Button on Timeout
       tip: ''
     - key: default_button_yn
-      title: 超时默认选中按钮
+      title: Default Selected Button on Timeout
       tip: ''
     - key: preview_button
-      title: 预览
+      title: Preview
       tip: ''
     outputList:
     - key: result_button
-      title: 保存用户选择的按钮至
+      title: Save User Selected Button to
       tip: ''
   Dialog.input_box:
-    title: 输入对话框
+    title: Input Dialog Box
     comment: ''
     icon: input-dialog
-    helpManual: 打开输入对话框，需用户进行信息输入并确定提交，返回用户在对话框中输入的内容。
+    helpManual: Open input dialog box, user needs to input information and confirm submission, returns the content entered by the user in the dialog box.
     inputList:
     - key: box_title
-      title: 对话框标题
-      tip: 限制标题内容字符数量为50个字符，不输入则默认标题为“输入对话框”
+      title: Dialog Title
+      tip: The title content is limited to 50 characters, if not entered, the default title is "Input Dialog Box"
     - key: input_type
-      title: 输入框类型
+      title: Input Box Type
       tip: ''
     - key: input_title
-      title: 输入框标题
+      title: Input Box Title
       tip: ''
     - key: default_input_text
-      title: 输入框内容默认值
-      tip: 填写则在对话框中展示默认文本作为文本提示符，限制内容字符数量为120个字符
+      title: Input Box Default Value
+      tip: If filled in, the default text will be displayed in the dialog box as a text prompt, the content is limited to 120 characters
     - key: default_input_pwd
-      title: 输入框内容默认值
-      tip: 填写则在对话框中展示默认密码，密码长度在4-16位之间
+      title: Input Box Default Value
+      tip: If filled in, the default password will be displayed in the dialog box, password length is between 4-16 characters
     - key: preview_button
-      title: 预览
+      title: Preview
       tip: ''
     outputList:
     - key: input_content
-      title: 保存用户输入内容至
+      title: Save User Input Content to
       tip: ''
   Dialog.select_box:
-    title: 选择对话框
+    title: Select Dialog Box
     comment: ''
     icon: select-dialog
-    helpManual: 打开选择对话框，保存用户从选择列表中选择的一个或多个选项
+    helpManual: Open select dialog box, save one or more options selected by the user from the selection list
     inputList:
     - key: box_title
-      title: 对话框标题
+      title: Dialog Title
       tip: ''
     - key: select_type
-      title: 选择模式
+      title: Selection Mode
       tip: ''
     - key: options
-      title: 选项
+      title: Options
       tip: ''
     - key: options_title
-      title: 选择框标题
+      title: Selection Box Title
       tip: ''
     - key: preview_button
-      title: 预览
+      title: Preview
       tip: ''
     outputList:
     - key: select_result
-      title: 保存选择结果至
+      title: Save Selection Result to
       tip: ''
   Dialog.select_time_box:
-    title: 日期时间选择框
+    title: Date Time Picker
     comment: ''
     icon: datetime-picker
-    helpManual: 打开日期时间选择框，保存用户选择的日期或时间
+    helpManual: Open date time picker, save the date or time selected by the user
     inputList:
     - key: box_title
-      title: 对话框标题
+      title: Dialog Title
       tip: ''
     - key: time_type
-      title: 时间类型
+      title: Time Type
       tip: ''
     - key: time_format
-      title: 时间格式
+      title: Time Format
       tip: ''
     - key: default_time
-      title: 默认时间
+      title: Default Time
       tip: ''
     - key: default_time_range
-      title: 默认时间
+      title: Default Time
       tip: ''
     - key: input_title
-      title: 输入框标题
+      title: Input Box Title
       tip: ''
     - key: preview_button
-      title: 预览
+      title: Preview
       tip: ''
     outputList:
     - key: select_time
-      title: 保存时间选择结果至
+      title: Save Time Selection Result to
       tip: ''
   Dialog.select_file_box:
-    title: 文件选择对话框
+    title: File Selection Dialog Box
     comment: ''
     icon: file-select-dialog
-    helpManual: 打开系统选择文件对话框，保存用户选择的对应的文件/文件夹路径
+    helpManual: Open system file selection dialog box, save the corresponding file/folder path selected by the user
     inputList:
     - key: box_title_file
-      title: 对话框标题
+      title: Dialog Title
       tip: ''
     - key: box_title_folder
-      title: 对话框标题
+      title: Dialog Title
       tip: ''
     - key: open_type
-      title: 打开类型
+      title: Open Type
       tip: ''
     - key: file_type
-      title: 文件类型
+      title: File Type
       tip: ''
     - key: multiple_choice
-      title: 是否允许多选
+      title: Allow Multiple Selection
       tip: ''
     - key: select_title
-      title: 选择框标题
+      title: Selection Box Title
       tip: ''
     - key: default_path
-      title: 默认文件夹
-      tip: 当配置了该参数，则在打开文件选择框时默认解析在该文件夹路径进行下一步选择
+      title: Default Folder
+      tip: When this parameter is configured, the file selection box will default to this folder path for the next step of selection
     - key: preview_button
-      title: 预览
+      title: Preview
       tip: ''
     outputList:
     - key: select_file
-      title: 保存文件选择结果至
-      tip: 保存用户的文件选择结果，如果用户点击取消按钮则返回为空值
+      title: Save File Selection Result to
+      tip: Save the user's file selection result, if the user clicks the cancel button, it will return empty value
   Dialog.custom_box:
-    title: 自定义对话框
+    title: Custom Dialog Box
     comment: ''
     icon: custom-dialog
     helpManual: ''
     inputList:
     - key: box_title
-      title: 对话框标题
+      title: Dialog Title
       tip: ''
     - key: design_interface
-      title: 设计对话框界面
-      tip: 点击按钮则进入对话框设计弹窗界面
+      title: Design Dialog Interface
+      tip: Click the button to enter the dialog design popup interface
       value: ''
     - key: auto_check
-      title: 无操作自动关闭对话框
+      title: Auto Close Dialog on No Operation
       tip: ''
     - key: wait_time
-      title: 无操作超时等待（秒）
+      title: No Operation Timeout Wait (seconds)
       tip: ''
     - key: default_button
-      title: 超时默认选中按钮
+      title: Default Selected Button on Timeout
       tip: ''
     outputList:
     - key: dialog_result
-      title: 自定义对话框结果
-      tip: 存储所有表单控件的输出结果以及点击的按钮结果
+      title: Custom Dialog Result
+      tip: Store the output results of all form controls and the clicked button result
 options:
   MessageType:
   - value: message
-    label: 信息
+    label: Information
   - value: warning
-    label: 警告
+    label: Warning
   - value: question
-    label: 问题
+    label: Question
   - value: error
-    label: 错误
+    label: Error
   ButtonType:
   - value: confirm
-    label: 确认
+    label: Confirm
   - value: confirm_cancel
-    label: 确认-取消
+    label: Confirm-Cancel
   - value: yes_no
-    label: 是-否
+    label: Yes-No
   - value: yes_no_cancel
-    label: 是-否-取消
+    label: Yes-No-Cancel
   Bool:
   - value: true
-    label: 是
+    label: Yes
   - value: false
-    label: 否
+    label: No
   DefaultButtonC:
   - value: confirm
-    label: 确认
+    label: Confirm
   DefaultButtonCN:
   - value: confirm
-    label: 确认
+    label: Confirm
   - value: cancel
-    label: 取消
+    label: Cancel
   DefaultButtonY:
   - value: 'yes'
-    label: 是
+    label: Yes
   - value: 'no'
-    label: 否
+    label: No
   DefaultButtonYN:
   - value: 'yes'
-    label: 是
+    label: Yes
   - value: 'no'
-    label: 否
+    label: No
   - value: cancel
-    label: 取消
+    label: Cancel
   InputType:
   - value: text
-    label: 文本框
+    label: Text Box
   - value: password
-    label: 密码框
+    label: Password Box
   SelectType:
   - value: single
-    label: 单选
+    label: Single Selection
   - value: multi
-    label: 多选
+    label: Multiple Selection
   TimeType:
   - value: time
-    label: 时间
+    label: Time
   - value: time_range
-    label: 时间段
+    label: Time Range
   TimeFormat:
   - value: YYYY-MM-DD
-    label: 年-月-日
+    label: Year-Month-Day
   - value: YYYY-MM-DD HH:mm
-    label: 年-月-日 时:分
+    label: Year-Month-Day Hour:Minute
   - value: YYYY-MM-DD HH:mm:ss
-    label: 年-月-日 时:分:秒
+    label: Year-Month-Day Hour:Minute:Second
   - value: YYYY/MM/DD
-    label: 年/月/日
+    label: Year/Month/Day
   - value: YYYY/MM/DD HH:mm
-    label: 年/月/日 时:分
+    label: Year/Month/Day Hour:Minute
   - value: YYYY/MM/DD HH:mm:ss
-    label: 年/月/日 时:分:秒
+    label: Year/Month/Day Hour:Minute:Second
   OpenType:
   - value: file
-    label: 文件
+    label: File
   - value: folder
-    label: 文件夹
+    label: Folder
   FileType:
   - value: '*'
-    label: 所有文件
+    label: All Files
   - value: .xls,.xlsx
-    label: Excel文件
+    label: Excel Files
   - value: .doc,.docx
-    label: Word文件
+    label: Word Files
   - value: .txt
-    label: 文本文件
+    label: Text Files
   - value: .png,.jpg,.jpeg,.bmp,.gif
-    label: 图像文件
+    label: Image Files
   - value: .ppt,.pptx
-    label: PPT文件
+    label: PPT Files
   - value: .zip,.rar
-    label: 压缩文件
+    label: Compressed Files

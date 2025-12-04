@@ -1,87 +1,89 @@
 atomic:
   VerifyCode.picture_code:
-    title: 通用数英验证码
-    comment: 识别浏览器中的验证码 @{picture_pick} ，返回识别结果 @{code_result}
+    title: General Text Captcha
+    comment: Recognize captcha @{picture_pick} in browser, return recognition result
+      @{code_result}
     icon: captcha-text
     helpManual: ''
     inputList:
     - key: browser_obj
-      title: 浏览器对象
+      title: Browser Object
       tip: ''
     - key: picture_pick
-      title: 拾取验证码对象
+      title: Pick Captcha Object
       tip: ''
     - key: code_type
-      title: 验证码类型
+      title: Captcha Type
       tip: ''
     - key: input_flag
-      title: 是否填写输入框
+      title: Fill Input Box
       tip: ''
     - key: input_box
-      title: 输入框对象
+      title: Input Box Object
       tip: ''
     outputList:
     - key: code_result
-      title: 识别结果
+      title: Recognition Result
       tip: ''
   VerifyCode.slider_code:
-    title: 通用滑块验证码
-    comment: 在背景图为 @{picture_pick} 的滑块验证码上，拖动滑块 @{slider_pick} 至指定位置，拖动距离为 @{drag_distance}
+    title: General Slider Captcha
+    comment: On background image @{picture_pick} slider captcha, drag slider @{slider_pick}
+      to specified position, drag distance @{drag_distance}
     icon: captcha-slider
     helpManual: ''
     inputList:
     - key: browser_obj
-      title: 浏览器对象
+      title: Browser Object
       tip: ''
     - key: picture_pick
-      title: 背景图片对象
+      title: Background Image Object
       tip: ''
     - key: slider_pick
-      title: 拾取滑块对象
+      title: Pick Slider Object
       tip: ''
     - key: unmatched_flag
-      title: 是否为变速验证码
+      title: Is Variable Speed Captcha
       tip: ''
     - key: move_pic_pick
-      title: 拾取滑动图片对象
+      title: Pick Sliding Image Object
       tip: ''
     - key: mini_step
-      title: 微调步长（px）
+      title: Fine Adjustment Step (px)
       tip: ''
     outputList:
     - key: drag_distance
-      title: 移动距离
+      title: Move Distance
       tip: ''
   VerifyCode.click_code:
-    title: 通用点击验证码
-    comment: 在背景图为 @{picture_pick} 的点击验证码上，点击对应位置
+    title: General Click Captcha
+    comment: On background image @{picture_pick} click captcha, click corresponding position
     icon: captcha-click
     helpManual: ''
     inputList:
     - key: browser_obj
-      title: 浏览器对象
+      title: Browser Object
       tip: ''
     - key: picture_pick
-      title: 点击图片对象
-      tip: 需要包括大的点击图片和小的指明顺序的图片
+      title: Click Image Object
+      tip: Need to include large click image and small image indicating order
     - key: hint_position
-      title: 指示顺序的图片相对大图的位置
-      tip: 如果指示顺序的图片相对大图在下，则选择下，反之选择上
+      title: Position of Order Indicator Image Relative to Main Image
+      tip: If the image indicating order is at the bottom relative to the main image, select bottom, otherwise select top
 options:
   PictureCodeType:
   - value: '10110'
-    label: 通用数英验证码1-4位
+    label: General Text Captcha 1-4 digits
   - value: '10111'
-    label: 通用数英验证码5-8位
+    label: General Text Captcha 5-8 digits
   - value: '10211'
-    label: 通用数英验证码（特殊)
+    label: General Text Captcha (Special)
   Bool:
   - value: true
-    label: 是
+    label: 'Yes'
   - value: false
-    label: 否
+    label: 'No'
   HintPosition:
   - value: bottom
-    label: 下
+    label: Bottom
   - value: top
-    label: 上
+    label: Top

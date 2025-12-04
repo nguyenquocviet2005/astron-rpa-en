@@ -1,979 +1,976 @@
 atomic:
   Excel.open_excel:
-    title: 打开Excel文件
-    comment: 打开路径为 @{file_path} 的Excel文件，返回Excel对象 @{open_excel_obj}
+    title: Open Excel File
+    comment: Open Excel file at @{file_path}, return Excel object @{open_excel_obj}
     icon: excel-open-file
     helpManual: ''
     inputList:
     - key: file_path
-      title: 文件路径
-      tip: 输入文件路径
+      title: File Path
+      tip: Enter file path
     - key: default_application
-      title: 默认创建程序
-      tip: 选择默认创建程序，可选Excel或WPS
+      title: Default Application
+      tip: Select default application, Excel or WPS
     - key: visible_flag
-      title: 是否可视化
+      title: Visible
       tip: ''
     - key: password
-      title: 密码
+      title: Password
       tip: ''
     - key: update_links
-      title: 自动更新外部链接
+      title: Update External Links Automatically
       tip: ''
     outputList:
     - key: open_excel_obj
-      title: 打开的Excel对象
+      title: Opened Excel Object
       tip: ''
   Excel.get_excel:
-    title: 获取已打开的Excel对象
-    comment: 获取文件名为 @{file_name} 的Excel对象，返回Excel对象 @{get_excel_obj}
+    title: Get Opened Excel Object
+    comment: Get Excel object with file name @{file_name}, return Excel object @{get_excel_obj}
     icon: get-open-excel-objects
     helpManual: ''
     inputList:
     - key: file_name
-      title: 文件名
-      tip: 输入文件名，不需要输入前序打开Excel的变量
+      title: File Name
+      tip: Enter file name, no need to enter the variable from previous open Excel operation
     outputList:
     - key: get_excel_obj
-      title: 获取的Excel对象
+      title: Retrieved Excel Object
       tip: ''
   Excel.create_excel:
-    title: 创建Excel文件
-    comment: 在路径为 @{file_path} 下创建文件名为 @{file_name} 的Excel文件，返回Excel对象 @{create_excel_obj}
+    title: Create Excel File
+    comment: Create Excel file named @{file_name} at path @{file_path}, return Excel object @{create_excel_obj}
     icon: excel-create-file
     helpManual: ''
     inputList:
     - key: file_path
-      title: 保存文件夹路径
+      title: Save Folder Path
       tip: ''
     - key: file_name
-      title: 保存文件名
-      tip: 输入文件名
+      title: Save File Name
+      tip: Enter file name
     - key: default_application
-      title: 默认创建程序
-      tip: 选择默认创建程序，可选Excel或WPS
+      title: Default Application
+      tip: Select default application, Excel or WPS
     - key: visible_flag
-      title: 是否可视化
+      title: Visible
       tip: ''
     - key: exist_handle_type
-      title: 文件名存在处理方式
-      tip: 选择文件存在处理方式，可选覆盖、重命名、取消保存
+      title: Existing File Handling
+      tip: Select how to handle existing file, can choose overwrite, rename, or cancel save
     - key: password
-      title: 文件打开密码
+      title: File Open Password
       tip: ''
     outputList:
     - key: create_excel_obj
-      title: 创建的Excel对象
+      title: Created Excel Object
       tip: ''
     - key: excel_path
-      title: 创建的Excel文件路径
+      title: Created Excel File Path
       tip: ''
   Excel.save_excel:
-    title: 保存Excel文件
-    comment: 保存Excel对象 @{excel} ，保存方式为 @{save_type}
+    title: Save Excel File
+    comment: Save Excel object @{excel}, save type @{save_type}
     icon: excel-save-file
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
-      tip: 输入Excel对象
+      title: Excel Object
+      tip: Enter Excel object
     - key: save_type
-      title: 保存类型
-      tip: 选择保存类型，可选保存或另存为
+      title: Save Type
+      tip: Select save type, can choose save or save as
     - key: file_path
-      title: 文件路径
-      tip: 输入文件路径
+      title: File Path
+      tip: Enter file path
     - key: file_name
-      title: 文件名
-      tip: 输入文件名
+      title: File Name
+      tip: Enter file name
     - key: exist_handle_type
-      title: 文件名存在处理方式
-      tip: 选择文件存在处理方式，可选覆盖、重命名、取消保存
+      title: Existing File Handling
+      tip: Select how to handle existing file, can choose overwrite, rename, or cancel save
     - key: close_flag
-      title: 是否关闭文件
-      tip: 选择保存后是否关闭文件，可选关闭或不关闭
+      title: Close File
+      tip: Choose whether to close the file after saving, can choose close or don't close
     outputList: []
   Excel.close_excel:
-    title: 关闭Excel文件
-    comment: 关闭 @{close_range_flag}，当前Excel对象 @{excel}，保存类型为 @{save_type_one||save_type_all}
+    title: Close Excel File
+    comment: Close @{close_range_flag}, current Excel object @{excel}, save type @{save_type_one||save_type_all}
     icon: excel-close-file
     helpManual: ''
     inputList:
     - key: close_range_flag
-      title: 关闭文档范围
-      tip: 选择关闭文档的范围，如关闭当前文档或关闭所有文档
+      title: Close Scope
+      tip: Select close scope, such as close current document or close all documents
     - key: excel
-      title: Excel对象
-      tip: 输入Excel对象
+      title: Excel Object
+      tip: Enter Excel object
     - key: save_type_one
-      title: 保存类型
-      tip: 选择保存类型，可选保存，另存为或不保存
+      title: Save Type
+      tip: Select save type, can choose save, save as, or don't save
     - key: save_type_all
-      title: 保存类型
-      tip: 选择保存类型，可选保存或不保存
+      title: Save Type
+      tip: Select save type, can choose save or don't save
     - key: file_path
-      title: 文件路径
-      tip: 输入文件路径
+      title: File Path
+      tip: Enter file path
     - key: file_name
-      title: 文件名
-      tip: 输入文件名
+      title: File Name
+      tip: Enter file name
     - key: exist_handle_type
-      title: 文件名存在处理方式
-      tip: 选择文件存在处理方式，可选覆盖、重命名、取消保存
+      title: Existing File Handling
+      tip: Select how to handle existing file, can choose overwrite, rename, or cancel save
     - key: pkill_flag
-      title: 是否关闭进程
-      tip: 选择是否关闭进程，可选关闭或不关闭
+      title: Close Process
+      tip: Choose whether to close process, can choose close or don't close
     outputList: []
   Excel.edit_excel:
-    title: 写入Excel文件
-    comment: 编辑Excel对象 @{excel} ，写入内容 @{value}
+    title: Write to Excel File
+    comment: Edit Excel object @{excel}, write content @{value}
     icon: excel-write-file
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
-      tip: 输入Excel对象
+      title: Excel Object
+      tip: Enter Excel object
     - key: edit_range
-      title: 编辑范围
-      tip: 选择编辑范围，可选行、列、区域
+      title: Edit Range
+      tip: Select edit range, can choose row, column, or area
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: start_col
-      title: 起始列
-      tip: 输入要编辑的起始列位置，支持字母(如'A')或数字(如1)格式。
+      title: Start Column
+      tip: Enter the starting column position to edit, supports letter (such as 'A') or number (such as 1) format.
     - key: start_row
-      title: 起始行
-      tip: 输入要编辑的起始行号，从1开始计数。当选择列(COLUMN)时可不填，当选择行(ROW)或区域(AREA)时必填
+      title: Start Row
+      tip: Enter the starting row number to edit, counting from 1. Can be left empty when selecting column (COLUMN), required when selecting row (ROW) or area (AREA)
     - key: value
-      title: 插入内容
-      tip: 修改的内容以列表方式输入，当选择行或列时输入列表如[1,2,3]，表示在指定行依次写入1,2,3；当选择区域时输入列表如[[1,1],[2,2]]，表示在指定区域按行写入数据
+      title: Insert Content
+      tip: The content to modify is entered as a list. When selecting row or column, enter a list like [1,2,3], which means writing 1,2,3 in sequence in the specified row; when selecting area, enter a list like [[1,1],[2,2]], which means writing data by row in the specified area
     outputList: []
   Excel.read_excel:
-    title: 读取Excel文件内容
-    comment: 读取Excel对象 @{excel} 中工作表 @{sheet_name} 的Excel文件内容
+    title: Read Excel File Content
+    comment: Read Excel file content from worksheet @{sheet_name} in Excel object @{excel}
     icon: excel-read-content
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
-      tip: 输入Excel对象
+      title: Excel Object
+      tip: Enter Excel object
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: read_range
-      title: 读取范围
-      tip: 选择读取范围，可选单元格、行、列、区域、已编辑区域
+      title: Read Range
+      tip: Select read range, can choose cell, row, column, area, or edited area
     - key: start_col
-      title: 起始列
-      tip: 输入起始列
+      title: Start Column
+      tip: Enter start column
     - key: end_col
-      title: 结束列
-      tip: 输入结束列
+      title: End Column
+      tip: Enter end column
     - key: cell
-      title: 单元格
-      tip: 输入待读取单元格，如A1
+      title: Cell
+      tip: Enter cell to read, such as A1
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: column
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: start_row
-      title: 起始行
-      tip: 输入整数代表行号，从1开始
+      title: Start Row
+      tip: Enter integer representing row number, starting from 1
     - key: end_row
-      title: 结束行
-      tip: 输入整数代表行号，-n代表倒数第n行
+      title: End Row
+      tip: Enter integer representing row number, -n means the nth row from the end
     - key: read_display
-      title: 读取单元格显示内容
-      tip: 选择是否读取单元格显示的内容，可选是或否
+      title: Read Cell Display Content
+      tip: Choose whether to read the content displayed in the cell, can choose yes or no
     - key: trim_spaces
-      title: 去除空格
-      tip: 选择是否去除空格，可选是或否
+      title: Trim Spaces
+      tip: Choose whether to trim spaces, can choose yes or no
     - key: replace_none
-      title: 替换空值
-      tip: 选择是否将空值（None）替换为空字符串，可选是或否
+      title: Replace None Values
+      tip: Choose whether to replace None values with empty strings, can choose yes or no
     outputList:
     - key: read_excel_contents
-      title: 读取的Excel内容
-      tip: 读取的Excel内容以列表方式返回
+      title: Read Excel Content
+      tip: The read Excel content is returned as a list
   Excel.design_cell_type:
-    title: 设置单元格格式
-    comment: 设置 @{excel} 中工作表 @{sheet_name} 的单元格格式，字体大小为 @{font_size}，字体名称为 @{font_name}，字体颜色为
-      @{font_color}，背景颜色 @{bg_color}
+    title: Set Cell Format
+    comment: Set cell format in worksheet @{sheet_name} of @{excel}, font size @{font_size}, font name @{font_name}, font color @{font_color}, background color @{bg_color}
     icon: excel-set-cell-format
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名称
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: design_type
-      title: 设置范围
-      tip: 选择设置范围，可选单元格、行、列、区域
+      title: Set Range
+      tip: Select set range, can choose cell, row, column, or area
     - key: cell_position
-      title: 单元格位置
-      tip: 输入单元格位置，如A1
+      title: Cell Position
+      tip: Enter cell position, such as A1
     - key: range_position
-      title: 范围位置
-      tip: 输入单元格范围，如A1:B2
+      title: Range Position
+      tip: Enter cell range, such as A1:B2
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: col_width
-      title: 列宽
+      title: Column Width
       tip: ''
     - key: bg_color
-      title: 背景颜色
+      title: Background Color
       tip: ''
     - key: font_color
-      title: 字体颜色
+      title: Font Color
       tip: ''
     - key: font_type
-      title: 字体类型
+      title: Font Style
       tip: ''
     - key: font_name
-      title: 字体名称
+      title: Font Name
       tip: ''
     - key: font_size
-      title: 字体大小
+      title: Font Size
       tip: ''
     - key: numberformat
-      title: 数字格式
+      title: Number Format
       tip: ''
     - key: numberformat_other
-      title: 自定义数字格式
+      title: Custom Number Format
       tip: ''
     - key: horizontal_align
-      title: 水平对齐
+      title: Horizontal Alignment
       tip: ''
     - key: vertical_align
-      title: 垂直对齐
+      title: Vertical Alignment
       tip: ''
     - key: wrap_text
-      title: 自动换行
+      title: Wrap Text
       tip: ''
     - key: auto_row_height
-      title: 自动行高
+      title: Auto Row Height
       tip: ''
     - key: auto_column_width
-      title: 自动列宽
+      title: Auto Column Width
       tip: ''
     outputList: []
   Excel.copy_excel:
-    title: 复制Excel单元格
-    comment: 复制Excel对象 @{excel} 中工作表 @{sheet_name} 的单元格，返回复制内容的字符串格式 @{copy_excel_contents}
+    title: Copy Excel Cell
+    comment: Copy cell from worksheet @{sheet_name} in Excel object @{excel}, return copied content as string @{copy_excel_contents}
     icon: excel-copy-cell
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: copy_range_type
-      title: 复制范围
+      title: Copy Range
       tip: ''
     - key: cell_position
-      title: 单元格位置
-      tip: 填写单元格位置，如A1
+      title: Cell Position
+      tip: Fill in cell position, such as A1
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: range_position
-      title: 单元格范围
-      tip: 填写单元格范围，如A1:B2
+      title: Cell Range
+      tip: Fill in cell range, such as A1:B2
     outputList:
     - key: copy_excel_contents
-      title: Excel复制内容
+      title: Excel Copied Content
       tip: ''
   Excel.paste_excel:
-    title: 粘贴Excel单元格
-    comment: 向Excel对象 @{excel} 中工作表 @{sheet_name} 粘贴单元格
+    title: Paste Excel Cell
+    comment: Paste cell to worksheet @{sheet_name} in Excel object @{excel}
     icon: excel-paste-cell
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: paste_type
-      title: 粘贴类型
+      title: Paste Type
       tip: ''
     - key: start_location
-      title: 起始位置
-      tip: 输入起始单元格位置，如A1
+      title: Start Location
+      tip: Enter start cell position, such as A1
     - key: skip_blanks
-      title: 是否跳过空白行
+      title: Skip Blank Rows
       tip: ''
     - key: transpose
-      title: 是否转置
+      title: Transpose
       tip: ''
     outputList: []
   Excel.delete_excel_cell:
-    title: 删除Excel单元格
-    comment: 删除Excel对象 @{excel} 中工作表 @{sheet_name} 的单元格
+    title: Delete Excel Cell
+    comment: Delete cell from worksheet @{sheet_name} in Excel object @{excel}
     icon: excel-delete-cell
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: delete_range_excel
-      title: 删除范围
+      title: Delete Range
       tip: ''
     - key: coordinate
-      title: 单元格位置
-      tip: 输入单元格位置，如A1
+      title: Cell Position
+      tip: Enter cell position, such as A1
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: data_region
-      title: 单元格范围
-      tip: 输入单元格范围，如A1:B2
+      title: Cell Range
+      tip: Enter cell range, such as A1:B2
     - key: direction
-      title: 剩余数据填充方向
+      title: Remaining Data Fill Direction
       tip: ''
     outputList: []
   Excel.clear_excel_content:
-    title: 清除Excel区域内容
-    comment: 清除Excel对象 @{excel} 中工作表 @{sheet_name} 的单元格内容
+    title: Clear Excel Range Content
+    comment: Clear cell content from worksheet @{sheet_name} in Excel object @{excel}
     icon: excel-clear-range
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: select_type
-      title: 区域选择
-      tip: 选择需要删除的区域内容
+      title: Range Selection
+      tip: Select the range content to delete
     - key: cell_location
-      title: 单元格位置
-      tip: 输入单元格位置，如A1
+      title: Cell Position
+      tip: Enter cell position, such as A1
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: data_range
-      title: 单元格范围
-      tip: 输入连续的单元格范围，如A1:B2
+      title: Cell Range
+      tip: Enter continuous cell range, such as A1:B2
     - key: clear_type
-      title: 清除类型
+      title: Clear Type
       tip: ''
     outputList: []
   Excel.insert_excel_row_or_column:
-    title: 插入Excel行或列
-    comment: 向Excel对象 @{excel} 中工作表 @{sheet_name} 插入行或列
+    title: Insert Excel Row or Column
+    comment: Insert row or column to worksheet @{sheet_name} in Excel object @{excel}
     icon: excel-insert-row-column
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: insert_type
-      title: 插入类型
+      title: Insert Type
       tip: ''
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: row_direction
-      title: 插入行方向
+      title: Insert Row Direction
       tip: ''
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: col_direction
-      title: 插入列方向
+      title: Insert Column Direction
       tip: ''
     - key: blank_rows
-      title: 是否只插入空行/空列
+      title: Insert Blank Rows/Columns Only
       tip: ''
     - key: insert_num
-      title: 插入行数
+      title: Number of Rows to Insert
       tip: ''
     - key: insert_content
-      title: 插入内容
-      tip: 插入单行或多行时，插入内容需为多维列表，字符需使用单引号''，例：插入1行，写入内容：[[123,24,32]]，插入2行，写入内容：[[123,123],['aaa']]，则实际写入excel内容为：第一行：123  123；第二行：aaa；写入内容：[[123,123],'aaa']，则实际写入excel内容为：第一行：123  123；第二行：a
-        a a；如果插入的行或列超过数据长度，多余的单元格将保持为空
+      title: Insert Content
+      tip: "When inserting a single or multiple rows, the insert content needs to be a multi-dimensional list, and characters need to use single quotes '', for example: insert 1 row, write content: [[123,24,32]], insert 2 rows, write content: [[123,123],['aaa']], then the actual content written to excel is: first row: 123 123; second row: aaa; write content: [[123,123],'aaa'], then the actual content written to excel is: first row: 123 123; second row: a a a; if the inserted rows or columns exceed the data length, the extra cells will remain empty"
     outputList: []
   Excel.get_excel_row_num:
-    title: 获取Excel行数
-    comment: 获取Excel对象 @{excel} 中工作表 @{sheet_name} 的行数，返回行数 @{excel_row_num}
+    title: Get Excel Row Count
+    comment: Get row count of worksheet @{sheet_name} in Excel object @{excel}, return row count @{excel_row_num}
     icon: excel-get-row-count
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: get_col_type
-      title: 获取类型
+      title: Get Type
       tip: ''
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     outputList:
     - key: excel_row_num
-      title: Excel行数
+      title: Excel Row Count
       tip: ''
   Excel.get_excel_col_num:
-    title: 获取Excel列数
-    comment: 获取Excel对象 @{excel} 中工作表 @{sheet_name} 的列数，返回列数 @{excel_col_num}
+    title: Get Excel Column Count
+    comment: Get column count of worksheet @{sheet_name} in Excel object @{excel}, return column count @{excel_col_num}
     icon: excel-get-column-count
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: get_row_type
-      title: 获取类型
+      title: Get Type
       tip: ''
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: output_type
-      title: 输出格式
+      title: Output Format
       tip: ''
     outputList:
     - key: excel_col_num
-      title: Excel列数
+      title: Excel Column Count
       tip: ''
   Excel.get_excel_first_available_row:
-    title: 获取Excel第一个可用行
-    comment: 获取Excel对象 @{excel} 中工作表 @{sheet_name} 的第一个可用行，返回可用行 @{get_first_available_row}
+    title: Get Excel First Available Row
+    comment: Get first available row of worksheet @{sheet_name} in Excel object @{excel}, return available row @{get_first_available_row}
     icon: excel-get-first-available-row
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     outputList:
     - key: get_first_available_row
-      title: 第一个可用行
+      title: First Available Row
       tip: ''
   Excel.get_excel_first_available_col:
-    title: 获取Excel第一个可用列
-    comment: 获取Excel对象 @{excel} 中工作表 @{sheet_name} 的第一个可用列，返回可用列 @{get_first_available_col}
+    title: Get Excel First Available Column
+    comment: Get first available column of worksheet @{sheet_name} in Excel object @{excel}, return available column @{get_first_available_col}
     icon: excel-get-first-available-column
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: output_type
-      title: 输出格式
+      title: Output Format
       tip: ''
     outputList:
     - key: get_first_available_col
-      title: 第一个可用列
+      title: First Available Column
       tip: ''
   Excel.loop_excel_content:
-    title: 循环Excel内容
-    comment: 循环Excel对象 @{excel} 中指定 @{select_type} 的内容，输出循环项位置至@{key} 输出循环项至@{value}
+    title: Loop Excel Content
+    comment: Loop through @{select_type} content in Excel object @{excel}, output loop item position to @{key}, output loop item to @{value}
     icon: excel-loop-content
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: select_type
-      title: 循环范围
+      title: Loop Range
       tip: ''
     - key: start_row
-      title: 起始行
-      tip: 输入起始行编号，从1开始
+      title: Start Row
+      tip: Enter start row number, starting from 1
     - key: end_row
-      title: 结束行
-      tip: 输入结束行编号，-n代表倒数第n行
+      title: End Row
+      tip: Enter end row number, -n means the nth row from the end
     - key: start_col
-      title: 起始列
-      tip: 输入起始列编号，如A或1
+      title: Start Column
+      tip: Enter start column number, such as A or 1
     - key: end_col
-      title: 结束列
-      tip: 输入结束列编号，-n代表倒数第n列
+      title: End Column
+      tip: Enter end column number, -n means the nth column from the end
     - key: real_text
-      title: 是否获取可见值
-      tip: Excel的可见值为打开所见到的值，真实值可能是隐藏的公式等，选择否获取真实值
+      title: Get Visible Value
+      tip: The visible value of Excel is the value seen when opened, the real value may be a hidden formula, etc. Select no to get the real value
     - key: cell_strip
-      title: 是否去除空格
-      tip: 是否去除前后空格以及换行符
+      title: Trim Spaces
+      tip: Whether to remove leading and trailing spaces and line breaks
     outputList:
     - key: key
-      title: 循环项位置
-      tip: 例如 A, B
+      title: Loop Item Position
+      tip: For example A, B
     - key: value
-      title: 循环项
-      tip: 例如 [1.0, None]
+      title: Loop Item
+      tip: For example [1.0, None]
   Excel.excel_get_cell_color:
-    title: 获取Excel单元格颜色
-    comment: 获取Excel对象 @{excel} 中工作表 @{sheet_name} 的单元格 @{coordinate} 的颜色，返回颜色 @{get_cell_color}
+    title: Get Excel Cell Color
+    comment: Get color of cell @{coordinate} from worksheet @{sheet_name} in Excel object @{excel}, return color @{get_cell_color}
     icon: excel-get-cell-color
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: coordinate
-      title: 单元格位置
-      tip: 输入单元格位置，如A1
+      title: Cell Position
+      tip: Enter cell position, such as A1
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     outputList:
     - key: get_cell_color
-      title: 单元格颜色
+      title: Cell Color
       tip: ''
   Excel.merge_split_excel_cell:
-    title: 合并或拆分Excel单元格
-    comment: 合并或拆分Excel对象 @{excel} 中工作表 @{sheet_name} 的单元格
+    title: Merge or Split Excel Cell
+    comment: Merge or split cells in worksheet @{sheet_name} of Excel object @{excel}
     icon: excel-split-cell
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: job_type
-      title: 合并或拆分类型
+      title: Merge or Split Type
       tip: ''
     - key: merge_cell_range
-      title: 合并单元格范围
-      tip: 输入需合并的连续单元格范围，如A1:B2
+      title: Merge Cell Range
+      tip: Enter continuous cell range to merge, such as A1:B2
     - key: split_cell_range
-      title: 拆分单元格范围
-      tip: 输入需拆分的连续单元格范围，如A1:B2
+      title: Split Cell Range
+      tip: Enter continuous cell range to split, such as A1:B2
     outputList: []
   Excel.add_excel_worksheet:
-    title: 添加Excel工作表
-    comment: 向Excel对象 @{excel} 中添加工作表 @{sheet_name}
+    title: Add Excel Worksheet
+    comment: Add worksheet @{sheet_name} to Excel object @{excel}
     icon: add-excel-worksheet
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: insert_type
-      title: 插入位置
+      title: Insert Position
       tip: ''
     - key: relative_sheet_name
-      title: 在...表之前/之后插入
-      tip: 输入相对位置相关的工作表名称，如'Sheet1'
+      title: Insert Before/After...
+      tip: Enter the worksheet name related to the relative position, such as 'Sheet1'
     outputList: []
   Excel.move_excel_worksheet:
-    title: 移动Excel工作表
-    comment: 移动Excel对象 @{excel} 中工作表 @{move_sheet} ，移动方式为 @{move_type}
+    title: Move Excel Worksheet
+    comment: Move worksheet @{move_sheet} in Excel object @{excel}, move type @{move_type}
     icon: excel-move-sheet
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: move_type
-      title: 移动方式
+      title: Move Type
       tip: ''
     - key: move_sheet
-      title: 要移动的工作表
-      tip: 工作表可以填写名称或序号，如'Sheet1'或'1'，序号从1开始
+      title: Worksheet to Move
+      tip: Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1
     - key: move_to_sheet
-      title: 目标工作表
-      tip: 工作表可以填写名称或序号，如'Sheet1'或'1'，序号从1开始
+      title: Target Worksheet
+      tip: Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1
     outputList: []
   Excel.delete_excel_worksheet:
-    title: 删除Excel工作表
-    comment: 删除Excel对象 @{excel} 中工作表 @{del_sheet_name}
+    title: Delete Excel Worksheet
+    comment: Delete worksheet @{del_sheet_name} from Excel object @{excel}
     icon: excel-delete-sheet
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: del_sheet_name
-      title: 删除工作表
-      tip: 工作表可以填写名称或序号，如'Sheet1'或'1'，序号从1开始
+      title: Delete Worksheet
+      tip: Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1
     outputList: []
   Excel.rename_excel_worksheet:
-    title: 重命名Excel工作表
-    comment: 重命名Excel对象 @{excel} 中工作表 @{source_sheet_name} 为 @{new_sheet_name}
+    title: Rename Excel Worksheet
+    comment: Rename worksheet @{source_sheet_name} to @{new_sheet_name} in Excel object @{excel}
     icon: excel-rename-sheet
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: source_sheet_name
-      title: 原工作表
-      tip: 工作表可以填写名称或序号，如'Sheet1'或'1'，序号从1开始
+      title: Original Worksheet
+      tip: Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1
     - key: new_sheet_name
-      title: 新工作表名
-      tip: 工作表可以填写名称或序号，如'Sheet1'或'1'，序号从1开始
+      title: New Worksheet Name
+      tip: Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1
     outputList: []
   Excel.copy_excel_worksheet:
-    title: 复制Excel工作表
-    comment: 复制Excel对象 @{excel} 中工作表 @{source_sheet_name} ，复制类型为 @{copy_type}
+    title: Copy Excel Worksheet
+    comment: Copy worksheet @{source_sheet_name} in Excel object @{excel}, copy type @{copy_type}
     icon: excel-copy-sheet
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: source_sheet_name
-      title: 原工作表
-      tip: 工作表可以填写名称或序号，如'Sheet1'或'1'，序号从1开始
+      title: Original Worksheet
+      tip: Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1
     - key: new_sheet_name
-      title: 新工作表名
-      tip: 工作表可以填写名称或序号，如'Sheet1'或'1'，序号从1开始
+      title: New Worksheet Name
+      tip: Worksheet can be filled in by name or number, such as 'Sheet1' or '1', number starts from 1
     - key: location
-      title: 复制位置
+      title: Copy Position
       tip: ''
     - key: copy_type
-      title: 复制类型
+      title: Copy Type
       tip: ''
     - key: other_excel_obj
-      title: 其他Excel对象
+      title: Other Excel Object
       tip: ''
     - key: is_cover
-      title: 是否覆盖
+      title: Overwrite
       tip: ''
     outputList: []
   Excel.get_excel_worksheet_names:
-    title: 获取Excel工作表名称
-    comment: 获取Excel对象 @{excel} 中工作表名称，返回工作表名称列表 @{sheet_names}
+    title: Get Excel Worksheet Names
+    comment: Get worksheet names from Excel object @{excel}, return worksheet name list @{sheet_names}
     icon: excel-get-sheet-names
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_range
-      title: 工作表范围
+      title: Worksheet Range
       tip: ''
     outputList:
     - key: sheet_names
-      title: 工作表名称
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Names
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
   Excel.search_and_replace_excel_content:
-    title: 查找或替换Excel内容
-    comment: 查找或替换Excel对象 @{excel} 中 @{search_range} 范围内 @{find_str} ，返回查找结果 @{search_excel_result}
+    title: Find or Replace Excel Content
+    comment: Find or replace @{find_str} in @{search_range} range of Excel object @{excel}, return search result @{search_excel_result}
     icon: excel-find-replace
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: find_str
-      title: 查找内容
+      title: Find Content
       tip: ''
     - key: replace_flag
-      title: 是否替换
+      title: Replace
       tip: ''
     - key: replace_str
-      title: 替换内容
+      title: Replace Content
       tip: ''
     - key: lookup_range_excel
-      title: 查找范围
+      title: Search Range
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: search_range
-      title: 工作表内查找范围
+      title: Search Range in Worksheet
       tip: ''
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: start_row
-      title: 起始行
+      title: Start Row
       tip: ''
     - key: end_row
-      title: 结束行
+      title: End Row
       tip: ''
     - key: start_col
-      title: 起始列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Start Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: end_col
-      title: 结束列
-      tip: 输入列名，支持输入字符A或者整数1，-n代表倒数第n列
+      title: End Column
+      tip: Enter column name, supports entering letter A or integer 1, -n means the nth column from the end
     - key: exact_match
-      title: 是否精确匹配
+      title: Exact Match
       tip: ''
     - key: case_flag
-      title: 是否区分大小写
+      title: Case Sensitive
       tip: ''
     - key: match_range
-      title: 匹配数量
+      title: Match Count
       tip: ''
     - key: output_type
-      title: 输出类型
-      tip: 默认返回单元格位置，比如['A1', 'B2']，也可以选择分开返回行列号，比如[['A', 1], ['B', 2]]
+      title: Output Type
+      tip: Returns cell position by default, such as ['A1', 'B2'], or you can choose to return row and column numbers separately, such as [['A', 1], ['B', 2]]
     outputList:
     - key: search_excel_result
-      title: 查找结果
-      tip: '选择单工作表查找是返回单元格位置列表，比如[''A1'', ''B2'']，选择多工作表查找是返回工作表名称和单元格位置列表字典，比如{''Sheet1'':
-        [''A1'', ''B2''], ''Sheet2'': [''C3'', ''D4'']}'
+      title: Search Result
+      tip: 'Single worksheet search returns a list of cell positions, such as [''A1'', ''B2''], multiple worksheet search returns a dictionary of worksheet names and cell position lists, such as {''Sheet1'': [''A1'', ''B2''], ''Sheet2'': [''C3'', ''D4'']}'
   Excel.insert_pic:
-    title: 插入Excel图片
-    comment: 向Excel对象 @{excel} 中工作表 @{sheet_name} 插入图片 @{pic_path} ，插入类型为 @{pic_size_type}
+    title: Insert Excel Image
+    comment: Insert image @{pic_path} to worksheet @{sheet_name} in Excel object @{excel}, insert type @{pic_size_type}
     icon: excel-insert-image
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: insert_pos
-      title: 插入位置
-      tip: 可填写单元格位置，如'A1'；也可填写范围位置，如'A1:B2'
+      title: Insert Position
+      tip: Can fill in cell position, such as 'A1'; can also fill in range position, such as 'A1:B2'
     - key: pic_path
-      title: 图片路径
+      title: Image Path
       tip: ''
     - key: pic_size_type
-      title: 图片大小控制
+      title: Image Size Control
       tip: ''
     - key: pic_height
-      title: 图片高度
+      title: Image Height
       tip: ''
     - key: pic_width
-      title: 图片宽度
+      title: Image Width
       tip: ''
     - key: pic_scale
-      title: 图片缩放比例
+      title: Image Scale
       tip: ''
     outputList: []
   Excel.insert_formula:
-    title: 插入Excel公式
-    comment: 向Excel对象 @{excel} 中工作表 @{sheet_name} 插入公式 @{formula}
+    title: Insert Excel Formula
+    comment: Insert formula @{formula} to worksheet @{sheet_name} in Excel object @{excel}
     icon: excel-insert-formula
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: insert_direction
-      title: 公式插入方向
+      title: Formula Insert Direction
       tip: ''
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: start_row
-      title: 起始行
-      tip: 输入整数代表行号，从1开始
+      title: Start Row
+      tip: Enter integer representing row number, starting from 1
     - key: end_row
-      title: 结束行
-      tip: 输入整数代表行号，-n代表倒数第n行
+      title: End Row
+      tip: Enter integer representing row number, -n means the nth row from the end
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: start_col
-      title: 起始列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Start Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: end_col
-      title: 结束列
-      tip: 输入列名，支持输入字符A或者整数1，-n代表倒数第n列
+      title: End Column
+      tip: Enter column name, supports entering letter A or integer 1, -n means the nth column from the end
     - key: formula
-      title: 插入公式
+      title: Insert Formula
       tip: ''
     outputList: []
   Excel.create_excel_comment:
-    title: 创建Excel批注
-    comment: 向Excel对象 @{excel} 中插入批注 @{comment}
+    title: Create Excel Comment
+    comment: Insert comment @{comment} to Excel object @{excel}
     icon: excel-create-comment
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: comment_type
-      title: 批注插入方式
-      tip: 可以指定单元格插入，也可以搜索内容插入
+      title: Comment Insert Method
+      tip: Can insert by specifying cell or by searching content
     - key: comment
-      title: 批注内容
+      title: Comment Content
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: cell_position
-      title: 单元格位置
-      tip: 输入单元格位置，如A1
+      title: Cell Position
+      tip: Enter cell position, such as A1
     - key: comment_range
-      title: 搜索范围
+      title: Search Range
       tip: ''
     - key: find_str
-      title: 搜索内容
+      title: Search Content
       tip: ''
     - key: comment_all
-      title: 是否批注所有匹配内容
-      tip: 选择是将会对所有匹配内容进行批注，选择否只会对第一个匹配内容进行批注
+      title: Comment All Matches
+      tip: Selecting yes will comment all matching content, selecting no will only comment the first matching content
     outputList: []
   Excel.delete_excel_comment:
-    title: 删除Excel批注
-    comment: 删除Excel对象 @{excel} 中批注
+    title: Delete Excel Comment
+    comment: Delete comment from Excel object @{excel}
     icon: excel-delete-comment
     helpManual: ''
     inputList:
     - key: excel
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: delete_all
-      title: 是否删除所有批注
+      title: Delete All Comments
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: cell_position
-      title: 单元格位置
-      tip: 输入单元格位置，如A1
+      title: Cell Position
+      tip: Enter cell position, such as A1
     outputList: []
   Excel.excel_text_to_number:
-    title: Excel区域文本转数字
-    comment: 将Excel对象 @{excel_obj} 中工作表 @{sheet_name} 中的区域文本转化为数字格式
+    title: Excel Range Text to Number
+    comment: Convert range text to number format in worksheet @{sheet_name} of Excel object @{excel_obj}
     icon: excel-text-to-number
     helpManual: ''
     inputList:
     - key: excel_obj
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: select_type
-      title: 区域选择
+      title: Range Selection
       tip: ''
     - key: cell_position
-      title: 单元格位置
-      tip: 输入单元格位置，如A1
+      title: Cell Position
+      tip: Enter cell position, such as A1
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: range_location
-      title: 单元格范围
-      tip: 输入单元格范围，如A1:B2
+      title: Cell Range
+      tip: Enter cell range, such as A1:B2
     outputList: []
   Excel.excel_number_to_text:
-    title: Excel区域数字转文本
-    comment: 将Excel对象 @{excel_obj} 中工作表 @{sheet_name} 中的区域数字转化为文本格式
+    title: Excel Range Number to Text
+    comment: Convert range numbers to text format in worksheet @{sheet_name} of Excel object @{excel_obj}
     icon: excel-number-to-text
     helpManual: ''
     inputList:
     - key: excel_obj
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: select_type
-      title: 区域选择
+      title: Range Selection
       tip: ''
     - key: cell_position
-      title: 单元格位置
-      tip: 输入单元格位置，如A1
+      title: Cell Position
+      tip: Enter cell position, such as A1
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: range_location
-      title: 单元格范围
-      tip: 输入单元格范围，如A1:B2
+      title: Cell Range
+      tip: Enter cell range, such as A1:B2
     outputList: []
   Excel.excel_set_col_width:
-    title: 设置Excel列宽
-    comment: 设置Excel对象 @{excel_obj} 工作表 @{sheet_name} 中 @{col} 的列宽
+    title: Set Excel Column Width
+    comment: Set column width of @{col} in worksheet @{sheet_name} of Excel object @{excel_obj}
     icon: excel-set-column-width
     helpManual: ''
     inputList:
     - key: excel_obj
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: set_type
-      title: 设置类型
+      title: Set Type
       tip: ''
     - key: col
-      title: 列
-      tip: 输入列名，支持输入字符A或者整数1
+      title: Column
+      tip: Enter column name, supports entering letter A or integer 1
     - key: width
-      title: 列宽
+      title: Column Width
       tip: ''
     outputList: []
   Excel.excel_set_row_height:
-    title: 设置Excel行高
-    comment: 设置Excel对象 @{excel_obj} 工作表 @{sheet_name} 中 @{row} 的行高
+    title: Set Excel Row Height
+    comment: Set row height of @{row} in worksheet @{sheet_name} of Excel object @{excel_obj}
     icon: excel-set-row-height
     helpManual: ''
     inputList:
     - key: excel_obj
-      title: Excel对象
+      title: Excel Object
       tip: ''
     - key: sheet_name
-      title: 工作表名
-      tip: 输入需编辑的工作表名称，如'Sheet1'，为空默认使用Excel文件中的第一个工作表对象
+      title: Worksheet Name
+      tip: Enter the worksheet name to edit, such as 'Sheet1'. If empty, the first worksheet object in the Excel file will be used by default
     - key: set_type
-      title: 设置类型
+      title: Set Type
       tip: ''
     - key: row
-      title: 行
-      tip: 输入整数代表行号，从1开始
+      title: Row
+      tip: Enter integer representing row number, starting from 1
     - key: height
-      title: 行高
+      title: Row Height
       tip: ''
     outputList: []
 options:
@@ -983,126 +980,126 @@ options:
   - value: WPS
     label: WPS
   - value: Default
-    label: 系统自动选择
+    label: Auto Select by System
   Bool:
   - value: true
-    label: 是
+    label: Yes
   - value: false
-    label: 否
+    label: No
   FileExistenceType:
   - value: overwrite
-    label: 覆盖原有文件
+    label: Overwrite Existing File
   - value: rename
-    label: 创建文件副本
+    label: Create File Copy
   - value: cancel
-    label: 取消保存操作
+    label: Cancel Save Operation
   SaveType:
   - value: save
-    label: 保存
+    label: Save
   - value: save_as
-    label: 另存为
+    label: Save As
   - value: abort
-    label: 不保存
+    label: Don't Save
   CloseRangeType:
   - value: one
-    label: 当前文档
+    label: Current Document
   - value: all
-    label: 所有文档
+    label: All Documents
   SaveType_ALL:
   - value: save
-    label: 保存
+    label: Save
   - value: abort
-    label: 不保存
+    label: Don't Save
   EditRangeType:
   - value: row
-    label: 行
+    label: Row
   - value: column
-    label: 列
+    label: Column
   - value: area
-    label: 区域
+    label: Area
   - value: cell
-    label: 单元格
+    label: Cell
   ReadRangeType:
   - value: cell
-    label: 单元格
+    label: Cell
   - value: row
-    label: 行
+    label: Row
   - value: column
-    label: 列
+    label: Column
   - value: area
-    label: 区域
+    label: Area
   - value: all
-    label: 已编辑区域
+    label: Edited Area
   FontType:
   - value: no_change
-    label: 维持原状
+    label: Keep Original
   - value: bold
-    label: 粗体
+    label: Bold
   - value: italic
-    label: 斜体
+    label: Italic
   - value: bold_italic
-    label: 粗斜体
+    label: Bold Italic
   - value: normal
-    label: 常规
+    label: Normal
   FontNameType:
-  - value: 维持原状
-    label: 维持原状
-  - value: 黑体
-    label: 黑体
-  - value: 仿宋
-    label: 仿宋
-  - value: 宋体
-    label: 宋体
-  - value: 微软雅黑
-    label: 微软雅黑
-  - value: 微软雅黑 Light
-    label: 微软雅黑 Light
-  - value: 华文中宋
-    label: 华文中宋
-  - value: 华文仿宋
-    label: 华文仿宋
-  - value: 华文宋体
-    label: 华文宋体
-  - value: 华文彩云
-    label: 华文彩云
-  - value: 华文新魏
-    label: 华文新魏
-  - value: 华文楷体
-    label: 华文楷体
-  - value: 华文琥珀
-    label: 华文琥珀
-  - value: 华文细黑
-    label: 华文细黑
-  - value: 华文行楷
-    label: 华文行楷
-  - value: 华文隶书
-    label: 华文隶书
-  - value: 幼圆
-    label: 幼圆
-  - value: 隶书
-    label: 隶书
-  - value: 方正姚体
-    label: 方正姚体
-  - value: 方正舒体
-    label: 方正舒体
-  - value: 新宋体
-    label: 新宋体
-  - value: 微軟正黑體 Light
-    label: 微軟正黑體 Light
-  - value: 微軟正黑體
-    label: 微軟正黑體
-  - value: 細明體_HKSCS-ExtB
-    label: 細明體_HKSCS-ExtB
-  - value: 等线
-    label: 等线
-  - value: 等线 Light
-    label: 等线 Light
-  - value: 楷体
-    label: 楷体
-  - value: 細明置-ExtB
-    label: 細明置-ExtB
-  - value: 新細明置-ExtB
-    label: 新細明置-ExtB
+  - value: no_change
+    label: Keep Original
+  - value: SimHei
+    label: SimHei
+  - value: FangSong
+    label: FangSong
+  - value: SimSun
+    label: SimSun
+  - value: Microsoft YaHei
+    label: Microsoft YaHei
+  - value: Microsoft YaHei Light
+    label: Microsoft YaHei Light
+  - value: STZhongsong
+    label: STZhongsong
+  - value: STFangsong
+    label: STFangsong
+  - value: STSong
+    label: STSong
+  - value: STCaiyun
+    label: STCaiyun
+  - value: STXinwei
+    label: STXinwei
+  - value: STKaiti
+    label: STKaiti
+  - value: STHupo
+    label: STHupo
+  - value: STXihei
+    label: STXihei
+  - value: STXingkai
+    label: STXingkai
+  - value: STLiti
+    label: STLiti
+  - value: YouYuan
+    label: YouYuan
+  - value: LiSu
+    label: LiSu
+  - value: FZYaoti
+    label: FZYaoti
+  - value: FZShuti
+    label: FZShuti
+  - value: NSimSun
+    label: NSimSun
+  - value: Microsoft JhengHei Light
+    label: Microsoft JhengHei Light
+  - value: Microsoft JhengHei
+    label: Microsoft JhengHei
+  - value: MingLiU_HKSCS-ExtB
+    label: MingLiU_HKSCS-ExtB
+  - value: DengXian
+    label: DengXian
+  - value: DengXian Light
+    label: DengXian Light
+  - value: KaiTi
+    label: KaiTi
+  - value: MingLiU-ExtB
+    label: MingLiU-ExtB
+  - value: PMingLiU-ExtB
+    label: PMingLiU-ExtB
   - value: Onyx
     label: Onyx
   - value: Myanmar Text
@@ -1183,211 +1180,211 @@ options:
     label: Mogolian Baiti
   NumberFormatType:
   - value: no_change
-    label: 维持原状
-  - value: G/通用格式
-    label: 常规
+    label: Keep Original
+  - value: General
+    label: General
   - value: '0.00'
-    label: 数字
+    label: Number
   - value: ¥#,##0.00
-    label: 货币
+    label: Currency
   - value: '_(¥* #,##0.00_);_(¥* (#,##0.00);_(¥* -_0_0_);_(@_)'
     label: '_(¥* #,##0.00_);_(¥* (#,##0.00);_(¥* -_0_0_);_(@_)'
   - value: yyyy/m/d
-    label: 短日期
-  - value: yyyy年mm月dd日
-    label: 长日期
+    label: Short Date
+  - value: yyyy-mm-dd
+    label: Long Date
   - value: h:mm:ss AM/PM
-    label: 时间
+    label: Time
   - value: 0.00%
-    label: 百分比
+    label: Percentage
   - value: '# ?/?'
-    label: 分数
+    label: Fraction
   - value: '0.00E+00'
-    label: 科学记数
+    label: Scientific
   - value: '@'
     label: '@'
   - value: other
-    label: 自定义
+    label: Custom
   HorizontalAlign:
   - value: no_change
-    label: 维持原状
+    label: Keep Original
   - value: default
-    label: 默认常规
+    label: Default General
   - value: left-aligned
-    label: 左对齐
+    label: Left Align
   - value: right-aligned
-    label: 右对齐
+    label: Right Align
   - value: center
-    label: 居中对齐
+    label: Center Align
   - value: padding
-    label: 填充
+    label: Fill
   - value: aligned_both_sides
-    label: 两端对齐
+    label: Justify
   - value: center_cross_column
-    label: 跨列居中
+    label: Center Across Selection
   - value: distributed_align
-    label: 分散对齐
+    label: Distributed
   VerticalAlign:
   - value: no_change
-    label: 维持原状
+    label: Keep Original
   - value: up
-    label: 靠上
+    label: Top
   - value: middle
-    label: 居中
+    label: Center
   - value: down
-    label: 靠下
+    label: Bottom
   - value: aligned_both_sides
-    label: 两端对齐
+    label: Justify
   - value: distributed_align
-    label: 分散对齐
+    label: Distributed
   PasteType:
   - value: all
-    label: 默认全部粘贴
+    label: Paste All (Default)
   - value: value_and_format
-    label: 值和数字格式
+    label: Values and Number Formatting
   - value: format
-    label: 仅格式
+    label: Formats Only
   - value: exclude_frame
-    label: 边框除外
+    label: All Except Borders
   - value: col_width_only
-    label: 仅列宽
+    label: Column Widths Only
   - value: formula_only
-    label: 仅公式
+    label: Formulas Only
   - value: formula_and_format
-    label: 公式和数字格式
+    label: Formulas and Number Formatting
   - value: paste_value
-    label: 粘贴值
+    label: Paste Values
   DeleteCellDirection:
   - value: lower_move_up
-    label: 下方单元格上移
+    label: Shift Cells Up
   - value: right_move_left
-    label: 右侧单元格左移
+    label: Shift Cells Left
   ClearType:
   - value: content
-    label: 清除内容
+    label: Clear Contents
   - value: style
-    label: 清除格式
+    label: Clear Formats
   - value: all
-    label: 清除内容和格式
+    label: Clear Contents and Formats
   EnhancedInsertType:
   - value: row
-    label: 指定行号插入
+    label: Insert at Specified Row Number
   - value: column
-    label: 指定列号插入
+    label: Insert at Specified Column Number
   - value: add_rows
-    label: 在最后一行后插入
+    label: Insert After Last Row
   - value: add_columns
-    label: 在最后一列后插入
+    label: Insert After Last Column
   RowDirectionType:
   - value: upper
-    label: 向上插入
+    label: Insert Above
   - value: lower
-    label: 向下插入
+    label: Insert Below
   ColumnDirectionType:
   - value: left
-    label: 向左插入
+    label: Insert Left
   - value: right
-    label: 向右插入
+    label: Insert Right
   ColumnType:
   - value: all
-    label: 所有列
+    label: All Columns
   - value: one_column
-    label: 单列
+    label: Single Column
   RowType:
   - value: all
-    label: 所有行
+    label: All Rows
   - value: one_row
-    label: 单行
+    label: Single Row
   ColumnOutputType:
   - value: letter
-    label: 字母列号
+    label: Letter Column Number
   - value: number
-    label: 数字列号
+    label: Numeric Column Number
   SearchRangeType:
   - value: all
-    label: 已编辑区域
+    label: Edited Area
   - value: row
-    label: 行
+    label: Row
   - value: column
-    label: 列
+    label: Column
   - value: area
-    label: 区域
+    label: Area
   MergeOrSplitType:
   - value: merge
-    label: 合并
+    label: Merge
   - value: split
-    label: 拆分
+    label: Split
   SheetInsertType:
   - value: first
-    label: 新表成为第一个工作表
+    label: New Sheet Becomes First Worksheet
   - value: last
-    label: 新表成为最后一个工作表
+    label: New Sheet Becomes Last Worksheet
   - value: before
-    label: 新表插入到...表之前
+    label: Insert New Sheet Before...
   - value: after
-    label: 新表插入到...表之后
+    label: Insert New Sheet After...
   MoveSheetType:
   - value: move_after
-    label: 移动到目标工作表之后
+    label: Move After Target Worksheet
   - value: move_before
-    label: 移动到目标工作表之前
+    label: Move Before Target Worksheet
   - value: move_to_first
-    label: 移动到第一个工作表
+    label: Move to First Worksheet
   - value: move_to_last
-    label: 移动到最后一个工作表
+    label: Move to Last Worksheet
   CopySheetLocationType:
   - value: before
-    label: 复制到当前工作表之前
+    label: Copy Before Current Worksheet
   - value: after
-    label: 复制到当前工作表之后
+    label: Copy After Current Worksheet
   - value: first
-    label: 复制到第一个工作表
+    label: Copy to First Worksheet
   - value: last
-    label: 复制到最后一个工作表
+    label: Copy to Last Worksheet
   CopySheetType:
   - value: current_workbook
-    label: 当前工作簿
+    label: Current Workbook
   - value: other_workbook
-    label: 其他工作簿
+    label: Other Workbook
   SheetRangeType:
   - value: activated
-    label: 当前激活工作表
+    label: Currently Active Worksheet
   - value: all
-    label: 所有工作表
+    label: All Worksheets
   SearchSheetType:
   - value: all
-    label: 全部工作表
+    label: All Worksheets
   - value: one
-    label: 单个工作表
+    label: Single Worksheet
   MatchCountType:
   - value: all
-    label: 所有结果
+    label: All Results
   - value: first
-    label: 第一个结果
+    label: First Result
   SearchResultType:
   - value: cell
-    label: 返回单元格位置
+    label: Return Cell Position
   - value: col_and_row
-    label: 返回列号和行号
+    label: Return Column and Row Numbers
   ImageSizeType:
   - value: scale
-    label: 调整缩放比例
+    label: Adjust Scale
   - value: number
-    label: 调整高度和宽度数值
+    label: Adjust Height and Width Values
   - value: auto
-    label: 自动调整大小匹配范围
+    label: Auto Adjust Size to Match Range
   InsertFormulaDirectionType:
   - value: down
-    label: 向下插入
+    label: Insert Downward
   - value: right
-    label: 向右插入
+    label: Insert Rightward
   CreateCommentType:
   - value: position
-    label: 按照单元格位置插入
+    label: Insert by Cell Position
   - value: content
-    label: 按照内容搜索插入
+    label: Insert by Content Search
   SetType:
   - value: value
-    label: 设置值
+    label: Set Value
   - value: auto
-    label: 自动调整
+    label: Auto Adjust
