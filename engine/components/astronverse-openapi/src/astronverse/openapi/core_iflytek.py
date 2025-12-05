@@ -155,7 +155,7 @@ class OpenapiIflytek:
             suffix = os.path.splitext(image)[1].lstrip(".").lower()
             # 请求数据准备
             body = {"encoding": suffix, "image": str(image_info, "UTF-8"), "status": 3}
-            url = "http://127.0.0.1:8003/api/rpa-ai-service/ocr/general"
+            url = "http://127.0.0.1:8080/api/rpa-ai-service/ocr/general"
             headers = {"content-type": "application/json"}
             # 发起请求
             ret = requests.request("POST", url, data=json.dumps(body), headers=headers)
